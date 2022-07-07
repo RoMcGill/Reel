@@ -1,0 +1,94 @@
+
+
+*
+{
+    padding: 0;
+}
+
+
+.features-container{
+
+}
+
+.callout-container{
+    height: 100vh;
+    background:url(/images/3.jpeg) no-repeat center center ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    padding-top: 140px;
+    padding-right: 50px;
+    color: darkolivegreen;
+
+    
+
+}
+
+.callout-jumbotron{
+
+
+}
+.jumbotron-header{
+    background-color: transparent;
+
+}
+
+.quotes-container{
+    background-color: lightgreen;
+
+}
+
+.features-container{
+    background-color: darkolivegreen;
+    color: white;
+}
+
+
+
+.profile-head {
+    transform: translateY(5rem)
+}
+
+.cover {
+    background-image: url(https://images.unsplash.com/photo-1530305408560-82d13781b33a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+body {
+    background: #654ea3;
+    background: linear-gradient(to right, #43e9a7, #5e954e);
+    min-height: 100vh;
+    overflow-x:hidden;
+}
+
+
+
+.hashtag{
+    font-size: 13px;
+    text-decoration: none;
+}
+.card{
+
+    margin: 0 auto;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
+
+nav{
+    margin-bottom: 10px;
+}
+
+
+.frm{
+    padding-left: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.caption{
+    padding: 20px;
+}
