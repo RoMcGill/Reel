@@ -51,7 +51,7 @@
       <ul class="navbar-nav mr-auto">
           <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item mr-2"><a class="nav-link" href="/About">About</a></li>
-          <li class="nav-item mr-2"><a class="nav-link" href="/post-details.html">Feed</a></li>
+          <li class="nav-item mr-2"><a class="nav-link" href="/post-detail.html">Feed</a></li>
           <li class="nav-item mr-2"><a class="nav-link" href="/profile.html">Profile</a></li>
           <li class="nav-item mr-2"><a class="nav-link" href="./templates/base.html">base(test)</a></li>
           <li class="nav-item mr-2"><a class="nav-link" href="./templates/login.html">login(test)</a></li>
@@ -69,7 +69,7 @@
   <!--post-->
 {% for post in post_items %}
   <div class="card responsive" style="width: 70%; height: 45%;">
-    <a href="{% url 'post-details' post.id %}"><img class="img-responsive" style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}" alt="Card image cap"></a>
+    <a href="{% url 'post-detail' post.id %}"><img class="img-responsive" style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}" alt="Card image cap"></a>
     <div class="card-body">
       <h5 class="card-title">{{ post.user.username }}</h5>
       <p class="card-text">{{ post.caption }}</p>

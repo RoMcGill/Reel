@@ -1,4 +1,4 @@
-"""REEL URL Configuration
+"""pp4 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('post.urls')),
+    path('post/', include('post.urls')),
     
 ]
 
