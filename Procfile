@@ -1,1 +1,1 @@
-web: gunicorn --chdir REEL reel-2022-new.wsgi
+web: gunicorn --chdir REEL REEL.wsgi
