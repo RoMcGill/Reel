@@ -60,6 +60,7 @@ def tags(request, tag_slug):
 
     context = {
         'posts': posts,
+        'tag': tag
 
     }
     return render(request, 'tags.html', context)
