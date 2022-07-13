@@ -20,7 +20,9 @@ def userProfile(request, username):
     posts_paginator = paginator.get_page(page_number)
 
     context = {
-        'posts_paginator': posts_paginator
+        'posts_paginator': posts_paginator,
+        'profile': profile,
+        'posts': posts
     }
 
     return render(request, 'profile.html', context)
