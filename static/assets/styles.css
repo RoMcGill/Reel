@@ -92,3 +92,7 @@ nav{
 .caption{
     padding: 20px;
 }
+
+a { color: inherit; 
+
+} 
