@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
+from django.db import transaction
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
-from django.urls import reverse, resolve
-from django.http import HttpResponseRedirect
+from django.urls import resolve, reverse
 from userauthentication.models import Profile
 from post.models import Post, Follow, Stream
-from django.db import transaction
+
 
 
 
@@ -45,18 +45,20 @@ def userProfile(request, username):
 def follow(request, username, option):
     user = request.user
     following = get_object_or_404(User, username=username)
+
     try:
-        f, created = Follow.objects.get_or_create(follower=user, following=following)
+        f, created = Follow.objects.get_or_create(follower=request.user, following=following)
+
         if int(option) == 0:
             f.delete()
-            Stream.objects.filter(following=following, user=user).all().delete()
+            Stream.objects.filter(following=following, user=request.user).all().delete()
         else:
-            posts = Post.objects.filter(user=following)[:10]
-
+            posts = Post.objects.all().filter(user=following)[:25]
             with transaction.atomic():
                 for post in posts:
-                    stream = Stream(post=post, user=user, date=post.posted, following=following)
+                    stream = Stream(post=post, user=request.user, date=post.posted, following=following)
                     stream.save()
         return HttpResponseRedirect(reverse('profile', args=[username]))
+
     except User.DoesNotExist:
         return HttpResponseRedirect(reverse('profile', args=[username]))

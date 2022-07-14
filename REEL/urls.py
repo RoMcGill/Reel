@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from userauthentication.models import Profile
-from userauthentication.views import userProfile
+from userauthentication.views import userProfile, follow
 
 
 urlpatterns = [
@@ -26,7 +26,8 @@ urlpatterns = [
     path('post/', include('post.urls')),
     path('<username>/', userProfile, name='profile'),
     path('<username>/svaed/', userProfile, name='favourite'),
-    path('<username>/follow/<option>', userProfile, name='follow'),
+    path('<username>/follow/<option>/', follow, name='follow'),
+    
     
 ]
 

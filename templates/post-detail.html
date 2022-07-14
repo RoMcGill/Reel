@@ -15,7 +15,7 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}" alt="post picture">
             <div class="card-body">
-              <h5 class="card-title">{{ post.user.username }} Recent Trip</h5>
+              <a href="{% url 'profile' post.user %}"><h5 class="card-title">{{ post.user.username }} Recent Trip</h5></a>
               <p class="card-text">{{post.caption}}</p>
             </div>
             <span class="post__date-time">{{post.posted|date:"d M,Y"}}</span>
