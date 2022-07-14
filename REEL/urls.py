@@ -26,6 +26,7 @@ urlpatterns = [
     path('post/', include('post.urls')),
     path('<username>/', userProfile, name='profile'),
     path('<username>/svaed/', userProfile, name='favourite'),
+    path('<username>/follow/<option>', userProfile, name='follow'),
     
 ]
 

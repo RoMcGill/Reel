@@ -15,10 +15,16 @@
                         class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
                         {% endif %}
                         {% if profile.user != request.user %}
-                        <a href="#"
-                        class="btn btn-outline-dark btn-sm btn-block">Follow</a>
-                        <a href="#"
+
+                        {% if follow_status == True %}
+                        <a href="{% url 'follow' Profile.user 1 %}"
                         class="btn btn-outline-dark btn-sm btn-block">Unfollow</a>
+                        {% else %}
+
+                        <a href="{% url 'follow' Profile.user 0 %}"
+                        class="btn btn-outline-dark btn-sm btn-block">Follow</a>
+                        {% endif %}
+
                         {% endif %}
                         <img
                             src= "{{profile.image.url}}"
