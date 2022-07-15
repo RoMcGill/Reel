@@ -18,12 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from userauthentication.models import Profile
-from userauthentication.views import userProfile, follow
+from userauthentication.views import userProfile, follow, editProfile
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('post/', include('post.urls')),
+    path('users/', include('userauthentication.urls')),
     path('<username>/', userProfile, name='profile'),
     path('<username>/svaed/', userProfile, name='favourite'),
     path('<username>/follow/<option>/', follow, name='follow'),

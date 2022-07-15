@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect
+from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, redirect
 from django.db import transaction
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from django.urls import resolve, reverse
 from userauthentication.models import Profile
 from post.models import Post, Follow, Stream
+from userauthentication.forms import EditProfileForm
 
 
 
@@ -62,3 +63,27 @@ def follow(request, username, option):
 
     except User.DoesNotExist:
         return HttpResponseRedirect(reverse('profile', args=[username]))
+
+
+def editProfile(request):
+    user = request.user.id
+    profile = Profile.objects.get(user__id=user)
+
+    if request.method == "POST":
+        form = EditProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            profile.image = form.cleaned_data.get('picture')
+            profile.first_name = form.cleaned_data.get('first_name')
+            profile.last_name = form.cleaned_data.get('last_name')
+            profile.location = form.cleaned_data.get('location')
+            profile.bio = form.cleaned_data.get('bio')
+            # profile.url = form.cleaned_data.get('url')
+            profile.save()
+            return redirect('profile', profile.user.username)
+    else:
+        form = EditProfileForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'edit-profile.html', context)
+    
