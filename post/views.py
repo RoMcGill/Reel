@@ -5,6 +5,8 @@ from post.models import Tag, Stream, Follow, Post, Likes
 from django.http import HttpResponseRedirect
 from post.forms import NewPostForm
 from userauthentication.models import Profile
+from comment.models import Comment
+from comment.forms import CommentForm
 
 
 
@@ -50,8 +52,27 @@ def NewPost(request):
 
 def PostDetail(request, post_id):
     post = get_object_or_404(Post, id=post_id)
+
+    # comment
+    comments = Comment.objects.filter(post=post).order_by("-date")
+
+    # commentForm
+    if request.method == "POST":
+        form = CommentForm(request.POST, request.FILES)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.user = request.user
+            comment.save()
+       
+        return HttpResponseRedirect(reverse("post-detail", args=[post_id]))
+    else:
+        form = CommentForm()
+ 
     context = {
-        'post': post
+        'form': form,
+        'comments': comments,
+        'post': post,
     }
     return render(request, 'post-detail.html', context)
 

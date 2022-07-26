@@ -25,9 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('post/', include('post.urls')),
     path('users/', include('userauthentication.urls')),
+    # path('users/', include('comment.urls')),
     path('<username>/', userProfile, name='profile'),
     path('<username>/svaed/', userProfile, name='favourite'),
     path('<username>/follow/<option>/', follow, name='follow'),
+    
     
     
 ]

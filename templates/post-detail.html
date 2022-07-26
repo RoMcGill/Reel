@@ -15,7 +15,7 @@
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}" alt="post picture">
             <div class="card-body">
-              <a href="{% url 'profile' post.user %}"><h5 class="card-title">{{ post.user.username }} Recent Trip</h5></a>
+              <a href="{% url 'profile' post.user %}"><h5 class="card-title">@{{ post.user.username }} </h5></a>
               <p class="card-text">{{post.caption}}</p>
             </div>
             <span class="post__date-time">{{post.posted|date:"d M,Y"}}</span>
@@ -29,11 +29,11 @@
 
 
   <!-- Modal -->
-<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLongTitle">Comments</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -46,47 +46,44 @@
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     Comment panel
-                                </div>
-                                <div class="panel-body">
-                                    <textarea class="form-control" placeholder="write a comment..." rows="3"></textarea>
-                                    <br>
-                                    <button type="button" class="btn btn-info pull-right">Post</button>
-                                    <div class="clearfix"></div>
-                                    <hr>
+                                    <form method="POST">
+                                      {% csrf_token %}
+                                      
+                                    
                                     <ul class="media-list">
                                         <li class="media">
                                             <a href="#" class="pull-left">
-                                                <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" class="img-circle">
+                                                <img src="{{ request.user.profile.image.url}}" width="30" height="30" alt="" class="img-circle">
                                             </a>
                                             <div class="media-body">
                                                 <span class="text-muted pull-right">
-                                                    <small class="text-muted">30 min ago</small>
+                                                    <small class="text-muted">{{ post.posted|date:"d M, Y" }}</small>
                                                 </span>
-                                                <strong class="text-success">@MartinoMont</strong>
+                                                <strong class="text-success">{{ post.user.username }}</strong>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    Lorem ipsum dolor sit amet, <a href="#">#consecteturadipiscing </a>.
+                                                   {{ form.body }}
                                                 </p>
+                                                <button type="submit" class="btn btn-info pull-right">Post</button>
                                             </div>
                                         </li>
+                                    </ul>
+                                    {% for comment in comments %}
+                                    <ul class="media-list">
                                         <li class="media">
                                             <a href="#" class="pull-left">
-                                                <img src="https://bootdey.com/img/Content/user_2.jpg" alt="" class="img-circle">
+                                                <img src="{{ request.user.profile.image.url}}" width="30" height="30" alt="" class="img-circle">
                                             </a>
                                             <div class="media-body">
                                                 <span class="text-muted pull-right">
-                                                    <small class="text-muted">30 min ago</small>
+                                                    <small class="text-muted">{{ comment.post.posted|date:"d M, Y" }}</small>
                                                 </span>
-                                                <strong class="text-success">@LaurenceCorreil</strong>
+                                                <strong class="text-success">{{ comment.post.user.username }}</strong>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    Lorem ipsum dolor <a href="#">#ipsumdolor </a>adipiscing elit.
+                                                   {{ comment.body }}
                                                 </p>
-                                            </div>
-                                        </li>
-                                        
-                                    </ul>
+                                    {% endfor %}
                                 </div>
+                               
                             </div>
                         </div>
                 
@@ -94,5 +91,11 @@
                 </div>
                 </div>
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
         {% endblock content%}
