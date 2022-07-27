@@ -5,15 +5,19 @@ from django.core.paginator import Paginator
 from django.urls import resolve, reverse
 from userauthentication.models import Profile
 from post.models import Post, Follow, Stream
-from userauthentication.forms import EditProfileForm
+from .forms import EditProfileForm #UserRegisterForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
 
 
 
-
-def userProfile(request, username):
+def UserProfile(request, username):
+    Profile.objects.get_or_create(user=request.user)
     user = get_object_or_404(User, username=username)
     profile = Profile.objects.get(user=user)
     url_name = resolve(request.path).url_name
+    posts = Post.objects.filter(user=user).order_by('-posted')
+
     if url_name == 'profile':
         posts = Post.objects.filter(user=user).order_by('-posted')
     else:
@@ -65,7 +69,7 @@ def follow(request, username, option):
         return HttpResponseRedirect(reverse('profile', args=[username]))
 
 
-def editProfile(request):
+def EditProfile(request):
     user = request.user.id
     profile = Profile.objects.get(user__id=user)
 
@@ -86,4 +90,33 @@ def editProfile(request):
         'form': form,
     }
     return render(request, 'edit-profile.html', context)
-    
+
+
+def register(request):
+    if request.method == "POST":
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            new_user = form.save()
+            # Profile.get_or_create(user=request.user)
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Hurray your account was created!!')
+
+            # Automatically Log In The User
+            new_user = authenticate(username=form.cleaned_data['username'],
+                                    password=form.cleaned_data['password1'],)
+            login(request, new_user)
+            # return redirect('editprofile')
+            return redirect('index')
+            
+
+
+    elif request.user.is_authenticated:
+        return redirect('index')
+    else:
+        form = UserRegisterForm()
+    context = {
+        'form': form,
+    }
+    return render(request, 'sign-up.html', context)    
+
+

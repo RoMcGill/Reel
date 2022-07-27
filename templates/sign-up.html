@@ -39,12 +39,12 @@
 
           <form method="post" action="" role="form">
           {% csrf_token %}
-           <h3 class="title is-3">Login</h3>
+           <h3 class="title is-3">create account</h3>
 
             <div class="field">
               <p class="control has-icons-left">
-              <label class="label is-medium">Username</label>
-                {{ form.username }}
+              <input class="label is-medium" name="Username">
+            
                 <span class="icon is-small is-left">
             <i class="fas fa-lock"></i>
           </span>
@@ -53,13 +53,14 @@
 
               <div class="field">
               <p class="control has-icons-left">
-              <label class="label is-medium">Password</label>
-                {{ form.password }}
+              <input class="label is-medium"name="Password">
+                
                 <span class="icon is-small is-left">
             <i class="fas fa-lock"></i>
           </span>
         </p>
           </div>
+        </div>
 
       {% if form.errors %}
       <div class="row">
@@ -71,8 +72,8 @@
 
       <div class="field">
       <p class="control">
-        <button type="submit" value="login" class="button is-success">
-          Login
+        <a href="{% url 'sign-up' %}"><button type="submit" value="login" class="button is-success"></a>
+          Register
         </button>
       </p>
     </div>
@@ -81,7 +82,7 @@
 
 
 
-    <a href="{% url 'signup' %}" class="button is-info">Create an account</a>
+    <a href="{% url 'sign-in' %}" class="button is-info">sign-in</a>
 
 
   </form>

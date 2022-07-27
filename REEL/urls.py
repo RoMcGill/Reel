@@ -18,16 +18,19 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from userauthentication.models import Profile
-from userauthentication.views import userProfile, follow, editProfile
+from userauthentication.views import UserProfile, follow, EditProfile
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('post/', include('post.urls')),
+    path('', include('post.urls')),
+    # path('members/', include('members.urls')),
+    # path('members/', include('django.contrib.auth.urls')),
+    # path('users/', include('django.contrib.auth.urls')),
     path('users/', include('userauthentication.urls')),
     # path('users/', include('comment.urls')),
-    path('<username>/', userProfile, name='profile'),
-    path('<username>/svaed/', userProfile, name='favourite'),
+    path('<username>/', UserProfile, name='profile'),
+    path('<username>/svaed/', UserProfile, name='favourite'),
     path('<username>/follow/<option>/', follow, name='follow'),
     
     
