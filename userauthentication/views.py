@@ -5,7 +5,7 @@ from django.core.paginator import Paginator
 from django.urls import resolve, reverse
 from userauthentication.models import Profile
 from post.models import Post, Follow, Stream
-from .forms import EditProfileForm #UserRegisterForm
+from .forms import editProfileForm #UserRegisterForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
@@ -69,12 +69,12 @@ def follow(request, username, option):
         return HttpResponseRedirect(reverse('profile', args=[username]))
 
 
-def EditProfile(request):
+def editProfile(request):
     user = request.user.id
     profile = Profile.objects.get(user__id=user)
 
     if request.method == "POST":
-        form = EditProfileForm(request.POST, request.FILES)
+        form = editProfileForm(request.POST, request.FILES)
         if form.is_valid():
             profile.image = form.cleaned_data.get('picture')
             profile.first_name = form.cleaned_data.get('first_name')
@@ -85,7 +85,7 @@ def EditProfile(request):
             profile.save()
             return redirect('profile', profile.user.username)
     else:
-        form = EditProfileForm()
+        form = editProfileForm()
     context = {
         'form': form,
     }
@@ -105,7 +105,7 @@ def register(request):
             new_user = authenticate(username=form.cleaned_data['username'],
                                     password=form.cleaned_data['password1'],)
             login(request, new_user)
-            # return redirect('editprofile')
+            # return redirect('editProfile')
             return redirect('index')
             
 

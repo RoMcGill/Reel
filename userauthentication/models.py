@@ -21,15 +21,21 @@ class Profile(models.Model):
     favourite = models.ManyToManyField(Post)
     image = models.ImageField(upload_to=user_directory_path, blank=True, null=True, verbose_name='picture')
 
-    # def __str__(self):
-    #     return self.first_name
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f'{self.user.username} - Profile'
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
 
 def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
+	if created:
+		Profile.objects.create(user=instance)
 
 def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+	instance.profile.save()
 
 post_save.connect(create_user_profile, sender=User)
 post_save.connect(save_user_profile, sender=User)

@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from userauthentication.models import Profile
-from userauthentication.views import UserProfile, follow, EditProfile
+from userauthentication.views import UserProfile, follow, editProfile
 
 
 urlpatterns = [
@@ -28,6 +28,7 @@ urlpatterns = [
     # path('members/', include('django.contrib.auth.urls')),
     # path('users/', include('django.contrib.auth.urls')),
     path('users/', include('userauthentication.urls')),
+    path('register/', include('userauthentication.urls')),
     # path('users/', include('comment.urls')),
     path('<username>/', UserProfile, name='profile'),
     path('<username>/svaed/', UserProfile, name='favourite'),

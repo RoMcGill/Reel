@@ -11,7 +11,7 @@
 
                     <div class="profile mr-3">
                         {% if profile.user == request.user %}
-                        <a href="{% url 'editprofile' %}"
+                        <a href="{% url 'editProfile' %}"
                         class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
                         {% endif %}
                         {% if profile.user != request.user %}
