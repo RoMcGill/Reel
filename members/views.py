@@ -1,22 +1,26 @@
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from .forms import UserRegisterForm 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
-def login_user(request):
+
+@login_required
+def register(request):
     if request.method == "POST":
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            # Redirect to a success page.
-            return redirect('post')
-        else:
-            # Return an 'invalid login' error message.
-            messages.success(request, ('there was an error logging in, please try again'))
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Welcome To The Reel Comunity {username}! Now Login')
             return redirect('login')
     else:
-        return redirect('templates/login.html', {})
+        form = UserRegisterForm()
 
+    return render(request, 'reelusers/register.html', {'form':form})
 
+@login_required
+def login(self, request):
+    if User.is_authenticated:
+        return HttpResponseRedirect(reverse('profile', args=[username]))

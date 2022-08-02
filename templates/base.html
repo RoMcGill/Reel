@@ -75,7 +75,7 @@
           <span><i class="fas fa-plus-circle fa-lg"></i></span>
         </a>
       
-          <span class="badge rounded-pill badge-notification bg-danger">6</span>
+          <span class="badge rounded-pill badge-notification bg-danger"></span>
         </a>
       </li>
     <!-- Right elements -->
@@ -85,6 +85,18 @@
         <!--callout-->
     <section class="section">
     <div class="container-fluid">
+
+<!---messages-->
+<div style="margin-top: 10px;">
+  {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}" role="alert">
+          <h4 style="text-align: center;">{{ message }}</h4>
+        </div>
+      {% endfor%}
+  {% endif %}
+
+</div>
 
         {% block content %}
        
