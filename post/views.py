@@ -26,6 +26,7 @@ def index(request):
 def NewPost(request):
     user = request.user.id
     tags_objs = []
+    profile = Profile.objects.get(user__id=user)
     
     if request.method == "POST":
         form = NewPostForm(request.POST, request.FILES)
@@ -41,7 +42,7 @@ def NewPost(request):
             p, created = Post.objects.get_or_create(picture=picture, caption=caption, user_id=user)
             p.tag.set(tags_objs)
             p.save()
-            return redirect('index')
+            return redirect('profile', profile.user.username)
     else:
         form = NewPostForm()
     context = {

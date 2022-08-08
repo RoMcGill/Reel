@@ -83,7 +83,7 @@
             </div>
                 <div class="px-4 py-3">
                     <h5 class="mb-0">Recent Trips</h5>
-                    <a href="{% url 'newpost' %}">add post</a>
+                    <button class="btn-outline-success"><a href="{% url 'newpost' %}">add post</a></button>
                     <div class="p-4 rounded shadow-sm bg-light">
                     {% for post in posts %}
                     <div class="card" style="width: 18rem;">

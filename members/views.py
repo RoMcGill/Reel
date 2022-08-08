@@ -1,9 +1,11 @@
-from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.shortcuts import render, redirect, HttpResponseRedirect, reverse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import UserRegisterForm 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from userauthentication.models import Profile
+from members.models import displayusername
 
 
 @login_required
@@ -13,7 +15,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Welcome To The Reel Comunity {username}! Now Login')
+            messages.success(request, f'Welcome To The Reel Comunity {username}')
             return redirect('login')
     else:
         form = UserRegisterForm()
@@ -22,5 +24,11 @@ def register(request):
 
 @login_required
 def login(self, request):
+    profile = Profile.objects.get(user__id=user)
     if User.is_authenticated:
-        return HttpResponseRedirect(reverse('profile', args=[username]))
+        return redirect('edit-profile', profile.user.username)
+
+
+def showusername(request):
+    displaynames=User.objects.all()
+    return render(request,'showuser.html',{"displayusername":displaynames})

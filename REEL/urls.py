@@ -36,6 +36,7 @@ urlpatterns = [
     path('<username>/', UserProfile, name='profile'),
     path('<username>/svaed/', UserProfile, name='favourite'),
     path('<username>/follow/<option>/', follow, name='follow'),
+    path('showuser',user_views.showusername, name='showuser')
     
     
     
