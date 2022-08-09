@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'userauthentication',
     'comment',
     'members',
+    'searchbar',
 ]
 
 MIDDLEWARE = [

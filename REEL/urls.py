@@ -21,6 +21,7 @@ from userauthentication.models import Profile
 from userauthentication.views import UserProfile, follow, editProfile
 from django.contrib.auth import views as auth_views
 from members import views as user_views
+from searchbar import views as search_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,6 +38,7 @@ urlpatterns = [
     path('<username>/svaed/', UserProfile, name='favourite'),
     path('<username>/follow/<option>/', follow, name='follow'),
     path('<username>/showuser/', user_views.showusername, name='showuser'),
+    path('<username>/searchbar/', search_views.SearchBar, name='SearchBar'),
     
     
 ]

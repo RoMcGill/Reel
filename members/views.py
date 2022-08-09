@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from userauthentication.models import Profile
 from members.models import displayusername
+from searchbar import views
 
 
 @login_required
