@@ -28,7 +28,7 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name="reelusers/login.html"), name='login'),
     path('logout/', auth_views.LoginView.as_view(template_name="reelusers/logout.html"), name='logout'),
-    # path('members/', include('members.urls')),
+    path('members/', include('members.urls')),
     # path('members/', include('django.contrib.auth.urls')),
     # path('users/', include('django.contrib.auth.urls')),
     path('users/', include('userauthentication.urls')),
@@ -36,9 +36,7 @@ urlpatterns = [
     path('<username>/', UserProfile, name='profile'),
     path('<username>/svaed/', UserProfile, name='favourite'),
     path('<username>/follow/<option>/', follow, name='follow'),
-    path('showuser',user_views.showusername, name='showuser')
-    
-    
+    path('<username>/showuser/', user_views.showusername, name='showuser'),
     
     
 ]

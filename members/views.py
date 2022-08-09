@@ -28,7 +28,7 @@ def login(self, request):
     if User.is_authenticated:
         return redirect('edit-profile', profile.user.username)
 
-
+@login_required
 def showusername(request):
     displaynames=User.objects.all()
     return render(request,'showuser.html',{"displayusername":displaynames})
