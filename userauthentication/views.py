@@ -75,7 +75,7 @@ def editProfile(request):
     profile = Profile.objects.get(user__id=user)
 
     if request.method == "POST":
-        form = editProfileForm(request.POST, request.FILES)
+        form = editProfileForm(request.POST, request.FILES, instance=request.user.profile)
         if form.is_valid():
             profile.image = form.cleaned_data.get('picture')
             profile.first_name = form.cleaned_data.get('first_name')
@@ -86,7 +86,7 @@ def editProfile(request):
             profile.save()
             return redirect('profile', profile.user.username)
     else:
-        form = editProfileForm()
+        form = editProfileForm(instance=request.user.profile)
     context = {
         'form': form,
     }
