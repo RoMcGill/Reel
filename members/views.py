@@ -9,7 +9,7 @@ from members.models import displayusername
 from searchbar import views
 
 
-@login_required
+
 def register(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
@@ -23,7 +23,7 @@ def register(request):
 
     return render(request, 'reelusers/register.html', {'form':form})
 
-@login_required
+
 def login(self, request):
     profile = Profile.objects.get(user__id=user)
     if User.is_authenticated:
