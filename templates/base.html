@@ -52,6 +52,18 @@
         <h6>logout</h6>
         </a>
         </div>
+  
+    
+    {% else %}
+    <a href="{% url 'login' %}" class="btn btn-login">Log in</a>
+    <a href="{% url 'register' %}" class="btn btn-login">Sign up</a>
+    
+    
+      {% endif %}
+      
+    </div>
+    
+    {% if user.profile.image.url == False %}
         <ul class="navbar-nav flex-row">
         <li class="nav-item me-3 me-lg-1">
          <a class="nav-link d-sm-flex align-items-sm-center" href="#">
@@ -63,15 +75,13 @@
     <li class="nav-item me-3 me-lg-1">
       <a class="nav-link" href="#">
         <span><i class="fas fa-plus-circle fa-lg"></i></span>
-      </a>
+      </a> 
+    
+
     {% else %}
-    <a href="{% url 'login' %}" class="btn btn-login">Log in</a>
-    <a href="{% url 'register' %}" class="btn btn-login">Sign up</a>
+<p>NOT WORKING</p>
     
-    
-      {% endif %}
-      
-    </div>
+    {% endif %}
     
 
     <!-- Left elements -->

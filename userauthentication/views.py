@@ -73,7 +73,7 @@ def follow(request, username, option):
 
 def editProfile(request):
     user = request.user.id
-    profile = Profile.objects.get_or_create(user__id=user)
+    profile = Profile.objects.get(user__id=user)
 
     if request.method == "POST":
         form = editProfileForm(request.POST, request.FILES, instance=request.user.profile)
