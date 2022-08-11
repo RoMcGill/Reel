@@ -69,7 +69,7 @@
                                     </ul>
                                     {% for comment in comments %}
                                     <ul class="media-list">
-                                        <li class="media">
+                                        <li class="media-list">
                                             <a href="#" class="pull-left">
                                                 <img src="{{ comment.user.profile.image.url}}" width="30" height="30" alt="" class="img-circle">
                                             </a>
@@ -84,6 +84,7 @@
                                                 <p>
                                                    {{ comment.body }}
                                                 </p>
+                                                </li>
                                     {% endfor %}
                                 </div>
                                
