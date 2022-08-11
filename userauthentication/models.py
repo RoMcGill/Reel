@@ -21,6 +21,7 @@ class Profile(models.Model):
     favourite = models.ManyToManyField(Post)
     image = models.ImageField(upload_to=user_directory_path, blank=True, null=True, verbose_name='picture')
 
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
