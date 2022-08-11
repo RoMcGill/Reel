@@ -102,3 +102,7 @@ a { color: inherit;
 .full-width{
     width: 100%;
 }
+
+.img-pb{
+    padding-bottom: 30px;
+}
