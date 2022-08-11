@@ -98,3 +98,7 @@ a { color: inherit;
 .white-text{
     color: white;
 }
+
+.full-width{
+    width: 100%;
+}
