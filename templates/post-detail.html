@@ -71,13 +71,16 @@
                                     <ul class="media-list">
                                         <li class="media">
                                             <a href="#" class="pull-left">
-                                                <img src="{{ request.user.profile.image.url}}" width="30" height="30" alt="" class="img-circle">
+                                                <img src="{{ comment.user.profile.image.url}}" width="30" height="30" alt="" class="img-circle">
                                             </a>
-                                            <div class="media-body">
+                                            <div class="media-list">
                                                 <span class="text-muted pull-right">
                                                     <small class="text-muted">{{ comment.post.posted|date:"d M, Y" }}</small>
                                                 </span>
                                                 <strong class="text-success">{{ comment.post.user.username }}</strong>
+                                                <a href="{% url 'profile' comment.user %}" style="text-decoration: none;">
+                                                  <div class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name">{{comment.user.profile.first_name}} {{comment.user.profile.last_name}}</span><span class="date text-black-50"> {{comment.date}}</span></div></a>
+                                              </div>
                                                 <p>
                                                    {{ comment.body }}
                                                 </p>
