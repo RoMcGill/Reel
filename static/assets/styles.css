@@ -96,3 +96,7 @@ nav{
 a { color: inherit; 
 
 } 
+
+.white-text{
+    color: white;
+}

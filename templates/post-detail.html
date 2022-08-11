@@ -19,8 +19,8 @@
               <p class="card-text">{{post.caption}}</p>
             </div>
             <span class="post__date-time">{{post.posted|date:"d M,Y"}}</span>
-            <span>{{ post.likes}} Likes</span>
-            <p class ="hashtag">{% for tag in post.tag.all %}<a href="{{tag.get_absolute_url}}">#{{ tag }} </a>{% endfor %}</p>
+            <a href="{% url 'like' post.id %}"><span>{{ post.likes}} Likes</span></a>
+    <p class ="hashtag">{% for tag in post.tag.all %}<a href="{{tag.get_absolute_url}}">#{{ tag }} </a>{% endfor %}</p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Comments
               </button>

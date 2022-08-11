@@ -85,7 +85,7 @@
     
     <div class="card-body">
       <a href="{% url 'favourite-post' post.id %}" class="card-link">Add To Favourites</a>
-      <a href="#" class="card-link">Trip details</a>
+      <a href="#" class="card-link">Post details</a>
     </div>
   </div>
     <!-- Modal -->
@@ -98,18 +98,30 @@
         <div class="row"></div>
             <div class="col-12"></div>
                 <section class ="callout-jumbotron">
+                  
                     <div>
                       {% if user.is_authenticated %}
                       <a href="{% url 'editProfile' %}"
                       class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
                       <a href="{% url 'login' %}" class="btn btn-login">Log out</a>
-                      <a href="{% url 'login' %}" class="btn btn-login">Profile</a>
-
+                      
+                      
                       {% else %}
                       <a href="{% url 'login' %}" class="btn btn-login">Log in</a>
                       <a href="{% url 'register' %}" class="btn btn-login">Sign up</a>
 
                       {% endif %}
+                      
+                        {% if user.is_authenticated %}
+                        <div>
+                        <h5 class="d-flex justify-content-center white-text">AFTER you edit profile</h5>
+                        <h6 class="d-flex justify-content-center white-text"> You must follow users to see content in the feed</h6>
+                        <a class="d-flex justify-content-center white-text" href="{% url 'showuser' %}">
+                        <h6 class="d-flex justify-content-center white-text">search for friends here</h6>
+                        </a>
+                      </div>
+        {% endif %}
+                      
                    
                   
                 </section>
