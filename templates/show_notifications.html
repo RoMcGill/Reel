@@ -1,0 +1,21 @@
+
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ notifications.count }} notifications
+    </button>
+    {% for notification in notifications %}
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        {% if notification.post%}
+                                        {% if notification.notification_type == 1 %}
+      <a class="dropdown-item" href="#">@{{ notification.from_user }} liked your post</a>
+      {% endif %}
+      {% else %}
+
+      <a class="dropdown-item" href="#">@{{ notification.from_user }} followed your you</a>
+      {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+  

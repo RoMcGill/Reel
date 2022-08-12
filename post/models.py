@@ -1,9 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save, post_delete
+from django.db.models.signals import post_save
+from django.utils import timezone
 from django.utils.text import slugify
 from django.urls import reverse
 import uuid
+
 
 # user files to directory
 def user_directory_path(instance, filename):
@@ -70,4 +72,13 @@ class Likes(models.Model):
 
 post_save.connect(Stream.add_post, sender=Post)
 
-
+class Notification(models.Model):
+    # 1 = like, 2 = comment, 3= follow
+    notification_type = models.IntegerField()
+    to_user = models.ForeignKey(User, related_name='notification_to', on_delete=models.CASCADE, null=True)
+    from_user = models.ForeignKey(User, related_name='notification_from', on_delete=models.CASCADE, null=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='+', blank=True, null=True)
+    follow = models.ForeignKey(Follow, on_delete=models.CASCADE, related_name='+', blank=True, null=True)
+    date = models.DateTimeField(default=timezone.now)
+    user_has_seen = models.BooleanField(default=False)
+    
