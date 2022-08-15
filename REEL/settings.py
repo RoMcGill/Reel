@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'searchbar',
     'cloudinary',
     'cloudinary_storage',
+    'contact',
 ]
 
 MIDDLEWARE = [

@@ -26,6 +26,7 @@ from searchbar import views as search_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('post.urls')),
+    path('contact/', include('contact.urls')),
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name="reelusers/login.html"), name='login'),
     path('logout/', auth_views.LoginView.as_view(template_name="reelusers/logout.html"), name='logout'),
