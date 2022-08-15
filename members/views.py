@@ -16,7 +16,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Welcome To The Reel Comunity {username}')
+            messages.success(request, f'Welcome To The Guess the boozer Comunity, Edit your Profile')
             return redirect('login')
     else:
         form = UserRegisterForm()
@@ -27,6 +27,7 @@ def register(request):
 def login(self, request):
     profile = Profile.objects.get(user__id=user)
     if User.is_authenticated:
+        messages.success(request, f'you are now logged in!')
         return redirect('edit-profile', profile.user.username)
 
 @login_required

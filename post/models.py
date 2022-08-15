@@ -73,7 +73,7 @@ class Likes(models.Model):
 post_save.connect(Stream.add_post, sender=Post)
 
 class Notification(models.Model):
-    # 1 = like, 2 = comment, 3= follow
+    # 1 = like, 3= follow
     notification_type = models.IntegerField()
     to_user = models.ForeignKey(User, related_name='notification_to', on_delete=models.CASCADE, null=True)
     from_user = models.ForeignKey(User, related_name='notification_from', on_delete=models.CASCADE, null=True)

@@ -10,11 +10,11 @@ class editProfileForm(forms.ModelForm):
     last_name = forms.CharField(widget=forms.TextInput(attrs={'class': 'input', 'placeholder': 'Last Name'}), required=True),
     Location = forms.CharField(widget=forms.TextInput(attrs={'class': 'input', 'placeholder': 'Location'}), required=True),
     # url = forms.CharField(widget=forms.TextInput(attrs={'class': 'input', 'placeholder': 'URL'}), required=True),
-    bio = forms.CharField(widget=forms.TextInput(attrs={'class': 'input', 'placeholder': 'Bio'}), required=True)
+    profile_info = forms.CharField(widget=forms.TextInput(attrs={'class': 'input', 'placeholder': 'profile_info'}), required=True)
     
     class Meta:
         model = Profile
-        fields = ['picture', 'first_name', 'last_name', 'location', 'url', 'bio']
+        fields = ['picture', 'first_name', 'last_name', 'location', 'url', 'profile_info']
 
 
 class UserRegisterForm(UserCreationForm):

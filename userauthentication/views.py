@@ -82,7 +82,7 @@ def editProfile(request):
             profile.first_name = form.cleaned_data.get('first_name')
             profile.last_name = form.cleaned_data.get('last_name')
             profile.location = form.cleaned_data.get('location')
-            profile.bio = form.cleaned_data.get('bio')
+            profile.profile_info = form.cleaned_data.get('profile_info')
             # profile.url = form.cleaned_data.get('url')
             profile.save()
             return redirect('profile', profile.user.username)

@@ -3,227 +3,202 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reel</title>
-    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lato:ital,wght@1,300&family=Oswald:wght@300&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'assets/styles.css' %}">
-    <style>
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 48
-        }
-        </style>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reel</title>
+  <link rel="stylesheet"
+    href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Lato:ital,wght@1,300&family=Oswald:wght@300&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'assets/styles.css' %}">
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL'0,
+        'wght'400,
+        'GRAD'0,
+        'opsz'48
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
 </head>
+
 <body>
- <!--Nav bar-->
- <div class="container-fluid nav-container">
-  <nav class="navbar navbar-light bg-light navbar-expand-sm">
+  <!--Nav bar-->
+  <div class="container-fluid nav-container">
+    <nav class="navbar navbar-light bg-light navbar-expand-sm">
       <a href="/" class="navbar-brand">Reels</a>
       <div class="fixed-top ml-auto">
-          <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-light p-4 text-center">
-                <h2 class="text-mr-auto">Reel</h2>
-              <ul class="navbar-nav mr-auto">
-                  <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
-                  <li class="nav-item mr-2"><a class="nav-link" href="/About">About</a></li>
-              </ul>
-            </div>
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-light p-4 text-center">
+            <h2 class="text-mr-auto">Reel</h2>
+            <ul class="navbar-nav mr-auto">
+              <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
+              <li class="nav-item mr-2"><a class="nav-link" href="/About">About</a></li>
+            </ul>
           </div>
-          <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </nav>
         </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
 
       <ul class="navbar-nav mr-auto">
-          <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
-          <li class="nav-item mr-2"><a class="nav-link" href="/About">About</a></li>
-          <li class="nav-item mr-2"><a class="nav-link" href="/post-detail.html">Feed</a></li>
-          <li class="nav-item mr-2"><a class="nav-link" href="/profile.html">Profile</a></li>
-          <li class="nav-item mr-2"><a class="nav-link" href="./templates/base.html">base()</a></li>
-          <li class="nav-item mr-2"><a class="nav-link" href="./templates/login.html">login()</a></li>
+        <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item mr-2"><a class="nav-link" href="/About">About</a></li>
+        <li class="nav-item mr-2"><a class="nav-link" href="/post-detail.html">Feed</a></li>
+        <li class="nav-item mr-2"><a class="nav-link" href="/profile.html">Profile</a></li>
+        <li class="nav-item mr-2"><a class="nav-link" href="./templates/base.html">base()</a></li>
+        <li class="nav-item mr-2"><a class="nav-link" href="./templates/login.html">login()</a></li>
       </ul>
-  </nav>
-  <div class ="container mt-3">
+    </nav>
+    <div class="container mt-3">
       <div class="row">
-          <div class="col-12">
-              
-          </div>
+        <div class="col-12">
+
+        </div>
       </div>
+    </div>
   </div>
-  </div>
- {% block content %}
+  {% block content %}
   <!--post-->
-{% for post in post_items %}
+  {% for post in post_items %}
   <div class="card responsive" style="width: 70%; height: 45%;">
-    <a href="{% url 'post-detail' post.id %}"><img class="img-responsive" style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}" alt="Card image cap"></a>
+    <a href="{% url 'post-detail' post.id %}"><img class="img-responsive"
+        style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}" alt="Card image cap"></a>
     <div class="card-body">
-      <a href="{% url 'profile' post.user %}"><h5 class="card-title">@{{ post.user.username }} </h5></a>
+      <a href="{% url 'profile' post.user %}">
+        <h5 class="card-title">@{{ post.user.username }} </h5>
+      </a>
       <a href="{% url 'post-detail' post.id %}">View Post/Comments</a>
       <p class="card-text">{{ post.caption }}</p>
     </div>
     <a href="{% url 'like' post.id %}"><span>{{ post.likes}} Likes</span></a>
-    <p class ="hashtag">{% for tag in post.tag.all %}<a href="{{tag.get_absolute_url}}">#{{ tag }} </a>{% endfor %}</p>
+    <p class="hashtag">{% for tag in post.tag.all %}<a href="{{tag.get_absolute_url}}">#{{ tag }} </a>{% endfor %}</p>
     <!--<ul class="list-group list-group-flush">
       <li class="list-group-item">biggest Catch: </li>
       <li class="list-group-item">Favorite location: </li>
       <li class="list-group-item">years Fishing: </li>
     </ul> -->
-    
+
     <div class="card-body">
       <a href="{% url 'favourite-post' post.id %}" class="card-link">Add To Favourites</a>
       <a href="#" class="card-link">Post details</a>
     </div>
   </div>
-    <!-- Modal -->
-    
-<!--modal-->
-{% endfor %}
+  <!-- Modal -->
+
+  <!--modal-->
+  {% endfor %}
   <!--post-->
-        <!--callout-->
-    <div class="container-fluid callout-container">
-        <div class="row"></div>
-            <div class="col-12"></div>
-                <section class ="callout-jumbotron">
-                  
-                    <div>
-                      {% if user.is_authenticated %}
-                      <a href="{% url 'editProfile' %}"
-                      class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
-                      <a href="{% url 'login' %}" class="btn btn-login">Log out</a>
-                      
-                      
-                      {% else %}
-                      <a href="{% url 'login' %}" class="btn btn-login">Log in</a>
-                      <a href="{% url 'register' %}" class="btn btn-login">Sign up</a>
+  <!--callout-->
+  <div class="container-fluid callout-container">
+    <div class="row"></div>
+    <div class="col-12"></div>
+    <section class="callout-jumbotron">
 
-                      {% endif %}
-                      
-                        {% if user.is_authenticated %}
-                        <div>
-                        <h5 class="d-flex justify-content-center white-text">AFTER you edit profile</h5>
-                        <h6 class="d-flex justify-content-center white-text"> You must follow users to see content in the feed</h6>
-                        <a class="d-flex justify-content-center white-text" href="{% url 'showuser' %}">
-                        <h6 class="d-flex justify-content-center white-text">search for friends here</h6>
-                        </a>
-                      </div>
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'editProfile' %}" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
+        <a href="{% url 'login' %}" class="btn btn-login">Log out</a>
+
+
+        {% else %}
+        <a href="{% url 'login' %}" class="btn btn-login">Log in</a>
+        <a href="{% url 'register' %}" class="btn btn-login">Sign up</a>
+
         {% endif %}
-                      
-                   
-                  
-                </section>
-            </div>
-        </div>
-        <!--callout-->
-    </div>
 
-        <!--quotes-->
-        <div class="container-fluid quotes-container opaque-overlay">
-        <section class ="quotes">
-            <div class="row">
-                <div class="col-12 my-5">
-                    <h2 class ="text-uppercase text-center">Quotes:</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="media">
-                        <img src="{% static '/assets/images/1.png' %}" alt="fisherman" class="rounded-circle mr-3" height=100 width=100>
-                    <div class="media-body">
-                    <blockquote class="blockquote">
-                        <p>
-                            I have learned more in 2 months on Reel than my previous 5 years fishing.<br>- Fisherman Tom</p>
-                    </blockquote>
-                </div>
-            </div>
+        {% if user.is_authenticated %}
+        <div>
+          <h5 class="d-flex justify-content-center white-text">AFTER you edit profile</h5>
+          <h6 class="d-flex justify-content-center white-text"> You must follow users to see content in the feed</h6>
+          <a class="d-flex justify-content-center white-text" href="{% url 'showuser' %}">
+            <h6 class="d-flex justify-content-center white-text">search for friends here</h6>
+          </a>
         </div>
-        <div class="row">
-            <div class="col-12">
-            </div>
+        {% endif %}
+
+
+
+    </section>
+  </div>
+  </div>
+  <!--callout-->
+  </div>
+
+  <!--quotes-->
+  
+      <!--quotes-->
+    </section>
+  </div>
+  <!--features-->
+  <div class="container-fluid features-container">
+    <section clas="features">
+      <div class="row">
+        <div class="col-12 my-5 text-center">
+          <h2>Features:</h2>
         </div>
-                <div class="col-12 col-md-6">
-                    <div class="media">
-                        <img src="{% static '/assets/images/2.png' %}" alt="fisherman" class="rounded-circle mr-3" height=100 width=100>
-                    <div class="media-body">
-                        <blockquote class="blockquote">
-                            <p>Found the best spots using this app<br>- Fisherman Fred</p>
-                        </blockquote>
-                </div>
-            </div>
-        </div>
-        </div>
-            <!--quotes-->
-        </section>
-    </div>
-         <!--features-->
-         <div class="container-fluid features-container">
-         <section clas="features">
-             <div class="row">
-                <div class="col-12 my-5 text-center">
-                    <h2>Features:</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-4 mt-3">
-                    <div class="feature text-center">
-                        <span class="material-symbols-outlined">
-                            login
-                            </span>    
-                    <h3>feature 1 <span class="badge badge-success">NEW!</span></h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam fugiat id maiores sit porro reprehenderit fuga commodi laudantium obcaecati odio quae eveniet, recusandae minima asperiores. Odit facere quas nemo adipisci.</p>
-                    <button class ="btn btn-light btn-sm">Read More</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mt-3">
-                    <div class="feature  text-center">
-                        <span class="material-symbols-outlined">
-                            add_reaction
-                            </span>
-                        <h3>feature 2</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam fugiat id maiores sit porro reprehenderit fuga commodi laudantium obcaecati odio quae eveniet, recusandae minima asperiores. Odit facere quas nemo adipisci.</p>
-                        <button class ="btn btn-light btn-sm">Read More</button>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 mt-3">
-                    <div class="feature text-center">
-                        <span class="material-symbols-outlined">
-                            add_business
-                            </span>
-                        <h3>feature 3</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam fugiat id maiores sit porro reprehenderit fuga commodi laudantium obcaecati odio quae eveniet, recusandae minima asperiores. Odit facere quas nemo adipisci.</p>
-                        <button class ="btn btn-light btn-sm">Read More</button>
-                    </div>
-                </div>
-            </div>
-         </section>
-         <!--features-->
-    </div>
-</div>
-<!-- Modal -->
-<div class="modal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Sign Up/Sign In</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
-      <div class="modal-body">
-        <form>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mt-3">
+          <div class="feature text-center">
+            <span class="material-symbols-outlined">
+              login
+            </span>
+            <h3>Create your account!<span class="badge badge-success">NEW!</span></h3>
+            <p>create your account and edit your profile</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mt-3">
+          <div class="feature  text-center">
+            <span class="material-symbols-outlined">
+              add_reaction
+            </span>
+            <h3>Find Friends</h3>
+            <p>Find your friends and Guess where they are based on the images they post.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mt-3">
+          <div class="feature text-center">
+            <span class="material-symbols-outlined">
+              add_business
+            </span>
+            <h3>Create posts</h3>
+            <p>Upload photos of where you are and see if any friends or other users can Guess </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--features-->
+  </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sign Up/Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
             <div class="form-group row">
               <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
@@ -241,7 +216,8 @@
                 <legend class="col-form-label col-sm-2 pt-0">Select One:</legend>
                 <div class="col-sm-10">
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
+                      checked>
                     <label class="form-check-label" for="gridRadios1">
                       Sign In
                     </label>
@@ -272,14 +248,20 @@
               </div>
             </div>
           </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> 
-{% endblock content %}
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+  </script>
+  {% endblock content %}

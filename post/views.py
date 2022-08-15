@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from django.contrib import messages
 from post.models import Tag, Stream, Follow, Post, Likes
 from django.http import HttpResponseRedirect
 from post.forms import NewPostForm
 from userauthentication.models import Profile
 from comment.models import Comment
 from comment.forms import CommentForm
+from django.contrib.auth.models import User
+from userauthentication.models import Profile
+from members.models import displayusername
 
 
 
@@ -42,6 +46,7 @@ def NewPost(request):
             p, created = Post.objects.get_or_create(picture=picture, caption=caption, user_id=user)
             p.tag.set(tags_objs)
             p.save()
+            messages.success(request, f'you created a Post')
             return redirect('profile', profile.user.username)
     else:
         form = NewPostForm()
@@ -98,9 +103,12 @@ def like(request, post_id):
     if not liked:
         Likes.objects.create(user=user, post=post)
         current_likes = current_likes + 1
+        messages.success(request, f'you liked a Post')
+        
     else:
         Likes.objects.filter(user=user, post=post).delete()
         current_likes = current_likes - 1
+        messages.success(request, f'you unliked a Post')
         
     post.likes = current_likes
     post.save()
