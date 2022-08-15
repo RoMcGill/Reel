@@ -1,17 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.contrib import messages
-from post.models import Tag, Stream, Follow, Post, Likes
+from post.models import Tag, Stream, Post, Likes
 from django.http import HttpResponseRedirect
 from post.forms import NewPostForm
 from userauthentication.models import Profile
 from comment.models import Comment
 from comment.forms import CommentForm
-from django.contrib.auth.models import User
 from userauthentication.models import Profile
-from members.models import displayusername
-
 
 
 def index(request):
@@ -31,7 +27,7 @@ def NewPost(request):
     user = request.user.id
     tags_objs = []
     profile = Profile.objects.get(user__id=user)
-    
+
     if request.method == "POST":
         form = NewPostForm(request.POST, request.FILES)
         if form.is_valid():
@@ -46,7 +42,7 @@ def NewPost(request):
             p, created = Post.objects.get_or_create(picture=picture, caption=caption, user_id=user)
             p.tag.set(tags_objs)
             p.save()
-            messages.success(request, f'you created a Post')
+            messages.success(request, 'you created a Post')
             return redirect('profile', profile.user.username)
     else:
         form = NewPostForm()
@@ -70,11 +66,11 @@ def PostDetail(request, post_id):
             comment.post = post
             comment.user = request.user
             comment.save()
-       
+
         return HttpResponseRedirect(reverse("post-detail", args=[post_id]))
     else:
         form = CommentForm()
- 
+
     context = {
         'form': form,
         'comments': comments,
@@ -103,13 +99,13 @@ def like(request, post_id):
     if not liked:
         Likes.objects.create(user=user, post=post)
         current_likes = current_likes + 1
-        messages.success(request, f'you liked a Post')
-        
+        messages.success(request, 'you liked a Post')
+
     else:
         Likes.objects.filter(user=user, post=post).delete()
         current_likes = current_likes - 1
-        messages.success(request, f'you unliked a Post')
-        
+        messages.success(request, 'you unliked a Post')
+
     post.likes = current_likes
     post.save()
     return HttpResponseRedirect(reverse('post-detail', args=[post_id]))
@@ -124,5 +120,3 @@ def favourite(request, post_id):
     else:
         profile.favourite.add(post)
     return HttpResponseRedirect(reverse('post-detail', args=[post_id]))
-
-

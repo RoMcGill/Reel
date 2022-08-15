@@ -11,7 +11,7 @@ class editProfileForm(forms.ModelForm):
     Location = forms.CharField(widget=forms.TextInput(attrs={'class': 'input', 'placeholder': 'Location'}), required=True),
     # url = forms.CharField(widget=forms.TextInput(attrs={'class': 'input', 'placeholder': 'URL'}), required=True),
     profile_info = forms.CharField(widget=forms.TextInput(attrs={'class': 'input', 'placeholder': 'profile_info'}), required=True)
-    
+
     class Meta:
         model = Profile
         fields = ['picture', 'first_name', 'last_name', 'location', 'url', 'profile_info']

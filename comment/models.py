@@ -17,6 +17,7 @@ class Comment(models.Model):
         post = comment.post
         sender = comment.user
         
-
 post_save.connect(Comment.user_comment_post, sender=Comment)
+
+
 

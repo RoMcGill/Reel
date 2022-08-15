@@ -5,11 +5,9 @@ from django.core.paginator import Paginator
 from django.urls import resolve, reverse
 from userauthentication.models import Profile
 from post.models import Post, Follow, Stream
-from .forms import editProfileForm, UserRegisterForm
-from django.contrib.auth import authenticate, login, logout
+from .forms import editProfileForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.core.exceptions import ObjectDoesNotExist
 
 
 @login_required
@@ -65,9 +63,11 @@ def follow(request, username, option):
                 for post in posts:
                     stream = Stream(post=post, user=request.user, date=post.posted, following=following)
                     stream.save()
+        messages.success(request, 'you have followed another user')
         return HttpResponseRedirect(reverse('profile', args=[username]))
 
     except User.DoesNotExist:
+        messages.success(request, 'this user does not exist')
         return HttpResponseRedirect(reverse('profile', args=[username]))
 
 
@@ -85,7 +85,9 @@ def editProfile(request):
             profile.profile_info = form.cleaned_data.get('profile_info')
             # profile.url = form.cleaned_data.get('url')
             profile.save()
+            messages.success(request, 'you have updated your profile')
             return redirect('profile', profile.user.username)
+            
     else:
         form = editProfileForm(instance=request.user.profile)
     context = {
@@ -109,7 +111,6 @@ def editProfile(request):
 #             login(request, new_user)
 #             # return redirect('editProfile')
 #             return redirect('index')
-            
 
 
 #     elif request.user.is_authenticated:
@@ -120,5 +121,4 @@ def editProfile(request):
 #         'form': form,
 #     }
 #     return render(request, 'sign-up.html', context)    
-
 

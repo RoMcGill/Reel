@@ -21,7 +21,7 @@ class Tag(models.Model):
         verbose_name_plural = 'Tags'
 
     def get_absolute_url(self):
-       return reverse('tags', args=[self.slug])
+        return reverse('tags', args=[self.slug])
 
     def __str__(self):
         return self.title
@@ -30,6 +30,7 @@ class Tag(models.Model):
         if not self.slug:
             self.slug - slugify(self.slug)
         return super().save(*args, **kwargs)
+
 
 class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=True)
@@ -48,8 +49,9 @@ class Post(models.Model):
 
 
 class Follow(models.Model):
-    follower = models.ForeignKey(User, on_delete=models.CASCADE,related_name="follower")
+    follower = models.ForeignKey(User, on_delete=models.CASCADE, related_name="follower")
     following = models.ForeignKey(User, on_delete=models.CASCADE, related_name="following")
+
 
 class Stream(models.Model):
     following = models.ForeignKey(User, on_delete=models.CASCADE, related_name="stream_following")
@@ -65,12 +67,14 @@ class Stream(models.Model):
             stream = Stream(post=post, user=follower.follower, date=post.posted, following=user)
             stream.save()
 
+
 class Likes(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='post_likes')
 
 
 post_save.connect(Stream.add_post, sender=Post)
+
 
 class Notification(models.Model):
     # 1 = like, 3= follow
@@ -81,4 +85,3 @@ class Notification(models.Model):
     follow = models.ForeignKey(Follow, on_delete=models.CASCADE, related_name='+', blank=True, null=True)
     date = models.DateTimeField(default=timezone.now)
     user_has_seen = models.BooleanField(default=False)
-    
