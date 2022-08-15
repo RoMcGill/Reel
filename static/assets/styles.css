@@ -106,3 +106,9 @@ a { color: inherit;
 .img-pb{
     padding-bottom: 30px;
 }
+
+.post-block{
+    padding-bottom: 30px;
+    background-color: wheat;
+    
+}

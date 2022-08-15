@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+
+{% for BlogPost in BlogPosts %}
+<div class="post-block">
+    <h2 class="subtitle">{{ BlogPost.title }}</h2>
+        <p>{{ BlogPost.intro }}</p>
+            <h3>{{ BlogPost.body }}</h3>
+                <small>Posted at {{ BlogPost.date_added }}</small>
+                <br>
+                
+</div>
+<br>
+
+{% endfor %}
+
+{% endblock content %}
