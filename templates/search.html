@@ -4,57 +4,61 @@
 {% block content %}
 
 <body>
-  
-    
-    <div class="d-flex">
-      <div class="form-data list-inline mx-auto justify-content-center">
-        
-        <form action="" method="GET">
-            <div class="search list-inline mx-auto justify-content-center">
-                <input type="text" placeholder="Search" name="q" value="{{ request.GET.q }}">
-                <button class="btn btn-primary" type="submit">Search</button>
-                
-            </div>
-        </form>
 
-        <form action="" method="POST" enctype="multipart/form-data">
-          <div class="logo">
-            <h3 style="padding-top: 5px; font-size: 20px;">Search Results</h3>
-          </div>
+
+  <div class="d-flex">
+    <div class="form-data list-inline mx-auto justify-content-center">
+
+      <form action="" method="GET">
+        <div class="search list-inline mx-auto justify-content-center">
+          <input type="text" placeholder="Search" name="q" value="{{ request.GET.q }}">
+          <button class="btn btn-primary" type="submit">Search</button>
+
+        </div>
+      </form>
+
+      <form action="" method="POST" enctype="multipart/form-data">
+        <div class="logo">
+          <h3 style="padding-top: 5px; font-size: 20px;">Search Results</h3>
+        </div>
 
         {% for user in users %}
         <div class="card" style="width: 20rem;">
-            <div class="" style="text-align: start; border: solid rgba(192, 192, 192, 0.514) 1px; border-radius: 25px;">
-                <a href="{% url 'profile' user.username %}" class="side-menu__user-avatar">
-                    {% if user.profile.image.url %}
-                    <img src="{{ user.profile.image.url }}" alt="User Picture" style="width: 20rem;  border-radius: 25px; padding: 5px;">
-                    {% else %}
-                    <img src="{% static '' %}" alt="User Picture">
+          <div class="" style="text-align: start; border: solid rgba(192, 192, 192, 0.514) 1px; border-radius: 25px;">
+            <a href="{% url 'profile' user.username %}" class="side-menu__user-avatar">
+              {% if user.profile.image.url %}
+              <img src="{{ user.profile.image.url }}" alt="User Picture"
+                style="width: 20rem;  border-radius: 25px; padding: 5px;">
+              {% else %}
+              <img src="{% static '' %}" alt="User Picture">
 
-                    {% endif %}
-                </a>
-                <div class="">
-                    {% if user.profile.first_name %}
-                    <a href="{% url 'profile' user.username %}" style="font-size: 15px; color: black; text-align: center;">{{user.profile.first_name|title }} {{user.profile.last_name|title }}</a>
-                    {% else%}
-                    <a href="{% url 'profile' user.username %}">profile not found</a>
+              {% endif %}
+            </a>
+            <div class="">
+              {% if user.profile.first_name %}
+              <a href="{% url 'profile' user.username %}"
+                style="font-size: 15px; color: black; text-align: center;">{{user.profile.first_name|title }}
+                {{user.profile.last_name|title }}</a>
+              {% else%}
+              <a href="{% url 'profile' user.username %}">profile not found</a>
 
-                    {% endif %}
-                    <br>
-                    <span style="font-size: 14px;">@{{user.username}}</span>
-                    <br>
-                    <a href="{% url 'profile' user.username %}" style="color: blue;" class="side-menu__user-button">View Profile</a>
+              {% endif %}
+              <br>
+              <span style="font-size: 14px;">@{{user.username}}</span>
+              <br>
+              <a href="{% url 'profile' user.username %}" style="color: blue;" class="side-menu__user-button">View
+                Profile</a>
 
-                </div>
             </div>
           </div>
-            <!-- <hr> -->
+        </div>
+        <!-- <hr> -->
         {% endfor %}
-        
-          
-        </form>
-        
-      </div>
-    </div>
 
-{% endblock content %}
+
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock content %}

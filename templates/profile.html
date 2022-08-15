@@ -11,24 +11,21 @@
 
                     <div class="profile mr-3">
                         {% if profile.user == request.user %}
-                        <a href="{% url 'editProfile' %}"
-                        class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
+                        <a href="{% url 'editProfile' %}" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
                         {% endif %}
                         {% if profile.user != request.user %}
 
                         {% if follow_status == True %}
                         <a href="{% url 'follow' profile.user 0 %}"
-                        class="btn btn-outline-dark btn-sm btn-block">Unfollow</a>
+                            class="btn btn-outline-dark btn-sm btn-block">Unfollow</a>
                         {% else %}
 
                         <a href="{% url 'follow' profile.user 1 %}"
-                        class="btn btn-outline-dark btn-sm btn-block">Follow</a>
+                            class="btn btn-outline-dark btn-sm btn-block">Follow</a>
                         {% endif %}
 
                         {% endif %}
-                        <img
-                            src= "{{profile.image.url}}"
-                            alt="..." width="130" class="rounded mb-5 img-thumbnail"></div>
+                        <img src="{{profile.image.url}}" alt="..." width="130" class="rounded mb-5 img-thumbnail"></div>
                     <div class="media-body mb-5 text-white">
                         <h4 class="mt-0 mb-0">{{profile.first_name|title}} {{profile.last_name|title}}</h4>
                         <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>@{{profile.user.username}}</p>
@@ -45,72 +42,81 @@
                                 class="fas fa-image mr-1"></i>Posts</small>
                     </li>
                     <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">{{ followers_count }}</h5><small class="text-muted"> <i
-                                class="fas fa-user mr-1"></i>Followers</small>
+                        <h5 class="font-weight-bold mb-0 d-block">{{ followers_count }}</h5><small class="text-muted">
+                            <i class="fas fa-user mr-1"></i>Followers</small>
                     </li>
                     <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">{{ following_count }}</h5><small class="text-muted"> <i
-                                class="fas fa-user mr-1"></i>Following</small>
+                        <h5 class="font-weight-bold mb-0 d-block">{{ following_count }}</h5><small class="text-muted">
+                            <i class="fas fa-user mr-1"></i>Following</small>
                     </li>
                     {% if url_name == "profile" %}
                     <li class="list-inline-item">
-                        <button class="btn btn-outline-success btn-sm"> <a href="{% url 'profile' profile.user %}" class="fas fa-user mr-1">Posts</a></button>
+                        <button class="btn btn-outline-success btn-sm"> <a href="{% url 'profile' profile.user %}"
+                                class="fas fa-user mr-1">Posts</a></button>
                     </li>
                     {% else %}
                     <li class="list-inline-item">
-                        <button class="text-muted"> <a href="{% url 'profile' profile.user %}" class="fas fa-user mr-1">Posts</a></button>
+                        <button class="text-muted"> <a href="{% url 'profile' profile.user %}"
+                                class="fas fa-user mr-1">Posts</a></button>
                     </li>
                     {% endif %}
-                    
+
                     {% if url_name == "favourite" %}
                     <li class="list-inline-item">
-                        <button class="btn btn-outline-success btn-sm" > <a href="{% url 'favourite' profile.user %}" class="fas fa-user mr-1">Favourites</a></button>
+                        <button class="btn btn-outline-success btn-sm"> <a href="{% url 'favourite' profile.user %}"
+                                class="fas fa-user mr-1">Favourites</a></button>
                     </li>
                     {% else %}
                     <li class="list-inline-item">
-                        <button class="text-muted"> <a href="{% url 'favourite' profile.user %}" class="fas fa-user mr-1">Favourites</a></button>
+                        <button class="text-muted"> <a href="{% url 'favourite' profile.user %}"
+                                class="fas fa-user mr-1">Favourites</a></button>
                     </li>
                     {% endif %}
-                    
+
                 </ul>
             </div>
             <div class="px-4 py-3">
                 <h5 class="mb-0">About</h5>
                 <div class="p-4 rounded shadow-sm bg-light">
                     <p class="font-italic mb-0">{{profile.profile_info}} </p>
-                    
+
                 </div>
             </div>
-                <div class="px-4 py-3">
-                    <h5 class="mb-0">Posts</h5>
-                    {% if profile.user == request.user %}
-                    <button class="btn-outline-success"><a href="{% url 'newpost' %}">add post</a></button>
-                    {% endif %}
-                    <div class="p-4 rounded shadow-sm bg-light">
+            <div class="px-4 py-3">
+                <h5 class="mb-0">Posts</h5>
+                {% if profile.user == request.user %}
+                <button class="btn-outline-success"><a href="{% url 'newpost' %}">add post</a></button>
+                {% endif %}
+                <div class="p-4 rounded shadow-sm bg-light">
                     {% for post in posts %}
                     <div class="card" style="width: 18rem;">
-                        <a href="{% url 'post-detail' post.id %}"><img class="card-img-top" style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}" alt="post picture"></a>
+                        <a href="{% url 'post-detail' post.id %}"><img class="card-img-top"
+                                style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}"
+                                alt="post picture"></a>
                         <div class="card-body">
-                          <a href="{% url 'profile' post.user %}"><h5 class="card-title">@{{ post.user.username }} </h5></a>
-                          <p class="card-text">{{post.caption}}</p>
+                            <a href="{% url 'profile' post.user %}">
+                                <h5 class="card-title">@{{ post.user.username }} </h5>
+                            </a>
+                            <p class="card-text">{{post.caption}}</p>
                         </div>
                         <span class="post__date-time">{{post.posted|date:"d M,Y"}}</span>
                         <a href="{% url 'like' post.id %}"><span>{{ post.likes}} Likes</span></a>
-    <p class ="hashtag">{% for tag in post.tag.all %}<a href="{{tag.get_absolute_url}}">#{{ tag }} </a>{% endfor %}</p>
+                        <p class="hashtag">{% for tag in post.tag.all %}<a href="{{tag.get_absolute_url}}">#{{ tag }}
+                            </a>{% endfor %}</p>
                         <a href="{% url 'post-detail' post.id %}">View Post/Comments</a>
-                      </div>
-                      <br>
-                    {% endfor %}
-                        
-            
                     </div>
-                
-                <br>
+                    <br>
+                    {% endfor %}
+
+
                 </div>
-              </div>
+
+                <br>
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 
 
