@@ -7,6 +7,6 @@ class Contact(models.Model):
     subject = models.TextField()
     message = models.TextField()
     def __str__(self):
-        return self.name
+        return self.subject + " - " + self.email
 
 # Create your models here.

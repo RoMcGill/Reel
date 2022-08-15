@@ -51,6 +51,8 @@ class Post(models.Model):
 class Follow(models.Model):
     follower = models.ForeignKey(User, on_delete=models.CASCADE, related_name="follower")
     following = models.ForeignKey(User, on_delete=models.CASCADE, related_name="following")
+    def __str__(self):
+        return self.follower, " is now following ", self.following
 
 
 class Stream(models.Model):
@@ -58,6 +60,8 @@ class Stream(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="stream_user")
     post = models.ForeignKey(Post, on_delete=models.CASCADE, null=True)
     date = models.DateTimeField()
+    def __str__(self):
+        return self.user, " posted ", self.post
 
     def add_post(sender, instance, *args, **kwargs):
         post = instance
@@ -71,6 +75,9 @@ class Stream(models.Model):
 class Likes(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='post_likes')
+    def __str__(self):
+        return self.user, " Likes ", self.post
+    
 
 
 post_save.connect(Stream.add_post, sender=Post)

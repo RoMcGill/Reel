@@ -43,6 +43,13 @@ urlpatterns = [
     path('<username>/searchbar/', search_views.SearchBar, name='SearchBar'),
 ]
 
+# django admin customization
+
+admin.site.site_header = "admin for Guess The Boozer"
+admin.site.site_title = "guess The Boozer"
+admin.site.index_title = "guess The Boozer"
+
+
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

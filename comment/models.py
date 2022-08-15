@@ -11,6 +11,9 @@ class Comment(models.Model):
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.user, " - ", self.body
+
 
     def user_comment_post(sender, instance, *args, **kwargs):
         comment = instance
