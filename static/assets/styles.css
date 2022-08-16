@@ -112,3 +112,8 @@ a { color: inherit;
     background-color: wheat;
     
 }
+
+.blog-img-size{
+    height: 50%;
+    width: 50%;
+}

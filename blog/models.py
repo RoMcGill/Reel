@@ -7,6 +7,7 @@ class BlogPost(models.Model):
     intro = models.TextField()
     body = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
+    picture = models.ImageField(verbose_name="Picture", null=True)
 
     class Meta:
         ordering = ['-date_added']
