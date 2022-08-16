@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+
+<div class="container">
+    <h1 class="title">Notifications</h1>
+
+    {% if not notifications %}
+    No Notifications
+    {% endif %}
+
+    {% for notification in notifications.all %}
+     <div class="notification">
+        <p>
+            #{#%# if notification.notification_type == 'comment' #%#}#
+            <a href="{% url 'notifications' %}?goto=view_aplication&notification={{ notification.id }}&extra_id={{notification.extra_id}}">
+                <strong>{{ notification.created_by.username}}</strong> commented on your post
+                <small>{{ notification.created_at|timesince}} ago</small>
+            </a>
+            #{#%# elif notification.notification_type == 'follow' #%#}#
+            <a href="{% url 'notifications' %}?goto=view_aplication&notification={{ notification.id }}&extra_id={{notification.extra_id}}">
+                <strong>{{ notification.created_by.username}}</strong> followed you
+                <small>{{ notification.created_at|timesince}} ago</small>
+            </a>
+
+            #{#%# endif #%#}#
+        </p>
+     </div>
+
+    {% endfor %}
+</div>
+
+{% endblock content %}

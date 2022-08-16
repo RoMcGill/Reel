@@ -8,6 +8,7 @@ from post.models import Post, Follow, Stream
 from .forms import editProfileForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+#from notify.utilities import create_notification
 
 
 @login_required
@@ -57,6 +58,7 @@ def follow(request, username, option):
         if int(option) == 0:
             f.delete()
             Stream.objects.filter(following=following, user=request.user).all().delete()
+            messages.success(request, 'you have followed another user')
         else:
             posts = Post.objects.all().filter(user=following)[:25]
             with transaction.atomic():
@@ -64,6 +66,9 @@ def follow(request, username, option):
                     stream = Stream(post=post, user=request.user, date=post.posted, following=following)
                     stream.save()
         messages.success(request, 'you have followed another user')
+        #### notifications (bug) ######
+        #create_notification(request, follow.stream, 'follow', extra_id=follow.id)
+        #### notifications (bug) ######
         return HttpResponseRedirect(reverse('profile', args=[username]))
 
     except User.DoesNotExist:

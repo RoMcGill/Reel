@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'contact',
     'blog',
+    'notify',
 ]
 
 MIDDLEWARE = [
@@ -81,10 +82,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'notify.context_processor.notifications'
             ],
-            'builtins':  [
-                'post.templatetags.custom_tags',
-            ]
+           
         },
     },
 ]

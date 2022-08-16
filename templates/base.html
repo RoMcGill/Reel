@@ -1,5 +1,5 @@
 {% load static %}
-{% load custom_tags %}
+
 
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=526, user-scalable=1">
-  <title>Reel</title>
+  <title>Guess The Boozer</title>
   <link rel="stylesheet"
     href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,6 +69,7 @@
             <h6>Blog</h6>
           </a>
         </div>
+      </div>
 
 
         {% else %}
@@ -78,7 +79,16 @@
 
         {% endif %}
 
-      </div>
+
+        {% if user.is_authenticated %}
+<div class="nav-item">
+  <a href="{% url 'notifications' %}" class="nav-item">notifications ({{ notifications.count }})</a>
+</div>
+
+        {% endif %}
+      
+
+
 
       {% if user.profile.image %}
       <ul class="navbar-nav flex-row">
@@ -107,23 +117,10 @@
           <!-- Left elements -->
 
 
-          <!-- Right elements -->
-          <!-- {% if user.is_authenticated %}
-    
-   
-   <span>{% show_notifications %}
-    {% for notification in notifications %}
-    
-    <span>{% if notification.post%}
-      @{{ notification.from_user }} liked your post
-    </span>
-    {% else %}
-    @{{ notification.from_user }} followed your you</span>
-    {% endif %}
-    {% endfor %}
+
   
           
-    {% endif %} 
+ 
   -->
           <!-- Right elements -->
     </div>

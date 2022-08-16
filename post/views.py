@@ -8,6 +8,7 @@ from userauthentication.models import Profile
 from comment.models import Comment
 from comment.forms import CommentForm
 from userauthentication.models import Profile
+from notify.utilities import create_notification
 
 
 def index(request):
@@ -66,7 +67,10 @@ def PostDetail(request, post_id):
             comment.post = post
             comment.user = request.user
             comment.save()
-
+            messages.success(request, 'you have commented on a users post')
+            #### notifications (bug) ######
+            #create_notification(request, comment.post, 'comment.user', extra_id=comment.id)
+            #### notifications (bug) ######
         return HttpResponseRedirect(reverse("post-detail", args=[post_id]))
     else:
         form = CommentForm()
