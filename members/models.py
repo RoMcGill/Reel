@@ -1,5 +1,11 @@
+"""
+imports
+"""
 from django.db import models
 
+
 class displayusername(models.Model):
-    username=models.CharField(max_length=100)
-    
+    """
+    class to create users username model
+    """
+    username = models.CharField(max_length=100)

@@ -1,16 +1,12 @@
-*
-{
+* {
     padding: 0;
 }
 
+.features-container {}
 
-.features-container{
-
-}
-
-.callout-container{
+.callout-container {
     height: 100vh;
-    background:url(/images/3.jpeg) no-repeat center center ;
+    background: url(/images/3.jpeg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -19,31 +15,24 @@
     padding-top: 140px;
     padding-right: 50px;
     color: darkolivegreen;
-
-    
-
 }
 
-.callout-jumbotron{
+.callout-jumbotron {}
 
-
-}
-.jumbotron-header{
+.jumbotron-header {
     background-color: transparent;
 
 }
 
-.quotes-container{
+.quotes-container {
     background-color: lightgreen;
 
 }
 
-.features-container{
+.features-container {
     background-color: darkolivegreen;
     color: white;
 }
-
-
 
 .profile-head {
     transform: translateY(5rem)
@@ -59,61 +48,61 @@ body {
     background: #654ea3;
     background: linear-gradient(to right, #43e9a7, #5e954e);
     min-height: 100vh;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
-
-
-.hashtag{
+.hashtag {
     font-size: 13px;
     text-decoration: none;
 }
-.card{
+
+.card {
 
     margin: 0 auto;
     background-color: aliceblue;
     border-radius: 25px;
 }
 
-nav{
+nav {
     margin-bottom: 10px;
 }
 
 
-.frm{
+.frm {
     padding-left: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-.caption{
+
+.caption {
     padding: 20px;
 }
 
-a { color: inherit; 
+a {
+    color: inherit;
 
-} 
+}
 
-.white-text{
+.white-text {
     color: white;
 }
 
-.full-width{
+.full-width {
     width: 100%;
 }
 
-.img-pb{
+.img-pb {
     padding-bottom: 30px;
 }
 
-.post-block{
+.post-block {
     padding-bottom: 30px;
     background-color: wheat;
-    
 }
 
-.blog-img-size{
+.blog-img-size {
     height: 50%;
     width: 50%;
 }

@@ -1,9 +1,19 @@
+"""
+imports
+"""
 from django.shortcuts import render, redirect
-from .models import Contact
-from django.http import HttpResponse
 from django.contrib import messages
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
+from .models import Contact
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 def contact_us(request):
+    """
+    function to view contact us page
+    """
+
     if request.method == "POST":
         contact = Contact()
         name = request.POST.get('name')
@@ -17,8 +27,5 @@ def contact_us(request):
         contact.save()
         messages.success(request, 'Thank You for getting in touch with us!')
         return redirect('index')
-        
 
     return render(request, 'contact_us.html')
-
-# Create your views here.

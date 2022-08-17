@@ -1,35 +1,73 @@
+"""
+imports
+"""
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
 from userauthentication.models import Profile
+from .forms import UserRegisterForm
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 def register(request):
+    """
+    function to view register form for new user
+    """
     if request.method == "POST":
-        form = UserRegisterForm(request.POST)
+        form = UserRegisterForm(
+            request.POST
+            )
+
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Welcome To The Guess the boozer Comunity{username}, Edit your Profile')
+            username = form.cleaned_data.get(
+                'username'
+                )
+
+            messages.success(
+                request,
+                f'Welcome To The Guess the boozer\
+                Comunity{username}, Edit your Profile'
+                )
+
             return redirect('login')
     else:
         form = UserRegisterForm()
 
-    return render(request, 'reelusers/register.html', {'form': form})
+    return render(
+        request,
+        'reelusers/register.html',
+        {'form': form}
+        )
 
 
 def login(self, request):
+    """
+    function to view login form for new user
+    """
     profile = Profile.objects.get(user__id=user)
     if User.is_authenticated:
-        messages.success(request, 'you are now logged in!')
-        return redirect('edit-profile', profile.user.username)
-        
-        
+        messages.success(
+            request,
+            'you are now logged in!'
+            )
+        return redirect(
+            'edit-profile',
+            profile.user.username
+             )
 
 
 @login_required
 def showusername(request):
+    """
+    function to view username of new user
+    """
     displaynames = User.objects.all()
-    return render(request, 'showuser.html', {"displayusername": displaynames})
+    return render(
+        request,
+        'showuser.html',
+        {"displayusername": displaynames}
+        )
