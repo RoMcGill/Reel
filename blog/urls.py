@@ -1,6 +1,13 @@
-from django.urls import path,include
+"""
+    Imports
+"""
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 3rd party:
+from django.urls import path
 from . import views
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 urlpatterns = [
-    path('blog/',views.BlogPage, name='blog')
+    path('blog/', views.blog_page, name='blog')
 ]

@@ -96,8 +96,25 @@
                             {{ comment.body }}
                           </p>
                         </li>
+                        
+                        
+                        <!-- <h1>Delete {{ comment.comment}}?</h1>
 
-                        {% endfor %}
+                        <form method="POST" action="">
+                          {% csrf_token %}
+                          <p> Are you sure you want to delete this post? </p>
+                          <input type="submit" value="Yes"/>
+                          <a href="/post-detail/{{ comment.id }}/">Cancel </a>
+                          </form>
+                      
+                          
+                          {%if request.user.username != comment.user %}
+                          <p>You cannot delete this entry</p>
+                          {% endif %}
+
+                      
+
+                        {% endfor %} -->
                   </div>
 
                 </div>

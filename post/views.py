@@ -69,7 +69,7 @@ def PostDetail(request, post_id):
             comment.save()
             messages.success(request, 'you have commented on a users post')
             #### notifications (bug) ######
-            #create_notification(request, comment.post, 'comment.user', extra_id=comment.id)
+            #create_notification(request, comment.body, 'comment.first_name', extra_id=0)
             #### notifications (bug) ######
         return HttpResponseRedirect(reverse("post-detail", args=[post_id]))
     else:
@@ -81,6 +81,35 @@ def PostDetail(request, post_id):
         'post': post,
     }
     return render(request, 'post-detail.html', context)
+
+###################################################################
+####################### delete comment ############################
+###################################################################
+
+# def comment_delete_view(request, id=None):
+
+#     comment= get_object_or_404(Comment, id=id)
+
+#     creator= comment.user.username
+
+#     if request.method == "POST" and request.user.is_authenticated and request.user.username == creator:
+#         comment.delete()
+#         messages.success(request, "Post successfully deleted!")
+#         return HttpResponseRedirect(reverse("post-detail", args=[post_id]))
+    
+#     context= {'content': content,
+#               'creator': creator,
+#               }
+    
+#     return render(request, 'post-detail.html', context)
+
+
+
+
+
+###################################################################
+####################### delete comment ############################
+###################################################################
 
 
 def tags(request, tag_slug):

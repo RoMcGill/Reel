@@ -58,7 +58,7 @@ def follow(request, username, option):
         if int(option) == 0:
             f.delete()
             Stream.objects.filter(following=following, user=request.user).all().delete()
-            messages.success(request, 'you have followed another user')
+            messages.success(request, 'you have unfollowed another user')
         else:
             posts = Post.objects.all().filter(user=following)[:25]
             with transaction.atomic():
@@ -67,7 +67,7 @@ def follow(request, username, option):
                     stream.save()
         messages.success(request, 'you have followed another user')
         #### notifications (bug) ######
-        #create_notification(request, follow.stream, 'follow', extra_id=follow.id)
+        #create_notification(request, follow.follower, 'follow', extra_id=follow.id)
         #### notifications (bug) ######
         return HttpResponseRedirect(reverse('profile', args=[username]))
 
