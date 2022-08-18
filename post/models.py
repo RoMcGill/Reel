@@ -198,6 +198,31 @@ class Likes(models.Model):
         shows who liked what post in admin panel
         """
         return self.user, " Likes ", self.post
+# ##################################################################
+# ###################### solved button ############################
+# ##################################################################
+# class Solves(models.Model):
+#     """
+#     class for the like model
+#     """
+#     user = models.ForeignKey(
+#         User,
+#         on_delete=models.CASCADE
+#         )
+#     post = models.ForeignKey(
+#         Post,
+#         on_delete=models.CASCADE,
+#         related_name='post_solves'
+#         )
+
+#     def __str__(self):
+#         """
+#         shows who solved what post in admin panel
+#         """
+#         return self.user, " Solved ", self.post
+# ##################################################################
+# ###################### solved button ############################
+# ##################################################################
 
 
 post_save.connect(Stream.add_post, sender=Post)

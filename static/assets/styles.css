@@ -106,3 +106,31 @@ a {
     height: 50%;
     width: 50%;
 }
+
+.firstcolor{
+    width: 275px;
+    height: 75px;
+    color: white;
+    background-color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size:22px
+}
+
+.secondecolor{
+    width: 275px;
+    height: 75px;
+    color: white;
+    background-color: green;
+    text-align: center;
+    line-height: 100px;
+}
+
+.button-click{
+  padding:10px;
+  cursor:pointer;
+  font-weight:bold;
+  background-color:#333;
+  color:#DDD;
+  boder:none
+}

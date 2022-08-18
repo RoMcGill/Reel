@@ -232,3 +232,45 @@ def favourite(request, post_id):
             post
             )
     return HttpResponseRedirect(reverse('post-detail', args=[post_id]))
+
+# ##################################################################
+# ###################### solved button ############################
+# ##################################################################
+# def solve(request, post_id):
+#     """
+#     view to show likes
+#     """
+#     user = request.user
+#     post = Post.objects.get(id=post_id)
+#     current_solves = post.solves
+#     solved = Solves.objects.filter(
+#         user=user,
+#         post=post
+#         ).count()
+
+#     if not solved:
+#         Solves.objects.create(
+#             user=user,
+#             post=post
+#             )
+#         current_solves = current_solves + 1
+#         messages.success(
+#             request,
+#             'your post has been solved'
+#             )
+
+#     else:
+#         Solves.objects.filter(
+#             user=user,
+#             post=post
+#             ).delete()
+#         current_solves = current_solves - 1
+#         messages.success(request, 'your post is not solved')
+
+#     post.solves = current_solves
+#     post.save()
+#     return HttpResponseRedirect(reverse('post-detail', args=[post_id]))
+
+# ##################################################################
+# ###################### solved button ############################
+# ##################################################################
