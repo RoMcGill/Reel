@@ -165,8 +165,6 @@ USER STORY : connecting people who enjoy socialising and puzzels MUST HAVE
 
 
 
-
-
 ## Design
 
 
@@ -189,7 +187,13 @@ USER STORY : connecting people who enjoy socialising and puzzels MUST HAVE
 
 
 ## Technologies Used
+### Languages & Frameworks
 
+- HTML
+- CSS
+- Javascript
+- Python 3.10.2
+- Django 3.2
 
 ## Features
 
