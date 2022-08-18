@@ -42,14 +42,128 @@ Guess the boozer is a social media game to play with friends, the object of the 
 
 ## User Goals
 
+Register and Login to a new Social media site.
+
+Join in on the fun and Create posts and give hints to other users so they can try tio guess where i am or have been.
+
+guess where other users are or have been using the information they supply.
+
 
 ## Site Owner Goals
+
+Create a platform for people to connect with eachother
+
+Implement a gaming/puzzel aspect to the social media site
+
+Spread awareness about new, fun, diffrent bars/pubs and resteraunts
 
 
 ## User Experience
 
+### Target Audience
+
+People who enjoy socialising.
+
+People who enjoy puzzels.
+
+People who enjoy gaming.
+
+### User Requirements
+
+Easy navigation, familiar layout and UX/UI design.
+
+Easy to use.
+
+Responsive layout for users on all devices.
+
+User feedback from user actions.
+
+Constant stream of new content from other users.
+
+Ability to connect with other users.
+
+Ability to share posts, connect and converse with other users.
+
+Dedicated Page/blog to advertise and support businesses and inform users of updates to the site and any other relavant news.
+
 
 ## User Stories
+
+
+### site Owner
+
+build login/signup page MUST HAVE
+#18 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
+setup repository prep
+#17 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
+deploy to heroku prep
+#16 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
+install django + supporting libraries
+#15 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
+ ### Users
+
+USER STORY should be able to log into my account MUST HAVE
+#1 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY have a log in page MUST HAVE
+#2 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY have an explore page COULD HAVE
+#3 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY have a personal profile COULD HAVE
+#4 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY be able tom follow other users SHOULD HAVE
+#6 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY add gps location of solved boozers COULD HAVE
+#7 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY add photos to posts COULD HAVE
+#8 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY comment on other users posts COULD HAVE
+#9 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY view other users posts COULD HAVE
+#10 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY upload details of recent trips to the pub/resteraunt COULD HAVE
+#11 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY discover more unique bars and restaurants near me MUST HAVE
+#12 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY find good pubs, bars, restaurants local to me MUST HAVE
+#13 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+USER STORY : connecting people who enjoy socialising and puzzels MUST HAVE
+#14 opened on 22 Apr by RoMcGill
+ PBI ITERATION 1
+
+
+
 
 
 ## Design
