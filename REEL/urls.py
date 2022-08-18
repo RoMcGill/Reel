@@ -44,7 +44,7 @@ urlpatterns = [
     path('<username>/showuser/', user_views.showusername, name='showuser'),
     path('searchbar/', include('searchbar.urls')),
     path('<username>/searchbar/', search_views.SearchBar, name='SearchBar'),
-    
+
 
 ]
 

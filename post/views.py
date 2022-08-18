@@ -135,23 +135,15 @@ def PostDetail(request, post_id):
 # ###################### delete comment ############################
 # ##################################################################
 
-# def comment_delete_view(request, id=None):
-
-#     comment= get_object_or_404(Comment, id=id)
-
-#     creator= comment.user.username
-
-#     if request.method == "POST" and request.user.is_authenticated \
-# and request.user.username == creator:
-#         comment.delete()
-#         messages.success(request, "Post successfully deleted!")
-#         return HttpResponseRedirect(reverse("post-detail", args=[post_id]))
-
-#     context= {'content': content,
-#               'creator': creator,
-#               }
-
-#     return render(request, 'post-detail.html', context)
+def delete_comment(request, comment_id):
+    """
+    Deletes a comment for the user
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.delete()
+    messages.add_message(request, messages.SUCCESS,
+                         'Your comment has been deleted')
+    return redirect(request.META.get('HTTP_REFERER', '/'))
 
 
 # ##################################################################

@@ -27,7 +27,7 @@
 <!-- solved button -->
 
 {% if post.user == request.user %}
-<!-- <a href="{% url 'solve' post.id %}"><span>{{# post.solves#}} solves</span></a> -->
+<!-- <a href="{#%# url 'solve' post.id #%#}"><span>{#{# post.solves#}#} solves</span></a> -->
 
   <!-- <button class="button-click" id="addcolor">
     Click if solved
@@ -87,7 +87,6 @@
                               {{ form.body }}
                             </p>
                             <button type="submit" class="btn btn-info pull-right">Post</button>
-
                           </div>
                         </li>
                       </ul>
@@ -109,30 +108,21 @@
                                   {{comment.user.profile.last_name}}</span><span class="date text-black-50">
                                   {{comment.date}}</span></div>
                             </a>
+
                           </div>
                           <p>
                             {{ comment.body }}
                           </p>
                         </li>
 
-
-                        <!-- <h1>Delete {{ comment.comment}}?</h1>
-
-                        <form method="POST" action="">
-                          {% csrf_token %}
-                          <p> Are you sure you want to delete this post? </p>
-                          <input type="submit" value="Yes"/>
-                          <a href="/post-detail/{{ comment.id }}/">Cancel </a>
-                          </form>
-
-
-                          {%if request.user.username != comment.user %}
-                          <p>You cannot delete this entry</p>
-                          {% endif %}
+                        {% if comment.user == user %}
+                        <button><a class="btn btn-info pull-right" href="{% url 'delete_comment' comment.id %}">Delete</a></button>
+                        {% endif %}
 
 
 
-                        {% endfor %} -->
+
+                        {% endfor %}
                   </div>
 
                 </div>
