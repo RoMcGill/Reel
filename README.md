@@ -92,6 +92,30 @@ Dedicated Page/blog to advertise and support businesses and inform users of upda
 
 ### site Owner
 
+user search bar/ list of users MUST HAVE
+#24 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
+create contact us form
+#23 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
+create a blog
+#22 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
+users create + view hashtags MUST HAVE
+#21 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
+users comment on posts MUST HAVE
+#20 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
+users create posts MUST HAVE
+#19 opened on 27 Jun by RoMcGill
+ PBI ITERATION 1
+
 build login/signup page MUST HAVE
 #18 opened on 27 Jun by RoMcGill
  PBI ITERATION 1
