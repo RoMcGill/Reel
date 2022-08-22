@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'contact',
     'blog',
     'notify',
+    'django_extensions',
+
 ]
 
 MIDDLEWARE = [
@@ -68,6 +70,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
 
 ROOT_URLCONF = 'REEL.urls'
 
@@ -84,7 +91,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'notify.context_processor.notifications'
             ],
-           
+
         },
     },
 ]
@@ -154,7 +161,7 @@ CLOUDINARY_STORAGE = {
 }
 
 
-MEDIA_URL = '/media/'  
+MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
