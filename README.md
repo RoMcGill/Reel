@@ -291,8 +291,6 @@ the image field is a ImageField for users to upload their Profile image
 
 
 
-
-
 ## Wireframes
 
 
@@ -336,6 +334,50 @@ the image field is a ImageField for users to upload their Profile image
 
 
 ## Heroku Deployment
+### Heroku Deployment
+This application has been deployed from GitHub to Heroku by following the steps:
+
+1. Create or log in to your account at heroku.com
+2. Create a new app, add a unique app name (this project is named "reel-2022-new") and choose your region
+3. Click on create app
+4. Under resources search for postgres, and add a Postgres database to the app
+5. Install the plugins dj-database-url and psycopg2-binary
+6. Install django and gunicorn
+7. Add the list of requirements by writing in the terminal "pip3 freeze --local > requirements.txt"
+8. Create a Procfile in your app:
+   ```
+   wsgi:PROJECT_NAME.wsgi
+   ```
+   (web: gunicorn reel.wsgi)
+9.  In the settings.py ensure the connection is to the Heroku postgres database
+10. Ensure Debug is set to False in the settings.py file
+11. Add localhost/127.0.0.1, and reel-2022-new.herokuapp.com to the ALLOWED_HOSTS variable in settings.py
+12. Go to Settings in your Heroku and set the environment variables in the Config Vars
+    ![Config vars](docs/readme/heroku-config-vars.jpg)
+13. Remove DISABLE_COLLECTSTATIC from Heroku settings
+14. Push the code to Heroku using the command git push heroku main
+
+Final steps:
+
+- Go to "Deploy" in the menu bar on the top
+- Deployment method: Heroku Git (direct connection to GitHub is no longer available)
+- Follow steps as shown:
+  ![Deployment steps](docs/readme/heroku-deployment.jpg)
+
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+
+### Making a Local Clone
+1. Go to the GitHub repository
+2. Locate the Code button above the list of files and click it
+3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
+4. Open commandline interface on your computer
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard
+7. Press Enter to create your local clone
 
 
 ## Credits
