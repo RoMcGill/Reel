@@ -2,14 +2,14 @@
 {% load static %}
 {% block content%}
 
-{% for BlogPost in BlogPosts %}
+{% for blogpost in blog_posts %}
 <div class="post-block">
-    <h2 class="subtitle">{{ BlogPost.title }}</h2>
-        <p>{{ BlogPost.intro }}</p><img class="blog-img-size" src="{{ BlogPost.picture.url}}"></img>
-            <h3>{{ BlogPost.body }}</h3>
-                <small>Posted at {{ BlogPost.date_added }}</small>
+    <h2 class="subtitle">{{ blogpost.title }}</h2>
+        <p>{{ blogpost.intro }}</p><img class="blog-img-size" src="{{ blogpost.picture.url}}"></img>
+            <h3>{{ blogpost.body }}</h3>
+                <small>Posted at {{ blogpost.date_added }}</small>
                 <br>
-                
+
 </div>
 <br>
 

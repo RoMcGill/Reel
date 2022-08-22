@@ -4,10 +4,10 @@
 from django.contrib import admin
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
-from.models import BlogPost
+from.models import blogpost
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 # Register your models here.
 
-admin.site.register(BlogPost)
+admin.site.register(blogpost)

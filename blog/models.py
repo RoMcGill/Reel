@@ -2,12 +2,9 @@
     Imports
 """
 from django.db import models
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 3rd party:
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-class BlogPost(models.Model):
+class blogpost(models.Model):
     """
     A class for the blog post model
     """
