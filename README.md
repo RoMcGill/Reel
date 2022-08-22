@@ -276,6 +276,16 @@ the tag model contains title and slug
 the title field is a CgarField for users to enter thier hashtags
 the slug field is a SlugField for creating unique slugs for each hashtag
 
+### userauthentication app
+the userauthentication app contains the profile model
+the profile model contains 9 Fields user, first_name, last_name, location, url, profile_info, created, favourite, image
+the first_name, last_name, location, url fields are all CharFields for users to input their own information.
+the user field is a OnetoOneField that contains the users username.
+the profile_info Field is a textfield for the user to input information about themselves.
+the created field is a DateTimeField to capture when the profile has been created,
+the Favourite Field is a ManyToManyField that users can have their favourite posts by them selfs or by other users saved.
+the image field is a ImageField for users to upload their Profile image
+
 
 
 
