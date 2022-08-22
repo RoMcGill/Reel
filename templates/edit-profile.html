@@ -35,7 +35,7 @@
         {% csrf_token %}
         <h3 class="title is-3">Edit Profile</h3>
         <div class="form-row">
-            <div class="form-group col-md-12 center">
+            <div class="form-group col-md-12 center" required>
                 <label for="inputPicture">Picture</label>
                 {{ form.picture }}
             </div>
@@ -60,13 +60,13 @@
             <label for="inputAddress">Website</label>
             {{ form.url }}
         </div>
-        
+
         <button type="submit" class="btn btn-primary">Update Profile</button>
     </form>
     </div>
-    
+
 </div>
-    
+
 </body>
 
 </html>
