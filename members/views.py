@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.contrib.auth import logout as auth_logout
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 3rd party:
 from userauthentication.models import Profile
@@ -60,7 +61,6 @@ def login(self, request):
             )
 
 
-
 @login_required
 def showusername(request):
     """
@@ -74,23 +74,9 @@ def showusername(request):
         )
 
 
-from django.contrib.auth import logout as auth_logout
-
 def logout(request):
+    """
+    function to logout current user
+    """
     auth_logout(request)
-    return render(request,"logout")
-    # Redirect to a success page.
-
-# def UserLoggedIn(request):
-#     if request.user.is_authenticated == True:
-#         username = request.user.username
-#     else:
-#         username = None
-#     return username
-
-# def logout_view(request):
-#     username = UserLoggedIn(request)
-#     if username != None:
-#         logout(request)
-#         return redirect('login')
-
+    return render(request, "logout")

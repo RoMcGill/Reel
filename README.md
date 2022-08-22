@@ -218,7 +218,7 @@ Contact page with contact form which allows users to send an email to the site o
 ***no 404 error page yet.***
 
 ## Database
-The backend is built on the Django framework using Postgres for the deployed Heroku version I have created a graph model of the site using python extensions and graphviz to display the model relationships.
+The backend is built on the Django framework using Postgres for the deployed Heroku version I have created a graph model of the site using django-extensions and graphviz to display the model relationships.
 
 <img src="/workspace/Reel/REEL_sans_foo_bar.png">
 
