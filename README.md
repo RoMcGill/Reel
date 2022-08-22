@@ -250,6 +250,21 @@ The message field contains the main body/contact of the correspondance.
 
 the post app contains 5 models follow, stream, likes, post and tag
 
+the follow model contains follower and following
+both fields contain foreignkey fields to identify users.
+
+the stream model contains following, user, post, date.
+the following field contains the following status of the user.
+the user field contains the id of the user.
+the post field contains the data being posted by the user.
+the date field contains the date and time the stream was created.
+
+the likes model contains user and post
+the user field is to identify the user id
+the post field is to identify the post id
+
+the post model contains id picture, caption, posted, tag, user, likes
+
 
 
 

@@ -160,7 +160,7 @@ class Stream(models.Model):
         """
         shows who posted what post in admin panel
         """
-        return self.user, " posted ", self.post
+        return self.user, self.post
 
     def add_post(sender, instance, *args, **kwargs):
         """
