@@ -191,18 +191,32 @@ USER STORY : connecting people who enjoy socialising and puzzels MUST HAVE
 
 ## Design
 
-
 ## Colours
-
+the colour scheme was chosen as there is a nice contrast between diffrent elements which makes for a pleasurable user experience also the colour schem plays a role in helping the user feel familiar with the site as the gradient used is similar to instagram just with the colours changedm, the fade from dark green to bright green in the background is like instagrams gradient from dark purple to bright pink.
 
 ## Fonts
+***all fonts are standard at the time of writing this.***
 
 
 ## Structure
-
+ease of use was the goal for this site. the navagation bar at ther top of the page provides easy clikable links to each section of the site, from there you can dive deeper into other features of the site.
 
 ## Website pages
+The website is made up of the following pages:
+Home page/feed this page is your landing page once logged in and will propt you to update your profile information and instruct you what to do next, following these instructions you will find other users and populate this page with there posts after following some users.
+Register page, this is where a user can create an account.
+Login page, on this page users can login to their account.
+search page, this page will show users a list of other users and provide a button to search for users by name.
+Logout page allowing user to log out of the website, this page will also provide the user with an option to log back in.
+Profile page where users can add their profile picture first/last name, bio and website. This page will display thier profile image,bio, name, posted posts and favourited posts. If a user is on another users Profile they will not have the option to edit their profile but will have an option to follow the user in its place
+post detail page is used for specific posts that a user clicks on
+tag
+favourite
+comment
+blog
 
+Contact page with contact form which allows users to send an email to the developer and provide their feedback.
+404 error page.
 
 ## Database
 
