@@ -263,7 +263,21 @@ the likes model contains user and post
 the user field is to identify the user id
 the post field is to identify the post id
 
-the post model contains id picture, caption, posted, tag, user, likes
+the post model contains id, picture, caption, posted, tag, user, likes
+The id field contains a unique id for the post.
+The picture field contains a ImageField for users to upload photos.
+The caption field contains a CharField for users to uplad a caption to their post.
+The posted field contains DateTimeField to capture the date and time the post was posted.
+The tag field contains a ManyToManyField for the hashtags.
+The user field contains a ForeignKey to identify the user.
+The likes field contains a IntergerField to handle the number of likes on a post.
+
+the tag model contains title and slug
+the title field is a CgarField for users to enter thier hashtags
+the slug field is a SlugField for creating unique slugs for each hashtag
+
+
+
 
 
 
