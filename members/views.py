@@ -57,7 +57,8 @@ def login(self, request):
         return redirect(
             'edit-profile',
             profile.user.username
-             )
+            )
+
 
 
 @login_required
@@ -71,3 +72,25 @@ def showusername(request):
         'showuser.html',
         {"displayusername": displaynames}
         )
+
+
+from django.contrib.auth import logout as auth_logout
+
+def logout(request):
+    auth_logout(request)
+    return render(request,"logout")
+    # Redirect to a success page.
+
+# def UserLoggedIn(request):
+#     if request.user.is_authenticated == True:
+#         username = request.user.username
+#     else:
+#         username = None
+#     return username
+
+# def logout_view(request):
+#     username = UserLoggedIn(request)
+#     if username != None:
+#         logout(request)
+#         return redirect('login')
+
