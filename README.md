@@ -222,7 +222,7 @@ The backend is built on the Django framework using Postgres for the deployed Her
 
 <img src="/workspace/Reel/REEL_sans_foo_bar.png">
 
-### blogpost
+### blogpost app
 
 the blog post model contains title, slug, intro, body, date_added, picture,
 the title field contains the title of the blog post
@@ -232,11 +232,24 @@ the body contains the main content for the blog post
 the date added contains the date and time the blog was created
 the picture field contains the image that is uploaded to support the text of the blog post.
 
-### comment model
-post
-user
-body
-date
+### comment app
+the comment model contains post, user, body, date
+The post field contains a ForeignKey to id the post.
+The user field contains a ForeignKey to id the user.
+The body field contains a textfield to manage user input
+The date field contains contains the date and time which the comment was posted.
+
+### contact app
+the contact model contains name, email, subject, message
+The name field contains the users name
+The email field contains the users email address
+The subject field contains the subject/ reason for contact
+The message field contains the main body/contact of the correspondance.
+
+### post app
+
+the post app contains 5 models follow, stream, likes, post and tag
+
 
 
 
