@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'contact',
     'blog',
     'notify',
-    'django_extensions',
+    # 'django_extensions',
 
 ]
 
@@ -71,10 +71,10 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-GRAPH_MODELS = {
-  'all_applications': True,
-  'group_models': True,
-}
+# GRAPH_MODELS = {
+#   'all_applications': True,
+#   'group_models': True,
+# }
 
 ROOT_URLCONF = 'REEL.urls'
 
