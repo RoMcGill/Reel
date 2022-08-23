@@ -8,7 +8,6 @@
         <div class="bg-white shadow rounded overflow-hidden">
             <div class="px-4 pt-0 pb-4 cover">
                 <div class="media align-items-end profile-head">
-
                     <div class="profile mr-3">
                         {% if profile.user == request.user %}
                         <a href="{% url 'editProfile' %}" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
@@ -107,10 +106,7 @@
                     </div>
                     <br>
                     {% endfor %}
-
-
                 </div>
-
                 <br>
             </div>
         </div>

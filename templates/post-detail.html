@@ -2,16 +2,6 @@
 {% load static %}
 {% block content %}
 
-
-<div class="container mt-3">
-  <div class="row">
-    <div class="col-12">
-
-    </div>
-  </div>
-</div>
-</div>
-
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}"
     alt="post picture">
@@ -28,7 +18,6 @@
 
 {% if post.user == request.user %}
 <!-- <a href="{#%# url 'solve' post.id #%#}"><span>{#{# post.solves#}#} solves</span></a> -->
-
   <!-- <button class="button-click" id="addcolor">
     Click if solved
   </button>
@@ -36,20 +25,15 @@
     solved
   </div>
   <br> -->
-
 {% endif %}
-
-
-
 <!-- solved button -->
+<!-- comment button -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Comments
   </button>
 </div>
 <br>
-
-
-<!-- Modal -->
+<!-- comment Modal -->
 <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -70,8 +54,6 @@
                     Comment panel
                     <form method="POST">
                       {% csrf_token %}
-
-
                       <ul class="media-list">
                         <li class="media">
                           <a href="#" class="pull-left">
@@ -90,7 +72,7 @@
                           </div>
                         </li>
                       </ul>
-                      {% for comment in comments %}
+{% for comment in comments %}
                       <ul class="media-list">
                         <li class="media-list">
                           <a href="#" class="pull-left">
@@ -106,28 +88,21 @@
                               <div class="d-flex flex-column justify-content-start ml-2"><span
                                   class="d-block font-weight-bold name">{{comment.user.profile.first_name}}
                                   {{comment.user.profile.last_name}}</span><span class="date text-black-50">
-                                  {{comment.date}}</span></div>
-                            </a>
-
+                                  {{comment.date}}</span></div></a>
                           </div>
                           <p>
                             {{ comment.body }}
                           </p>
                         </li>
 
-                        {% if comment.user == user %}
-                        <button><a class="btn btn-info pull-right" href="{% url 'delete_comment' comment.id %}">Delete</a></button>
-                        {% endif %}
-
-
-
-
-                        {% endfor %}
+{% if comment.user == user %}
+                        <button><a class="btn btn-info pull-right"
+                            href="{% url 'delete_comment' comment.id %}">Delete</a></button>
+{% endif %}
+{% endfor %}
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </div>

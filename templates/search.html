@@ -2,21 +2,15 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-
 <body>
-
-
   <div class="d-flex">
     <div class="form-data list-inline mx-auto justify-content-center">
-
       <form action="" method="GET">
         <div class="search list-inline mx-auto justify-content-center">
           <input type="text" placeholder="Search" name="q" value="{{ request.GET.q }}">
           <button class="btn btn-primary" type="submit">Search</button>
-
         </div>
       </form>
-
       <form action="" method="POST" enctype="multipart/form-data">
         <div class="logo">
           <h3 style="padding-top: 5px; font-size: 20px;">Search Results</h3>
@@ -41,24 +35,17 @@
                 {{user.profile.last_name|title }}</a>
               {% else%}
               <a href="{% url 'profile' user.username %}">profile not found</a>
-
               {% endif %}
               <br>
               <span style="font-size: 14px;">@{{user.username}}</span>
               <br>
               <a href="{% url 'profile' user.username %}" style="color: blue;" class="side-menu__user-button">View
                 Profile</a>
-
             </div>
           </div>
         </div>
-        <!-- <hr> -->
         {% endfor %}
-
-
       </form>
-
     </div>
   </div>
-
   {% endblock content %}

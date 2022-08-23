@@ -31,7 +31,8 @@ class Comment(models.Model):
         """
         returns users name and comment body in admin panel
         """
-        return self.user, " commented ", self.body
+        return '{}/{}'.format(self.user, self.body)
+
 
     def user_comment_post(sender, instance, *args, **kwargs):
         """

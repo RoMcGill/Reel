@@ -53,7 +53,7 @@ class Tag(models.Model):
         """
         shows tag title in admin panel
         """
-        return self.title
+        return '{}/{}'.format(self.slug, self.title)
 
     def save(self, *args, **kwargs):
         """
@@ -110,7 +110,7 @@ class Post(models.Model):
         """
         shows post caption in admin panel
         """
-        return self.caption
+        return '{}/{}'.format(self.user, self.caption)
 
 
 class Follow(models.Model):
@@ -132,7 +132,7 @@ class Follow(models.Model):
         """
         shows who is now following who in admin panel
         """
-        return self.follower, " is now following ", self.following
+        return '{}/{}'.format(self.follower, self.following)
 
 
 class Stream(models.Model):
@@ -160,7 +160,7 @@ class Stream(models.Model):
         """
         shows who posted what post in admin panel
         """
-        return self.user, self.post
+        return '{}/{}'.format(self.user, self.post)
 
     def add_post(sender, instance, *args, **kwargs):
         """
@@ -197,7 +197,7 @@ class Likes(models.Model):
         """
         shows who liked what post in admin panel
         """
-        return self.user, " Likes ", self.post
+        return '{}/{}'.format(self.user, self.post)
 # ##################################################################
 # ###################### solved button ############################
 # ##################################################################

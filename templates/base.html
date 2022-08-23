@@ -1,10 +1,7 @@
 {% load static %}
 
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,11 +44,8 @@
           <h1>Guess The Boozer</h1>
         </a>
 
-
-
         <!-- Search form -->
-
-        {% if user.is_authenticated %}
+{% if user.is_authenticated %}
         <div class="d-flex full-width">
           <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="{% url 'showuser' %}">
             <h6>search</h6>
@@ -70,27 +64,19 @@
           </a>
         </div>
       </div>
-
-
-        {% else %}
+{% else %}
         <a href="{% url 'login' %}" class="btn btn-login">Log in</a>
         <a href="{% url 'register' %}" class="btn btn-login">Sign up</a>
+{% endif %}
 
 
-        {% endif %}
-
-
-        {% if user.is_authenticated %}
+{% if user.is_authenticated %}
 <div class="nav-item">
   <a href="{% url 'notifications' %}" class="nav-item">notifications ({{ notifications.count }})</a>
 </div>
+{% endif %}
 
-        {% endif %}
-
-
-
-
-      {% if user.profile.image %}
+{% if user.profile.image %}
       <ul class="navbar-nav flex-row">
         <li class="nav-item me-3 me-lg-1">
           <a class="nav-link d-sm-flex align-items-sm-center" href="#">
@@ -106,22 +92,12 @@
           <a class="nav-link" href="#">
             <span><i class="fas fa-plus-circle fa-lg"></i></span>
           </a>
-
-
-          {% else %}
+{% else %}
           <img src="{% static 'default-avatar.png' %}" alt="Image not added yet">
-
-          {% endif %}
-
-
+{% endif %}
           <!-- Left elements -->
 
-
-
-
-
-
-
+          <!-- Left elements -->
           <!-- Right elements -->
     </div>
   </nav>
@@ -132,27 +108,19 @@
 
       <!---messages-->
       <div style="margin-top: 10px;">
-        {% if messages %}
-        {% for message in messages %}
+{% if messages %}
+{% for message in messages %}
         <div class="alert alert-{{ message.tags }}" role="alert">
           <h4 style="text-align: center;">{{ message }}</h4>
         </div>
-        {% endfor%}
-        {% endif %}
-
+{% endfor%}
+{% endif %}
       </div>
-
-      {% block content %}
-
-
-
-
-
-      {% endblock %}
+{% block content %}
+{% endblock %}
 
     </div>
   </section>
-
   <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -164,5 +132,4 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
   </script>
 </body>
-
 </html>
