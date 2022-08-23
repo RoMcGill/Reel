@@ -35,6 +35,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["reel-2022-new.herokuapp.com", "localhost"]
 
+# HTMLVALIDATOR_ENABLED = True
+# HTMLVALIDATOR_FAILFAST = True
 
 # Application definition
 

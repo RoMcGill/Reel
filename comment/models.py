@@ -33,7 +33,6 @@ class Comment(models.Model):
         """
         return '{}/{}'.format(self.user, self.body)
 
-
     def user_comment_post(sender, instance, *args, **kwargs):
         """
         A function for user to post comment
@@ -46,4 +45,3 @@ class Comment(models.Model):
 post_save.connect(
     Comment.user_comment_post,
     sender=Comment)
-
