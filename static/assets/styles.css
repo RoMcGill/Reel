@@ -10,6 +10,10 @@
     --dark: #212121;
 }
 
+body{
+    padding-top: 175px;
+}
+
 .container{
     max-width: 1280;
 
@@ -26,7 +30,7 @@ nav{
     right: 0;
     z-index: 99;
     background-color: var(--dark);
-    padding: 7px 15px;
+    padding: 5px 15px;
     border-bottom: 3px solid var(--primary);
 
 }
@@ -121,6 +125,45 @@ h1{
         display: flex;
     }
 
+}
+
+.mobilemenu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    z-index: 98;
+    padding-top: 6rem ;
+    opacity: 0;
+    transform: translateY(-100%);
+    background-color: var(--dark);
+    color: var(--light);
+    transition: 0.3s;
+
+
+}
+
+.mobilemenu.is-open{
+    opacity: 0.9;
+    transform: translateY(0);
+    backdrop-filter: blur(5px);
+
+}
+
+.mobilemenu a{
+    display: block;
+    padding: 1rem;
+    color: var(--light);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+.mobilemenu a:hover{
+    color: var(--primary);
+    background-color: var(--light);
 }
 
 .callout-container {

@@ -40,7 +40,7 @@
       style="width: 5rem; height: 5rem; border-radius: 50px; padding: 5px; float: left;">
 
       <a href="{% url 'profile' user.username %}"
-        style="font-size: 15px; color: black; text-align: center;">{{user.profile.first_name|title }}
+        style="font-size: 15px; color: rgb(255, 255, 255); text-align: center;">{{user.profile.first_name|title }}
           {{user.profile.last_name|title }}</a>
 
 {% else %}
@@ -65,9 +65,18 @@
     <span></span>
     <span></span>
     </button>
+    <div class="mobilemenu">
+      <a href="{% url 'showuser' %}">search</a>
+      <a href="{% url 'editProfile' %}">Create/Edit profile</a>
+      <a href="{% url 'index' %}">Feed</a>
+      <a href="{% url 'logout' %}">logout</a>
+      <a href="{% url 'contact_us' %}">Contact Us</a>
+      <a href="{% url 'blog' %}">Blog</a>
+    </div>
 
 
     {% else %}
+    <div class="menu">
     <a href="{% url 'login' %}">login</a>
     <a href="{% url 'contact_us' %}">Contact Us</a>
     <a href="{% url 'blog' %}">Blog</a>
@@ -78,6 +87,12 @@
 <span></span>
 <span></span>
 </button>
+<div class="mobilemenu">
+  <a href="{% url 'login' %}">login</a>
+  <a href="{% url 'contact_us' %}">Contact Us</a>
+  <a href="{% url 'blog' %}">Blog</a>
+  <a href="{% url 'register' %}">Sign up</a>
+</div>
 {% endif %}
 
 </div>
