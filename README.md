@@ -1,3 +1,7 @@
+todo:
+fix tag slug showing instead of tag
+messeges when you login
+
 # Guess The Boozer <img src="" style="width: 40px;height:40px;">
 
 

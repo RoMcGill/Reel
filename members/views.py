@@ -31,7 +31,7 @@ def register(request):
             messages.success(
                 request,
                 f'Welcome To The Guess the boozer\
-                Comunity{username}, Edit your Profile'
+                Comunity {username}, Edit your Profile'
                 )
 
             return redirect('login')

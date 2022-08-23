@@ -10,17 +10,17 @@
                 <div class="media align-items-end profile-head">
                     <div class="profile mr-3">
                         {% if profile.user == request.user %}
-                        <a href="{% url 'editProfile' %}" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
+                        <a href="{% url 'editProfile' %}" class="btn btn-outline-light btn-sm btn-block">Edit profile</a>
                         {% endif %}
                         {% if profile.user != request.user %}
 
                         {% if follow_status == True %}
                         <a href="{% url 'follow' profile.user 0 %}"
-                            class="btn btn-outline-dark btn-sm btn-block">Unfollow</a>
+                            class="btn btn-outline-light btn-sm btn-block">Unfollow</a>
                         {% else %}
 
                         <a href="{% url 'follow' profile.user 1 %}"
-                            class="btn btn-outline-dark btn-sm btn-block">Follow</a>
+                            class="btn btn-outline-light btn-sm btn-block">Follow</a>
                         {% endif %}
 
                         {% endif %}
