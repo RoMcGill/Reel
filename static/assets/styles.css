@@ -12,7 +12,7 @@
 
 .container{
     max-width: 1280;
-    margin: 0 auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,12 +26,21 @@ nav{
     right: 0;
     z-index: 99;
     background-color: var(--dark);
-    padding: 16px 32px;
+    padding: 7px 15px;
     border-bottom: 3px solid var(--primary);
 
 }
 
-.hamburger1{
+h1{
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.hamburger{
     display: block;
     position: relative;
     z-index: 1;
@@ -44,9 +53,10 @@ nav{
 
 }
 
-.hamburger1 span{
+.hamburger span{
     display: block;
     width: 33px;
+    height: 4px;
     margin-bottom: 5px;
     position: relative;
     background-color: var(--light);
@@ -56,12 +66,61 @@ nav{
     transition: 0.4s;
 }
 
-.hamburger1:hover span:nth-child(2){
+.hamburger:hover span:nth-child(2){
     transform: translateX(10px);
+    background-color: var(--primary);
 }
+
+.hamburger.is-active span:nth-child(2){
+    opacity: 0;
+
+
+}
+.hamburger.is-active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+
+}
+.hamburger.is-active span:nth-child(3){
+    transform: translate(-3px, 3px) rotate(-45deg);
+
+}
+
+.hamburger.is-active:hover span{
+    background-color: var(--primary);
+}
+
 
 .menu{
     display: none;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+    margin: 0px -60px;
+
+}
+
+.menu a{
+    color: #ffffff;
+    margin: 0 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 00.4s;
+    padding: 4px 8px;
+    border-radius: 99px;
+
+}
+
+.menu a.is-active, .menu a:hover {
+    background-color: var(--primary);
+}
+
+@media(min-width:816px) {
+    .hamburger{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+
 }
 
 .callout-container {

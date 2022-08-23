@@ -1,10 +1,5 @@
-var divColor = document.getElementById('maincolor'),
+const hamburger = document.querySelector('.hamburger');
 
-    btnColor = document.getElementById('addcolor');
-
-btnColor.onclick = function () {
-
-    "use strict";
-
-    divColor.classList.toggle('secondecolor');
-};
+hamburger.addEventListener('click', function () {
+    this.classList.toggle('is-active');
+});

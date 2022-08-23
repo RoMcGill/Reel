@@ -35,12 +35,9 @@
 <body>
   <!--Nav bar-->
   <nav>
-<div class="container">
-  <a href="{%url 'index' %}"><h1>Guess The Boozer</h1></a>
-
-  {% if user.profile.image %}
+    {% if user.profile.image %}
     <img src="{{ user.profile.image.url }}" alt="User Picture"
-      style="width: 5rem; height: 5rem; border-radius: 50px; padding: 5px;">
+      style="width: 5rem; height: 5rem; border-radius: 50px; padding: 5px; float: left;">
 
       <a href="{% url 'profile' user.username %}"
         style="font-size: 15px; color: black; text-align: center;">{{user.profile.first_name|title }}
@@ -50,16 +47,20 @@
         <p>Upload a photo</p>
 {% endif %}
 
+<div class="container">
+  <a href="{%url 'index' %}"><h1>Guess The Boozer</h1></a>
+
+
 {% if user.is_authenticated %}
   <div class="menu">
-    <a href="{% url 'showuser' %}" class="is-active">search</a>
+    <a href="{% url 'showuser' %}">search</a>
     <a href="{% url 'editProfile' %}">Create/Edit profile</a>
     <a href="{% url 'index' %}">Feed</a>
     <a href="{% url 'logout' %}">logout</a>
     <a href="{% url 'contact_us' %}">Contact Us</a>
     <a href="{% url 'blog' %}">Blog</a>
   </div>
-  <button class="hamburger1">
+  <button class="hamburger">
     <span></span>
     <span></span>
     <span></span>
@@ -72,7 +73,7 @@
     <a href="{% url 'blog' %}">Blog</a>
     <a href="{% url 'register' %}">Sign up</a>
   </div>
-<button class="hamburger2">
+<button class="hamburger">
 <span></span>
 <span></span>
 <span></span>
