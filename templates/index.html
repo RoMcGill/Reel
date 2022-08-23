@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
   <!--post-->
+  {% if user.is_authenticated %}
   {% for post in post_items %}
   <div class="card responsive" style="width: 70%; height: 45%;">
     <a href="{% url 'post-detail' post.id %}"><img class="img-responsive"
@@ -15,64 +16,16 @@
     </div>
     <a href="{% url 'like' post.id %}"><span>{{ post.likes}} Likes</span></a>
     <p class="hashtag">{% for tag in post.tag.all %}<a href="{{tag.get_absolute_url}}">#{{ tag }} </a>{% endfor %}</p>
-    <!--<ul class="list-group list-group-flush">
-      <li class="list-group-item">biggest Catch: </li>
-      <li class="list-group-item">Favorite location: </li>
-      <li class="list-group-item">years Fishing: </li>
-    </ul> -->
 
     <div class="card-body">
       <a href="{% url 'favourite-post' post.id %}" class="card-link">Add To Favourites</a>
       <a href="#" class="card-link">Post details</a>
     </div>
   </div>
-  <!-- Modal -->
-
-  <!--modal-->
   {% endfor %}
-  <!--post-->
-  <!--callout-->
-  <div class="container-fluid callout-container">
-    <div class="row"></div>
-    <div class="col-12"></div>
-    <section class="callout-jumbotron">
+  {% else %}
 
-      <div>
-        {% if user.is_authenticated %}
-        <a href="{% url 'editProfile' %}" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
-        <a href="{% url 'login' %}" class="btn btn-login">Log out</a>
-
-
-        {% else %}
-        <a href="{% url 'login' %}" class="btn btn-login">Log in</a>
-        <a href="{% url 'register' %}" class="btn btn-login">Sign up</a>
-
-        {% endif %}
-
-        {% if user.is_authenticated %}
-        <div>
-          <h5 class="d-flex justify-content-center white-text">AFTER you edit profile</h5>
-          <h6 class="d-flex justify-content-center white-text"> You must follow users to see content in the feed</h6>
-          <a class="d-flex justify-content-center white-text" href="{% url 'showuser' %}">
-            <h6 class="d-flex justify-content-center white-text">search for friends here</h6>
-          </a>
-        </div>
-        {% endif %}
-
-
-
-    </section>
-  </div>
-  </div>
-  <!--callout-->
-  </div>
-
-  <!--quotes-->
-
-      <!--quotes-->
-    </section>
-  </div>
-  <!--features-->
+     <!--features-->
   <div class="container-fluid features-container">
     <section clas="features">
       <div class="row">
@@ -86,7 +39,7 @@
             <span class="material-symbols-outlined">
               login
             </span>
-            <h3>Create your account!<span class="badge badge-success">NEW!</span></h3>
+            <h3>Create your account!</h3>
             <p>create your account and edit your profile</p>
           </div>
         </div>
@@ -102,7 +55,7 @@
         <div class="col-12 col-md-6 col-lg-4 mt-3">
           <div class="feature text-center">
             <span class="material-symbols-outlined">
-              add_business
+              &#xE87D
             </span>
             <h3>Create posts</h3>
             <p>Upload photos of where you are and see if any friends or other users can Guess </p>
@@ -111,74 +64,17 @@
       </div>
     </section>
     <!--features-->
+
+
+  {% endif %}
+  <!--post-->
+  <!--callout-->
+
+
+
+
+    </section>
   </div>
   </div>
-  <!-- Modal -->
-  <div class="modal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Sign Up/Sign In</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group row">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-              <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail3">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-              <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword3">
-              </div>
-            </div>
-            <fieldset class="form-group">
-              <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Select One:</legend>
-                <div class="col-sm-10">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
-                      checked>
-                    <label class="form-check-label" for="gridRadios1">
-                      Sign In
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                    <label class="form-check-label" for="gridRadios2">
-                      Sign Up
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-            <div class="form-group row">
-              <div class="col-sm-3"></div>
-              <div class="col-sm-10">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="gridCheck1">
-                  <label class="form-check-label" for="gridCheck1">
-                    I Agree to all T's & C's
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="form-group row">
-              <div class="col-sm-10">
-                <button type="submit" class="btn btn-success">Sign in</button>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
   {% endblock content %}

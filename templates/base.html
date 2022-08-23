@@ -40,7 +40,7 @@
       <!-- Left elements -->
       <div class="d-flex">
         <!-- Brand -->
-        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="{%url 'index' %}">
           <h1>Guess The Boozer</h1>
         </a>
 
@@ -62,23 +62,30 @@
           <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="{% url 'blog' %}">
             <h6>Blog</h6>
           </a>
+          <a href="{% url 'editProfile' %}" class="navbar-brand me-2 mb-1 d-flex align-items-center"><h6>Create/Edit profile</h6></a>
         </div>
       </div>
 {% else %}
-        <a href="{% url 'login' %}" class="btn btn-login">Log in</a>
-        <a href="{% url 'register' %}" class="btn btn-login">Sign up</a>
+        <a href="{% url 'login' %}" class="navbar-brand me-2 mb-1 d-flex align-items-center">Log in</a>
+        <a href="{% url 'register' %}" class="navbar-brand me-2 mb-1 d-flex align-items-center">Sign up</a>
+        <a class="navbar-brand me-2 mb-1 d-flex align-items-center navbar-brand me-2 mb-1 d-flex align-items-center" href="{% url 'contact_us' %}">
+          Contact Us
+        </a>
+        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="{% url 'blog' %}">
+          Blog
+        </a>
 {% endif %}
 
 
 {% if user.is_authenticated %}
 <div class="nav-item">
-  <a href="{% url 'notifications' %}" class="nav-item">notifications ({{ notifications.count }})</a>
+  <a href="{% url 'notifications' %}" class="navbar-brand me-2 mb-1 d-flex align-items-center">notifications ({{ notifications.count }})</a>
 </div>
 {% endif %}
 
 {% if user.profile.image %}
       <ul class="navbar-nav flex-row">
-        <li class="nav-item me-3 me-lg-1">
+        <li class="nav-item me-2 me-lg-1">
           <a class="nav-link d-sm-flex align-items-sm-center" href="#">
             <img src="{{ user.profile.image.url }}" alt="User Picture"
               style="width: 5rem; height: 5rem; border-radius: 50px; padding: 5px;">
@@ -93,7 +100,7 @@
             <span><i class="fas fa-plus-circle fa-lg"></i></span>
           </a>
 {% else %}
-          <img src="{% static 'default-avatar.png' %}" alt="Image not added yet">
+          <p></p>
 {% endif %}
           <!-- Left elements -->
 

@@ -22,7 +22,7 @@ def index(request):
     view for index page
     """
     user = request.user
-    posts = Stream.objects.filter(user=user)
+    posts = Stream.objects.all().order_by('-date')
     group_ids = []
     for post in posts:
         group_ids.append(post.post_id)
