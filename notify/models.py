@@ -11,12 +11,30 @@ class Notification(models.Model):
         (FOLLOW, 'follow')
     )
 
-    to_user = models.ForeignKey(User, related_name='notifications', on_delete=models.CASCADE)
-    Notification_type = models.CharField(max_length=20, choices=CHOICES)
-    is_read = models.BooleanField(default=False)
-    extra_id = models.IntegerField(null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    created_by = models.ForeignKey(User, related_name='creatednotification', on_delete=models.CASCADE)
+    to_user = models.ForeignKey(
+        User,
+        related_name='notifications',
+        on_delete=models.CASCADE
+        )
+    Notification_type = models.CharField(
+        max_length=20,
+        choices=CHOICES
+        )
+    is_read = models.BooleanField(
+        default=False
+        )
+    extra_id = models.IntegerField(
+        null=True,
+        blank=True
+        )
+    created_at = models.DateTimeField(
+        auto_now_add=True
+        )
+    created_by = models.ForeignKey(
+        User,
+        related_name='creatednotification',
+        on_delete=models.CASCADE
+        )
 
     def __unicode__(self):
         try:
@@ -28,11 +46,11 @@ class Notification(models.Model):
     class Meta:
         ordering = ['-created_at']
 
-    
-    
-    
-    
-    
+
+
+
+
+
     # # 1 = like, 3= follow
     # notification_type = models.IntegerField()
     # to_user = models.ForeignKey(User, related_name='notification_to', on_delete=models.CASCADE, null=True)
