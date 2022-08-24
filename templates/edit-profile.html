@@ -7,7 +7,7 @@
     <form method="POST" enctype="multipart/form-data" >
         {% csrf_token %}
         <h3 class="title is-3">Edit Profile</h3>
-        <div class="form-row">
+
             <div class="form-group col-md-12 center" required>
                 <label for="inputPicture">Picture</label>
                 {{ form.picture }}
@@ -17,19 +17,19 @@
                 {{ form.first_name}}
             </div>
         </div>
-        <div class="form-group" required>
+        <div class="form-group col-md-12" required>
             <label for="inputAddress">Last Name</label>
             {{ form.last_name }}
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-12">
             <label for="inputAddress">Location</label>
             {{ form.location }}
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-12">
             <label for="inputAddress" required>Profile info</label>
             {{ form.profile_info }}
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-12">
             <label for="inputAddress">Website</label>
             {{ form.url }}
         </div>
@@ -38,7 +38,6 @@
     </form>
     </div>
 
-</div>
 
 </body>
 

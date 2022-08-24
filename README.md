@@ -311,6 +311,10 @@ the image field is a ImageField for users to upload their Profile image
 
 ## Testing
 ### Manual testing
+
+I performed manual testing throughout the whole prcess of building this site, I also took into account my user storys while creating my manual testing plan.
+
+
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 |from landing page Register a new account|new account would be created| new account created and welcome message apears letting me know I have created an account|

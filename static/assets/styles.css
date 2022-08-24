@@ -30,7 +30,7 @@ nav{
     right: 0;
     z-index: 99;
     background-color: var(--dark);
-    padding: 5px 15px;
+    padding: 5px 30px;
     border-bottom: 3px solid var(--primary);
 
 }
@@ -244,13 +244,6 @@ body {
 
 
 
-.frm {
-    padding-left: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
 
 .caption {
     padding: 20px;
