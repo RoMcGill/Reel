@@ -15,6 +15,9 @@ import os
 import dj_database_url
 import cloudinary
 import cloudinary_storage
+import cloudinary.uploader
+import cloudinary.api
+import django_heroku
 
 if os.path.isfile("env.py"):
     import env
@@ -24,6 +27,8 @@ if os.path.isfile("env.py"):
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -31,7 +36,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["reel-2022-new.herokuapp.com", "localhost"]
 
@@ -177,7 +182,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Default primary key field type
@@ -190,3 +195,6 @@ LOGIN_REDIRECT_URL = 'index'
 LOGIN_URL = 'sign-in'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+django_heroku.settings(locals())
