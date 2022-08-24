@@ -1,13 +1,9 @@
-todo:
-fix tag slug showing instead of tag
-messeges when you login
-
 # Guess The Boozer <img src="" style="width: 40px;height:40px;">
 
 
 **Developer: Ronan McGill**
 
-💻 [Visit live website](https://reel-2022-new.herokuapp.com/login/)
+💻 [Visit live website](https://reel-2022-new.herokuapp.com)
 
 ![Mockup image]()
 
