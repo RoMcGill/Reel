@@ -179,7 +179,7 @@ h1{
 
 }
 
-.callout-jumbotron {}
+
 
 .jumbotron-header {
     background-color: transparent;
@@ -221,8 +221,6 @@ body {
 }
 
 .card {
-
-    margin: 0 auto;
     background-color: aliceblue;
     border-radius: 25px;
 }
@@ -232,15 +230,15 @@ body {
 }
 
 .login-button{
-background: var(--dark);
-color: var(--primary);
-border-style: outset;
-border-color: var(--light)
-height: 50px;
-width: 100px;
-font: bold15px arial,sans-serif;
-text-shadow: none;
-border-radius: 50px;
+    background: var(--dark);
+    color: var(--primary);
+    border-style: outset;
+    border-color: var(--light);
+    height: 50px;
+    width: 100px;
+    font: bold15px arial,sans-serif;
+    text-shadow: none;
+    border-radius: 50px;
 
 }
 

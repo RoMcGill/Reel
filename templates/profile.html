@@ -81,14 +81,13 @@
 
                 </div>
             </div>
-            <div class="px-4 py-3">
+            <div class="px-3 py-2" style="width: 80%;">
                 <h5 class="mb-0">Posts</h5>
                 {% if profile.user == request.user %}
                 <button class="btn-outline-success"><a href="{% url 'newpost' %}">add post</a></button>
                 {% endif %}
-                <div class="p-4 rounded shadow-sm bg-light">
                     {% for post in posts %}
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="width: 100%;">
                         <a href="{% url 'post-detail' post.id %}"><img class="card-img-top"
                                 style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}"
                                 alt="post picture"></a>
