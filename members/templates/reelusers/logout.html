@@ -3,10 +3,10 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<h1>
+<h1 class="has-text-centered">
     You Have Been Logged Out
 </h1>
 
-<button><a href="{% url 'login' %}">Login</button></a>
+<button class="login-button btn-lg"><a href="{% url 'login' %}">Login</button></a>
 
 {% endblock content %}

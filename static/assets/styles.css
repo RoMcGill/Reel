@@ -227,8 +227,22 @@ body {
     border-radius: 25px;
 }
 
+.card-login{
+    background-color: none;
+}
 
+.login-button{
+background: var(--dark);
+color: var(--primary);
+border-style: outset;
+border-color: var(--light)
+height: 50px;
+width: 100px;
+font: bold15px arial,sans-serif;
+text-shadow: none;
+border-radius: 50px;
 
+}
 
 
 

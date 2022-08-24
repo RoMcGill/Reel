@@ -53,7 +53,7 @@ class Tag(models.Model):
         """
         shows tag title in admin panel
         """
-        return '{}/{}'.format(self.slug, self.title)
+        return self.title
 
     def save(self, *args, **kwargs):
         """

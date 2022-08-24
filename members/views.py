@@ -51,10 +51,7 @@ def login(self, request):
     """
     profile = Profile.objects.get(user__id=user)
     if User.is_authenticated:
-        messages.success(
-            request,
-            'you are now logged in!'
-            )
+
         return redirect(
             'edit-profile',
             profile.user.username
