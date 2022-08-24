@@ -65,7 +65,7 @@ class Profile(models.Model):
         upload_to=user_directory_path,
         blank=True,
         null=True,
-        verbose_name='picture'
+        verbose_name='picture',
         )
 
     def save(self, *args, **kwargs):

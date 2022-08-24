@@ -47,7 +47,8 @@
           {{user.profile.last_name|title }}</a>
 
 {% else %}
-        <p>Upload a photo</p>
+        <img src="{% static 'images/default-avatar.png'%}" alt="default Picture"
+        style="width: 5rem; height: 5rem; border-radius: 50px; padding: 5px; float: left;">
 {% endif %}
 
 <div class="container">

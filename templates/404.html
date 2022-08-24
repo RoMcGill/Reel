@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1>This page went OUT OUT last night</h1>
+<p>Im sure I can Help though</p>
+<ul>
+    <li>
+        <a href="{%url 'index'%}">Feed</a>
+    </li>
+    <li>
+        <a href="{% url 'contact_us' %}">Contact Us</a>
+        <p>(with only good news)</p>
+    </li>
+</ul>
+{% endblock %}

@@ -17,17 +17,16 @@
         </div>
 
         {% for user in users %}
-        <div class="card" style="width: 20rem;">
-          <div class="" style="text-align: start; border: solid rgba(192, 192, 192, 0.514) 1px; border-radius: 25px;">
-            <a href="{% url 'profile' user.username %}" class="side-menu__user-avatar">
-              {% if user.profile.image.url %}
+        {% if user.profile.image %}
               <img src="{{ user.profile.image.url }}" alt="User Picture"
                 style="width: 20rem;  border-radius: 25px; padding: 5px;">
               {% else %}
-              <img src="{% static '' %}" alt="User Picture">
-
+              <img src="{% static 'images/default-avatar.png' %}" alt="default Picture"
+              style="width: 20rem;  border-radius: 25px; padding: 5px;">
               {% endif %}
-            </a>
+        <div class="card" style="width: 20rem;">
+          <div class="" style="text-align: start; border: solid rgba(192, 192, 192, 0.514) 1px; border-radius: 25px;">
+            <a href="{% url 'profile' user.username %}" class="side-menu__user-avatar"></a>
             <div class="">
               {% if user.profile.first_name %}
               <a href="{% url 'profile' user.username %}"

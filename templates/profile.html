@@ -24,7 +24,12 @@
                         {% endif %}
 
                         {% endif %}
-                        <img src="{{profile.image.url}}" alt="..." width="130" class="rounded mb-5 img-thumbnail"></div>
+                        {% if user.profile.image %}
+                        <img src="{{profile.image.url}}" alt="..." width="130" class="rounded mb-5 img-thumbnail">
+                        {% else %}
+                        <img src="{% static 'images/default-avatar.png'%}" alt="..." width="130" class="rounded mb-5 img-thumbnail">
+                       {% endif %}
+                        </div>
                     <div class="media-body mb-5 text-white">
                         <h4 class="mt-0 mb-0">{{profile.first_name|title}} {{profile.last_name|title}}</h4>
                         <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>@{{profile.user.username}}</p>
