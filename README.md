@@ -320,8 +320,19 @@ the image field is a ImageField for users to upload their Profile image
 
 ## Performing tests on various devices
 
+The website was tested using Google Chrome Developer Tools on all devices available asell as the sesponsive toggle where you can drag to your prefered screensize. I also tested all available screen sizes on responsinator.com and amiresponsive.com
+
+The website was tested on the following devices:
+
+MacBook Pro
+Samsung Galaxy s21 ultra
+Samsung Galaxy Tab2
+
 
 ## Browser compatibility
+Testing has been carried out on the following browsers:
+
+*** finish***
 
 
 ## Bugs
@@ -335,23 +346,11 @@ the image field is a ImageField for users to upload their Profile image
 |12th July:heroku not showing anything| created runtime txt file and moved my procfile to be in the same app as manage.py|
 |12th July: I cannot create a post with a hashtag that has already been created|I was using title unique =True so i removed that, and added it to my SlugField which is where it was supposed to be all along.|
 |12th July:After Heroku deployment, no css shown on deployed site|installed whitenoise middleware to serve static files for production, later installed cloudinary.|
-|26th July:comments working in post-details but not in profile or index|(unconventional fix) instead of displaying comments on index + profile I linked the post-details to Post and index.|     |
+|26th July:comments working in post-details but not in profile or index|(unconventional fix) instead of displaying comments on index + profile I linked the post-details to Post and index.|
+|27th July: template for login/logout not showing|create templates folder with login/logout html files directly in members app|
 |2nd August:profile details not displaying|my model for profile details had an field called bio but i was showing profile-info in my view, made them both the same and it worked|
-|    |     |
-|    |     |
-|    |     |
-|    |     |
-|    |     |
-
-
-
-
-
-## Configuration
-
-
-## Google emails
-
+|22nd August:logout button was not logging user out| created a logout function in members.views|
+|TBA: getting a success message when user logs in|have tried placing the success message after the function to login, before it redirects and after but still no message shown.|
 
 ## Heroku Deployment
 ### Heroku Deployment
