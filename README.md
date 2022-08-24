@@ -331,10 +331,12 @@ the image field is a ImageField for users to upload their Profile image
 |29th June: tried to create user models. without having django User authentication in my imports| import from django.contrib.auth.models import User|
 |4th July: could not display my deployed site on heroku anymore|there was heroku maintance which chnaged my cofig vars on heroku, I updated my env.py file with the correct information.|
 |4th July: the error was cannot type cast int to uuid, cused by migrating my user model with primary key, then changing to uuid|migrate model with no primary key then migrate with uuid|
-|12th July:    |     |
-|    |     |
-|    |     |
-|    |     |
+|7th July: corrupted database|reset database, still was not working, started new repo from scratch (will add detailed report of intire issue below.)|
+|12th July:heroku not showing anything| created runtime txt file and moved my procfile to be in the same app as manage.py|
+|12th July: I cannot create a post with a hashtag that has already been created|I was using title unique =True so i removed that, and added it to my SlugField which is where it was supposed to be all along.|
+|12th July:After Heroku deployment, no css shown on deployed site|installed whitenoise middleware to serve static files for production, later installed cloudinary.|
+|26th July:comments working in post-details but not in profile or index|(unconventional fix) instead of displaying comments on index + profile I linked the post-details to Post and index.|     |
+|2nd August:profile details not displaying|my model for profile details had an field called bio but i was showing profile-info in my view, made them both the same and it worked|
 |    |     |
 |    |     |
 |    |     |
