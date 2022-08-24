@@ -326,6 +326,24 @@ the image field is a ImageField for users to upload their Profile image
 
 ## Bugs
 
+| **Bug** | **Fix** |
+| ------- | ------- |
+|29th June: tried to create user models. without having django User authentication in my imports| import from django.contrib.auth.models import User|
+|4th July: could not display my deployed site on heroku anymore|there was heroku maintance which chnaged my cofig vars on heroku, I updated my env.py file with the correct information.|
+|4th July: the error was cannot type cast int to uuid, cused by migrating my user model with primary key, then changing to uuid|migrate model with no primary key then migrate with uuid|
+|12th July:    |     |
+|    |     |
+|    |     |
+|    |     |
+|    |     |
+|    |     |
+|    |     |
+|    |     |
+|    |     |
+
+
+
+
 
 ## Configuration
 
