@@ -310,12 +310,35 @@ the image field is a ImageField for users to upload their Profile image
 
 
 ## Testing
-
-
-## Manual testing of user stories
+### Manual testing
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|from landing page Register a new account|new account would be created| new account created and welcome message apears letting me know I have created an account|
+|Login as New user| have acccess to the rest of the features on the site|all sites features are available once user is logged in.|
+|Setup profile|have the ability to personalise my profile|users can add their own personal profile picture, firstname, last name, bio, location and website|
+|create a post|to be able to create a post that other users can see and interact with|post created with picture, hashtag, and caption with the ability for other users to like comment and favourite it.|
+|browse the feed|see other users posts|the ability to see other users posts and interact with them|
+|search for other users|see a list of other users|a list of users + a searchbar to search for specific users|
+|follow other users|be able to follow other users|ability to follow users and have it reflect in the number of users on both profiles|
+|browse other users posts on their profile|list of posts on users profile page|list of posts displayed on users profile|
+|add their posts to my favourites|add posts to a favourite folder|favorited posts go into a page on my profile for anyone to see if they click the favourites button beside the the posts button|
+|like their posts|users will see that I have liked their post|the number of likes on a post raises by 1 every time a user likes it|
+|unlike a post|the like will go away| the number of likes on the post droped by 1|
+|comment on their posts|comment will show up under post|comment is displayed in the post details which can be accessed through the feed or users profile or anywhere the post is on the site|
+|delete my comments|.button to remove comments posted by me|button below my comments deletes them and shows a message confirming i delketed the comment|
+|search the hastags from other users posts|look at what hashtags people are posting on their posts and click them to see their popularity|all posts with the same hashtags are displayed to get to that page just click the hashtag you want to see|
+|look at other users favorited posts|click their favourites button and see a list of their favourite posts|favourites are displayed in place of the users posts when the favourite button is clicked|
+|contact the site owner|enter in my information an messsage and send message|message sent and message apears to confirm I have sent a message to site owner|
+|read the site owners blog|see a list of blog posts|blog posts are displayed on the blog page|
+|logout of my account|not be able to access some of the sites features|log out stops users from being able to see some site features|
+|log back in|be able to click a button to log back in |there is an option to log back in once logged out|
+|edit/ update my profile|edit my profile and update/change some information|all updated information changes instantly and a message apears to confirm I have updated my profile|
+|login on a mobile device|be able to login to my account |all features available on the desktop site are available on mobile|
+|re trace all steps taken again on mobile device|all steps work the same as on desktop site|all steps work the same as on desktop site|
 
 
 ## Automated testing
+*** not done yet ***
 
 
 ## Performing tests on various devices
