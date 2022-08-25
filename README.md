@@ -4,7 +4,7 @@
 
 💻 [Visit live website](https://reel-2022-new.herokuapp.com)
 
-<img src="/workspace/Reel/readme-images/amiresponsive.jpg" width="800">
+<img src="./readme-images/amiresponsive.jpg" width="800">
 
 ## Table of Contents
   - [About](#about)
