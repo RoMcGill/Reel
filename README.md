@@ -323,52 +323,52 @@ the image field is a ImageField for users to upload their Profile image
 ## Wireframes
 <details>
 <summary>Edit profile</summary>
-<img src="/workspace/Reel/readme-images/wireframe1.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe1.png">
 </details>
 
 <details>
 <summary>Register</summary>
-<img src="/workspace/Reel/readme-images/wireframe2.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe2.png">
 </details>
 
 <details>
 <summary>Login</summary>
-<img src="/workspace/Reel/readme-images/wireframe3.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe3.png">
 </details>
 
 <details>
 <summary>Logout</summary>
-<img src="/workspace/Reel/readme-images/wireframe4.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe4.png">
 </details>
 
 <details>
 <summary>Index</summary>
-<img src="/workspace/Reel/readme-images/wireframe5.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe5.png">
 </details>
 
 <details>
 <summary>Blog</summary>
-<img src="/workspace/Reel/readme-images/wireframe6.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe6.png">
 </details>
 
 <details>
 <summary>Contact us</summary>
-<img src="/workspace/Reel/readme-images/wireframe7.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe7.png">
 </details>
 
 <details>
 <summary>Search</summary>
-<img src="/workspace/Reel/readme-images/wireframe8.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe8.png">
 </details>
 
 <details>
 <summary>Feed</summary>
-<img src="/workspace/Reel/readme-images/wireframe9.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe9.png">
 </details>
 
 <details>
 <summary>Profile</summary>
-<img src="/workspace/Reel/readme-images/wireframe10.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe10.png">
 </details>
 
 
@@ -392,6 +392,58 @@ the image field is a ImageField for users to upload their Profile image
 
 ---
 ## Validation
+### Chrome Dev Tools Lighthouse
+Lighthouse was used to test the performance, accessibility, best practice and SEO of the site.
+
+<details>
+<summary>Edit profile</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-edit-profile.png">
+</details>
+
+<details>
+<summary>Register</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-register.png">
+</details>
+
+<details>
+<summary>Login</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-login.png">
+</details>
+
+<details>
+<summary>Logout</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-logout.png">
+</details>
+
+<details>
+<summary>Index</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-index.png">
+</details>
+
+<details>
+<summary>Blog</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-blog.png">
+</details>
+
+<details>
+<summary>Contact us</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-contact.png">
+</details>
+
+<details>
+<summary>Search</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-search.png">
+</details>
+
+<details>
+<summary>Feed</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-feed.png">
+</details>
+
+<details>
+<summary>Profile</summary>
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-profile.png">
+</details>
 
 ---
 ## Testing
