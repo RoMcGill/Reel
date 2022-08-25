@@ -321,6 +321,26 @@ the image field is a ImageField for users to upload their Profile image
 ----
 
 ## Wireframes
+Edit profile
+![wireframe](./readme-images/wireframe1.png)
+Regiseter
+![wireframe](./readme-images/wireframe2.png)
+Login
+![wireframe](./readme-images/wireframe3.png)
+logout
+![wireframe](./readme-images/wireframe4.png)
+Index
+![wireframe](./readme-images/wireframe5.png)
+Blog
+![wireframe](./readme-images/wireframe6.png)
+Contact Us
+![wireframe](./readme-images/wireframe7.png)
+Search
+![wireframe](./readme-images/wireframe8.png)
+Feed
+![wireframe](./readme-images/wireframe9.png)
+Profile
+![wireframe](./readme-images/wireframe11.png)
 
 ----
 
