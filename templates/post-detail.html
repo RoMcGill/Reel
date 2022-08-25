@@ -14,19 +14,7 @@
   <span class="post__date-time">{{post.posted|date:"d M,Y"}}</span>
   <a href="{% url 'like' post.id %}"><span>{{ post.likes}} Likes</span></a>
   <p class="hashtag">{% for tag in post.tag.all %}<a href="{{tag.get_absolute_url}}">#{{ tag }} </a>{% endfor %}</p>
-<!-- solved button -->
 
-{% if post.user == request.user %}
-<!-- <a href="{#%# url 'solve' post.id #%#}"><span>{#{# post.solves#}#} solves</span></a> -->
-  <!-- <button class="button-click" id="addcolor">
-    Click if solved
-  </button>
-  <div id="maincolor" class="firstcolor">
-    solved
-  </div>
-  <br> -->
-{% endif %}
-<!-- solved button -->
 <!-- comment button -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Comments
