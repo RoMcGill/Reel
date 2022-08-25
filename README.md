@@ -4,8 +4,7 @@
 
 💻 [Visit live website](https://reel-2022-new.herokuapp.com)
 
-<img src="https://raw.githubusercontent.com/romcgill/reel/main//workspace/Reel/readme-images/amiresponsive.png">
-
+<img src="/workspace/Reel/readme-images/amiresponsive.png" width="800">
 
 ## Table of Contents
   - [About](#about)
