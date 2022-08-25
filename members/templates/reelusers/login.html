@@ -16,7 +16,7 @@
       </div>
     <div class="card-login">
   <div class="card-content">
-    <form method="POST" action="" role="form">
+    <form method="POST">
       {% csrf_token %}
         {{form|crispy}}
           {% if form.errors %}
@@ -31,5 +31,12 @@
       <input type="submit" value="Sign In" class="button is-success login-button">
     <a href="{% url 'register' %}" class="button is-info">sign-up</a>
   </div>
+  </form>
+  </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 
             {% endblock content %}

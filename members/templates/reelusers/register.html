@@ -2,69 +2,48 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-  <body>
 
-
+<div style="padding-left: 10px;">
   <section class="section">
     <div class="container-register">
 
-<div class="has-text-centered">
-  <div class="column is-half is-offset-one-quarter">
+      <div class="has-text-centered">
+        <div class="column is-half is-offset-one-quarter">
 
-    <div class="card-login">
-    <div class="card-content">
+          <div class="card-login">
+            <div class="card-content">
 
-          <form method="POST" action="" role="form">
-          {% csrf_token %}
-          {{form|crispy}}
+              <form method="POST">
+                {% csrf_token %}
+                {{form|crispy}}
 
-
-
+            </div>
           </div>
-        </div>
 
-      {% if form.errors %}
-      <div class="row">
-        <div class="col s12">
-          <span style="color: red; font-weight: bold;">Your username or password did not match.</span>
+          {% if form.errors %}
+          <div class="row">
+            <div class="col s12">
+              <span style="color: red; font-weight: bold;">Your username or password did not match.</span>
+            </div>
+          </div>
+          {% endif %}
+          <div class="field">
+            <p class="control"></p>
+            <input type="submit" value="Sign Up" class="button is-success login-button">
+          </div>
+          <input type="hidden" name="next" value="{{ next }}">
+          <h3>Already have an account?</h3>
+          <a href="{% url 'login' %}" class="btn">Sign in here</a>
+          </form>
         </div>
       </div>
-      {% endif %}
-
-      <div class="field">
-      <p class="control"></p>
-        <input type="submit" value="Sign Up" class="button is-success login-button">
-
-
-
     </div>
-
-    <input type="hidden" name="next" value="{{ next }}">
-
-
-<h3>Already have an account?</h3>
-    <button><a href="{% url 'login' %}">Sign in here</button></a>
-
-
-  </form>
-
-
-
-
-    </div>
-    </div>
-
-
-
-  </div>
 </div>
+</div>
+</section>
 
 
-    </div>
-  </section>
 
-  </body>
-</html>
 
 
 {% endblock content %}

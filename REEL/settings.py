@@ -39,6 +39,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ["reel-2022-new.herokuapp.com", "localhost", "*"]
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.gitpod.io']
 
 # HTMLVALIDATOR_ENABLED = True
 # HTMLVALIDATOR_FAILFAST = True

@@ -4,9 +4,9 @@
   <!--post-->
   {% if user.is_authenticated %}
   {% for post in post_items %}
-  <div class="card responsive" style="width: 70%; margin: 0 auto;">
+  <div class="card responsive" style="width: 65%; margin: 0 auto;">
     <a href="{% url 'post-detail' post.id %}"><img class="img-responsive"
-        style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}" alt="Card image cap"></a>
+        style="border-radius: 25px; width: 100%; height: 50%;" src="{{ post.picture.url }}" alt="Card image cap"></a>
     <div class="card-body">
       <a href="{% url 'profile' post.user %}">
         <h5 class="card-title">@{{ post.user.username }} </h5>
@@ -27,7 +27,7 @@
 
      <!--features-->
   <div class="container-fluid features-container">
-    <section clas="features">
+    <section class="features">
       <div class="row">
         <div class="col-12 my-5 text-center">
           <h2>Heres The Plan!:</h2>
@@ -55,7 +55,7 @@
         <div class="col-12 col-md-6 col-lg-4 mt-3">
           <div class="feature text-center">
             <span class="material-symbols-outlined">
-              &#xE87D
+              &#xE87D;
             </span>
             <h3>Create posts</h3>
             <p>Upload photos of where you are and see if any friends or other users can Guess </p>
@@ -73,8 +73,7 @@
 
 
 
-    </section>
-  </div>
+
   </div>
 
   {% endblock content %}
