@@ -3,9 +3,12 @@
 {% block content%}
 
 {% for blogpost in blog_posts %}
-<div class="post-block">
-    <h2 class="subtitle">{{ blogpost.title }}</h2>
-        <p>{{ blogpost.intro }}</p><img class="blog-img-size" src="{{ blogpost.picture.url}}" alt="blog post image"></img>
+<div class="post-block" style="width: 95%; margin: 0 auto;">
+    <h2 class="subtitle" style="text-align: center; width: 50%; margin: 0 auto;">{{ blogpost.title }}</h2>
+        <p style="text-align: center; width: 50%; margin: 0 auto;">{{ blogpost.intro }}</p>
+    <div style="width: 95%; display: flex;">
+        <img class="blog-img-size center"src="{{ blogpost.picture.url}}" alt="blog post image" style="width: 50%; margin: 0 auto; justify-content: center;"></img>
+    </div>
             <h3>{{ blogpost.body }}</h3>
                 <small>Posted at {{ blogpost.date_added }}</small>
                 <br>
