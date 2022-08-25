@@ -1,9 +1,11 @@
 # Guess The Boozer
 **Developer: Ronan McGill**
 
+
 💻 [Visit live website](https://reel-2022-new.herokuapp.com)
 
-<img src="/workspace/Reel/readme-images/amiresponsive.png">
+<img src="https://raw.githubusercontent.com/romcgill/reel/main//workspace/Reel/readme-images/amiresponsive.png">
+
 
 ## Table of Contents
   - [About](#about)
