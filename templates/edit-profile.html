@@ -3,40 +3,47 @@
 {% block content%}
 
 <body>
-    <div class="frm">
-    <form method="POST" enctype="multipart/form-data" >
+    <div class="frm" style="width: 50%; margin: 0 auto;">
+    <form method="POST" enctype="multipart/form-data" style="width: 50%; margin: 0 auto;">
         {% csrf_token %}
         <h3 class="title is-3">Edit Profile</h3>
 
             <div class="form-group col-md-12 center" required>
                 <label for="inputPicture">Picture</label>
+                <br>
                 {{ form.picture }}
             </div>
             <div class="form-group col-md-12" required>
                 <label for="inputPassword4">First Name</label>
+                <br>
                 {{ form.first_name}}
             </div>
-        </div>
+
         <div class="form-group col-md-12" required>
             <label for="inputAddress">Last Name</label>
+            <br>
             {{ form.last_name }}
         </div>
         <div class="form-group col-md-12">
             <label for="inputAddress">Location</label>
+            <br>
             {{ form.location }}
         </div>
         <div class="form-group col-md-12">
             <label for="inputAddress" required>Profile info</label>
+            <br>
             {{ form.profile_info }}
         </div>
         <div class="form-group col-md-12">
             <label for="inputAddress">Website</label>
+            <br>
             {{ form.url }}
         </div>
 
-        <button type="submit" class="btn btn-primary">Update Profile</button>
+        <button type="submit" class="btn btn-primary" aria-label="submit button">Update Profile</button>
     </form>
     </div>
+</div>
 
 
 </body>

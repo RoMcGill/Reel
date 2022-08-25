@@ -5,7 +5,7 @@
 {% for blogpost in blog_posts %}
 <div class="post-block">
     <h2 class="subtitle">{{ blogpost.title }}</h2>
-        <p>{{ blogpost.intro }}</p><img class="blog-img-size" src="{{ blogpost.picture.url}}"></img>
+        <p>{{ blogpost.intro }}</p><img class="blog-img-size" src="{{ blogpost.picture.url}}" alt="blog post image"></img>
             <h3>{{ blogpost.body }}</h3>
                 <small>Posted at {{ blogpost.date_added }}</small>
                 <br>
