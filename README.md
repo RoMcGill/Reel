@@ -4,7 +4,7 @@
 
 💻 [Visit live website](https://reel-2022-new.herokuapp.com)
 
-<img src="/workspace/Reel/readme-images/amiresponsive.png" width="800">
+<img src="/workspace/Reel/readme-images/amiresponsive.jpg" width="800">
 
 ## Table of Contents
   - [About](#about)
@@ -321,54 +321,53 @@ the image field is a ImageField for users to upload their Profile image
 ## Wireframes
 <details>
 <summary>Edit profile</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe1.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe1.jpg">
 </details>
 
 <details>
 <summary>Register</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe2.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe2.jpg">
 </details>
 
 <details>
 <summary>Login</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe3.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe3.jpg">
 </details>
 
 <details>
 <summary>Logout</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe4.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe4.jpg">
 </details>
 
 <details>
 <summary>Index</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe5.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe5.jpg">
 </details>
 
 <details>
 <summary>Blog</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe6.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe6.jpg">
 </details>
 
 <details>
 <summary>Contact us</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe7.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe7.jpg">
 </details>
 
 <details>
 <summary>Search</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe8.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe8.jpg">
 </details>
 
 <details>
 <summary>Feed</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe9.png">
+<img src="/workspace/Reel/readme-images/wireframes/wireframe9.jpg">
 </details>
 
 <details>
 <summary>Profile</summary>
-<img src="/workspace/Reel/readme-images/wireframes/wireframe10.png">
-</details>
-
+<img src="/workspace/Reel/readme-images/wireframes/wireframe10.jpg">
+</detailjpg
 
 ----
 
@@ -395,52 +394,52 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 
 <details>
 <summary>Edit profile</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-edit-profile.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-edit-profile.jpg">
 </details>
 
 <details>
 <summary>Register</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-register.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-register.jpg">
 </details>
 
 <details>
 <summary>Login</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-login.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-login.jpg">
 </details>
 
 <details>
 <summary>Logout</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-logout.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-logout.jpg">
 </details>
 
 <details>
 <summary>Index</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-index.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-index.jpg">
 </details>
 
 <details>
 <summary>Blog</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-blog.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-blog.jpg">
 </details>
 
 <details>
 <summary>Contact us</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-contact.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-contact.jpg">
 </details>
 
 <details>
 <summary>Search</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-search.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-search.jpg">
 </details>
 
 <details>
 <summary>Feed</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-feed.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-feed.jpg">
 </details>
 
 <details>
 <summary>Profile</summary>
-<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-profile.png">
+<img src="/workspace/Reel/readme-images/lighthouse/lighthouse-profile.jpg">
 </details>
 
 ---
