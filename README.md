@@ -367,7 +367,7 @@ the image field is a ImageField for users to upload their Profile image
 <details>
 <summary>Profile</summary>
 <img src="./readme-images/wireframes/wireframe10.jpg">
-</detailjpg
+</detail>
 
 ----
 
