@@ -35,10 +35,12 @@
     - [Heroku Deployment](#heroku-deployment)
   - [Credits](#credits)
   - [Acknowledgements](#acknowledgements)
-
+---
 ## About
 
 Guess the boozer is a social media game to play with friends, the object of the game is to guess what pub,bar,resteraunt your friends are in based on their vague images and hints, this is a game that my friends and I personaly Play most weekends and by creating guess the boozer we will bring the game to a wider audience.
+
+----------
 
 ## User Goals
 
@@ -48,7 +50,7 @@ Join in on the fun and Create posts and give hints to other users so they can tr
 
 guess where other users are or have been using the information they supply.
 
-
+----
 ## Site Owner Goals
 
 Create a platform for people to connect with eachother
@@ -57,6 +59,7 @@ Implement a gaming/puzzel aspect to the social media site
 
 Spread awareness about new, fun, diffrent bars/pubs and resteraunts
 
+----
 
 ## User Experience
 
@@ -86,7 +89,7 @@ Ability to share posts, connect and converse with other users.
 
 Dedicated Page/blog to advertise and support businesses and inform users of updates to the site and any other relavant news.
 
-
+----
 ## User Stories
 
 
@@ -187,6 +190,7 @@ USER STORY : connecting people who enjoy socialising and puzzels MUST HAVE
 #14 opened on 22 Apr by RoMcGill
  PBI ITERATION 1
 
+----
 
 
 ## Design
@@ -195,27 +199,55 @@ USER STORY : connecting people who enjoy socialising and puzzels MUST HAVE
 the colour scheme was chosen as there is a nice contrast between diffrent elements which makes for a pleasurable user experience also the colour schem plays a role in helping the user feel familiar with the site as the gradient used is similar to instagram just with the colours changedm, the fade from dark green to bright green in the background is like instagrams gradient from dark purple to bright pink.
 
 ## Fonts
-***all fonts are standard at the time of writing this.***
+The fonts implemented on the site are Fira sans with sans-serif as a fallback these fonts were used thoughout the site to add charachter, style and legibility
 
 
 ## Structure
 ease of use was the goal for this site. the navagation bar at ther top of the page provides easy clikable links to each section of the site, from there you can dive deeper into other features of the site.
 
+-----
+
 ## Website pages
-The website is made up of the following pages:
-Home page/feed this page is your landing page once logged in and will propt you to update your profile information and instruct you what to do next, following these instructions you will find other users and populate this page with there posts after following some users.
-Register page, this is where a user can create an account.
-Login page, on this page users can login to their account.
-search page, this page will show users a list of other users and provide a button to search for users by name.
-Logout page allowing user to log out of the website, this page will also provide the user with an option to log back in.
-Profile page where users can add their profile picture first/last name, bio and website. This page will display thier profile image,bio, name, posted posts and favourited posts. If a user is on another users Profile they will not have the option to edit their profile but will have an option to follow the user in its place.
-post detail page is used for specific posts that a user clicks on, this page will show all of the details of a given post and also provide a button to view the comments and post/delete a comment, view the hashtags and likes associated with the post.
-the tags page is where all posts with corrisponding tags are displayed.
-the favourites page is in the profile page and when clicked the user posts will no loger show but the posts that the given user has favourited will display instead.
-the cooment page/modal is used to display, post and delete comments on nay given post.
-the blog page is a site owner run blog to promote businesses and provide users with information.
-Contact page with contact form which allows users to send an email to the site owner and provide their feedback or questions.
-***no 404 error page yet.***
+### The website is made up of the following pages:
+
+### Home page/feed
+this page is your landing page once logged in and will propt you to update your profile information and instruct you what to do next, following these instructions you will find other users and populate this page with their posts after following some users.
+
+### Register page
+this is where a user can create an account.
+
+### Login page
+on this page users can login to their account.
+
+### search page
+this page will show users a list of other users and provide a button to search for users by name.
+
+### Logout page
+this page will allow users to log out of the website, this page will also provide the user with an option to log back in.
+
+### Profile page
+where users can add their profile picture first/last name, bio and website. This page will display thier profile image,bio, name, posted posts and favourited posts. If a user is on another users Profile page they will not have the option to edit their profile from there but will have an option to follow the user in its place.
+
+### post detail page
+is used for specific posts that a user clicks on, this page will show all of the details of a given post and also provide a button to view the comments and post/delete a comment, view the hashtags and likes associated with the post.
+
+### the tags page
+is where all posts with corrisponding tags are displayed.
+
+### the favourites page
+is located in the profile page and when clicked the user posts will no loger show but the posts that the given user has favourited will display instead.
+
+### the comment page/modal
+is used to display, post and delete comments on nay given post.
+
+### the blog page
+is a site owner run blog to promote businesses and provide users with information.
+
+### Contact page
+ with contact form which allows users to send an email to the site owner and provide their feedback or questions.
+
+### 404 error page
+----
 
 ## Database
 The backend is built on the Django framework using Postgres for the deployed Heroku version I have created a graph model of the site using django-extensions and graphviz to display the model relationships.
@@ -286,15 +318,16 @@ the created field is a DateTimeField to capture when the profile has been create
 the Favourite Field is a ManyToManyField that users can have their favourite posts by them selfs or by other users saved.
 the image field is a ImageField for users to upload their Profile image
 
-
-
-
-
+----
 
 ## Wireframes
 
+----
 
 ## Technologies Used
+
+
+
 ### Languages & Frameworks
 
 - HTML
@@ -303,12 +336,14 @@ the image field is a ImageField for users to upload their Profile image
 - Python 3.10.2
 - Django 3.2
 
+----
+
 ## Features
 
-
+---
 ## Validation
 
-
+---
 ## Testing
 ### Manual testing
 
@@ -359,8 +394,13 @@ Samsung Galaxy Tab2
 ## Browser compatibility
 Testing has been carried out on the following browsers:
 
-*** finish***
+google chrome Version 103.0.5060.53 (Official Build) (x86_64)
 
+Safari Version 14.1.2 (14611.3.10.1.7)
+
+Samsung Internet Version (18.0.0.58)
+
+----
 
 ## Bugs
 
@@ -378,6 +418,8 @@ Testing has been carried out on the following browsers:
 |2nd August:profile details not displaying|my model for profile details had an field called bio but i was showing profile-info in my view, made them both the same and it worked|
 |22nd August:logout button was not logging user out| created a logout function in members.views|
 |TBA: getting a success message when user logs in|have tried placing the success message after the function to login, before it redirects and after but still no message shown.|
+
+----
 
 ## Heroku Deployment
 ### Heroku Deployment
@@ -411,6 +453,8 @@ Final steps:
   ![Deployment steps](docs/readme/heroku-deployment.jpg)
 
 
+-----
+
 ### Forking the GitHub Repository
 1. Go to the GitHub repository
 2. Click on Fork button in top right corner
@@ -425,9 +469,11 @@ Final steps:
 6. Type git clone and paste the URL from the clipboard
 7. Press Enter to create your local clone
 
+-----
 
 ## Credits
 
+-----
 
 ## Acknowledgements
 
