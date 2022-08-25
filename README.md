@@ -321,26 +321,56 @@ the image field is a ImageField for users to upload their Profile image
 ----
 
 ## Wireframes
-Edit profile
-![wireframe](./readme-images/wireframe1.png)
-Regiseter
-![wireframe](./readme-images/wireframe2.png)
-Login
-![wireframe](./readme-images/wireframe3.png)
-logout
-![wireframe](./readme-images/wireframe4.png)
-Index
-![wireframe](./readme-images/wireframe5.png)
-Blog
-![wireframe](./readme-images/wireframe6.png)
-Contact Us
-![wireframe](./readme-images/wireframe7.png)
-Search
-![wireframe](./readme-images/wireframe8.png)
-Feed
-![wireframe](./readme-images/wireframe9.png)
-Profile
-![wireframe](./readme-images/wireframe11.png)
+<details>
+<summary>Edit profile</summary>
+<img src="/workspace/Reel/readme-images/wireframe1.png">
+</details>
+
+<details>
+<summary>Register</summary>
+<img src="/workspace/Reel/readme-images/wireframe2.png">
+</details>
+
+<details>
+<summary>Login</summary>
+<img src="/workspace/Reel/readme-images/wireframe3.png">
+</details>
+
+<details>
+<summary>Logout</summary>
+<img src="/workspace/Reel/readme-images/wireframe4.png">
+</details>
+
+<details>
+<summary>Index</summary>
+<img src="/workspace/Reel/readme-images/wireframe5.png">
+</details>
+
+<details>
+<summary>Blog</summary>
+<img src="/workspace/Reel/readme-images/wireframe6.png">
+</details>
+
+<details>
+<summary>Contact us</summary>
+<img src="/workspace/Reel/readme-images/wireframe7.png">
+</details>
+
+<details>
+<summary>Search</summary>
+<img src="/workspace/Reel/readme-images/wireframe8.png">
+</details>
+
+<details>
+<summary>Feed</summary>
+<img src="/workspace/Reel/readme-images/wireframe9.png">
+</details>
+
+<details>
+<summary>Profile</summary>
+<img src="/workspace/Reel/readme-images/wireframe10.png">
+</details>
+
 
 ----
 
