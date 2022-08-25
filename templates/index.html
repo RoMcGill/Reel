@@ -4,7 +4,7 @@
   <!--post-->
   {% if user.is_authenticated %}
   {% for post in post_items %}
-  <div class="card responsive" style="width: 70%; height: 45%;">
+  <div class="card responsive" style="width: 70%; margin: 0 auto;">
     <a href="{% url 'post-detail' post.id %}"><img class="img-responsive"
         style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}" alt="Card image cap"></a>
     <div class="card-body">

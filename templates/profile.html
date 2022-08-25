@@ -92,11 +92,11 @@
                 <button class="btn-outline-success"><a href="{% url 'newpost' %}">add post</a></button>
                 {% endif %}
                     {% for post in posts %}
-                    <div class="card" style="width: 100%;">
+                    <div class="card" style="width: 100%; margin: 0 auto;">
                         <a href="{% url 'post-detail' post.id %}"><img class="card-img-top"
                                 style="border-radius: 25px; width: 100%; height: auto;" src="{{ post.picture.url }}"
                                 alt="post picture"></a>
-                        <div class="card-body">
+                        <div class="card-body" style="margin: 0 auto;">
                             <a href="{% url 'profile' post.user %}">
                                 <h5 class="card-title">@{{ post.user.username }} </h5>
                             </a>
