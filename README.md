@@ -537,8 +537,18 @@ I used JSHint JS Validation Service to validate my Javascript files. No errors w
 
 ----
 
-PEP8 Validation
-PEP8 Validation Service was used to check the code for PEP8 requirements. All the code passes with no errors and no warnings to show.
+### PEP8 Validation
+I used PEP8 Validation Service to check the code for PEP8 requirements. All the code passes with no errors and no warnings to show Bar one url file that one line was 2 charachters too log, I decided to leave it as when it was formated to meet requirements it was less legible
+
+#### Blog
+
+#### Comment
+#### Search
+#### Comment
+#### Post
+#### USerauthentication
+#### Members
+
 
 ---
 ## Testing
