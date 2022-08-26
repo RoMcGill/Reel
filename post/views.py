@@ -219,9 +219,17 @@ def favourite(request, post_id):
         profile.favourite.remove(
             post
             )
+        messages.success(
+            request,
+            'Post removed from favourites'
+            )
     else:
         profile.favourite.add(
             post
+            )
+        messages.success(
+            request,
+            'Post added to favourites'
             )
     return HttpResponseRedirect(reverse('post-detail', args=[post_id]))
 
