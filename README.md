@@ -542,13 +542,154 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 
 #### Blog
 
+<details>
+<summary>Models</summary>
+<img src="./readme-images/blog-pep8/blog-models.png">
+</details>
+
+<details>
+<summary>Admin</summary>
+<img src="./readme-images/blog-pep8/blog-admin.png">
+</details>
+
+<details>
+<summary>Url</summary>
+<img src="./readme-images/blog-pep8/blog-url.png">
+</details>
+
+<details>
+<summary>Views</summary>
+<img src="./readme-images/blog-pep8/blog-views.png">
+</details>
+
 #### Comment
+
+<details>
+<summary>Models</summary>
+<img src="./readme-images/comment-pep8/comment-models.png">
+</details>
+
+<details>
+<summary>Admin</summary>
+<img src="./readme-images/comment-pep8/comment-admin.png">
+</details>
+
+<details>
+<summary>Url</summary>
+<img src="./readme-images/comment-pep8/blog-url.png">
+</details>
+
 #### Search
-#### Comment
+
+<details>
+<summary>Views</summary>
+<img src="./readme-images/search-pep8/search-views.png">
+</details>
+
+<details>
+<summary>Url</summary>
+<img src="./readme-images/search-pep8/search-url.png">
+</details>
+
+
+#### Contact us
+
+<details>
+<summary>Models</summary>
+<img src="./readme-images/contact-pep8/contact-models.png">
+</details>
+
+<details>
+<summary>Views</summary>
+<img src="./readme-images/contact-pep8/contact-views.png">
+</details>
+
+<details>
+<summary>Url</summary>
+<img src="./readme-images/contact-pep8/contact-url.png">
+</details>
+
+<details>
+<summary>Admin</summary>
+<img src="./readme-images/contact-pep8/contact-admin.png">
+</details>
+
 #### Post
-#### USerauthentication
+
+
+<details>
+<summary>Url</summary>
+<img src="./readme-images/post-pep8/post-urls.png">
+</details>
+
+<details>
+<summary>Admin</summary>
+<img src="./readme-images/post-pep8/post-admin.png">
+</details>
+
+<details>
+<summary>Form</summary>
+<img src="./readme-images/post-pep8/post-form.png">
+</details>
+
+<details>
+<summary>Models</summary>
+<img src="./readme-images/post-pep8/post-models.png">
+</details>
+
+<details>
+<summary>Views</summary>
+<img src="./readme-images/post-pep8/post-views.png">
+</details>
+
+#### Userauthentication
+
+<details>
+<summary>Models</summary>
+<img src="./readme-images/userauth-pep8/userauth-models.png">
+</details>
+
+<details>
+<summary>Admin</summary>
+<img src="./readme-images/userauth-pep8/userauth-admin.png">
+</details>
+
+<details>
+<summary>Form</summary>
+<img src="./readme-images/userauth-pep8/userauth-form.png">
+</details>
+
+<details>
+<summary>Url</summary>
+<img src="./readme-images/userauth-pep8/userauth-url.png">
+</details>
+
+<details>
+<summary>Views</summary>
+<img src="./readme-images/userauth-pep8/userauth-views.png">
+</details>
+
 #### Members
 
+<details>
+<summary>Views</summary>
+<img src="./readme-images/members-pep8/members-views.png">
+</details>
+
+<details>
+<summary>Url</summary>
+<img src="./readme-images/members-pep8/members-url.png">
+</details>
+
+<details>
+<summary>Models</summary>
+<img src="./readme-images/members-pep8/members-models.png">
+</details>
+
+<details>
+<summary>Form</summary>
+<img src="./readme-images/members-pep8/members-form.png">
+</details>
 
 ---
 ## Testing
