@@ -372,8 +372,6 @@ the image field is a ImageField for users to upload their Profile image
 
 ## Technologies Used
 
-
-
 ### Languages & Frameworks
 
 - HTML
@@ -381,6 +379,33 @@ the image field is a ImageField for users to upload their Profile image
 - Javascript
 - Python 3.10.2
 - Django 3.2
+
+### Libraries & Tools
+Am I Responsive -
+Cloudinary -
+Favicon.io -
+Chrome dev tools -
+Gitpod -
+GitHub -
+CrispyForms
+Google Fonts -
+django_extentions -
+Heroku -
+jQuery -
+Bootstrap -
+Postgres –
+graphviz -
+gunicorn -
+Pillow -
+psycopg2 -
+Balsamiq -
+WC3 Validator -
+Jigsaw W3 Validator -
+JShint -
+PEP8 -
+Google dev tools -
+Lighthouse -
+responsinator -
 
 ----
 
@@ -767,7 +792,7 @@ Samsung Internet Version (18.0.0.58)
 
 ----
 
-## Heroku Deployment
+## Heroku Deployment (expand on this)
 ### Heroku Deployment
 This application has been deployed from GitHub to Heroku by following the steps:
 
