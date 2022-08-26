@@ -1,3 +1,15 @@
+ToDo:
+Features to readme
+cleanup files
+extra detail on heroku deployment
+add explination for new repo at begining
+add project url and explain
+create better database diagram
+add screenshots to manual tests
+add credits+
+
+
+
 # Guess The Boozer
 **Developer: Ronan McGill**
 
@@ -192,7 +204,9 @@ USER STORY find good pubs, bars, restaurants local to me
 ## Design
 
 ## Colours
-the colour scheme was chosen as there is a nice contrast between diffrent elements which makes for a pleasurable user experience also the colour schem plays a role in helping the user feel familiar with the site as the gradient used is similar to instagram just with the colours changedm, the fade from dark green to bright green in the background is like instagrams gradient from dark purple to bright pink.
+<img src="./readme-images/Screenshot 2022-08-26 at 23.25.19.png">
+the colour scheme was chosen as there is a nice contrast between diffrent elements which makes for a pleasurable user experience also the colour schem plays a role in helping the user feel familiar with the site as the gradient used is similar to instagram just with diffrent colours, the fade from dark green to bright green in the background is like instagrams gradient from dark purple to bright pink.
+
 
 ## Fonts
 The fonts implemented on the site are Fira sans with sans-serif as a fallback these fonts were used thoughout the site to add charachter, style and legibility
@@ -201,9 +215,7 @@ The fonts implemented on the site are Fira sans with sans-serif as a fallback th
 ## Structure
 ease of use was the goal for this site. the navagation bar at ther top of the page provides easy clikable links to each section of the site, from there you can dive deeper into other features of the site.
 
------
-
-## Website pages
+### Website pages
 ### The website is made up of the following pages:
 
 ### Home page/feed
@@ -724,26 +736,194 @@ I performed manual testing throughout the whole prcess of building this site, I 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 |from landing page Register a new account <sup>User Story #1,5</sup> |new account would be created| new account created and welcome message apears letting me know I have created an account|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 | Login as New user <sup>User Story #6</sup>| have acccess to the rest of the features on the site|all sites features are available once user is logged in.|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 | Setup profile <sup>User Story #8</sup>|have the ability to personalise my profile|users can add their own personal profile picture, firstname, last name, bio, location and website|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |create a post <sup>User Story #20, #27</sup>|to be able to create a post that other users can see and interact with|post created with picture, hashtag, and caption with the ability for other users to like comment and favourite it.|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |browse the feed <sup>User Story #14, #17, #7</sup>|see other users posts|the ability to see other users posts and interact with them|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |search for other users <sup>User Story #25</sup>|see a list of other users|a list of users + a searchbar to search for specific users|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |follow other users <sup>User Story #9</sup>|be able to follow other users|ability to follow users and have it reflect in the number of users on both profiles|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |browse other users posts on other users profile <sup>User Story #13, #8</sup>|list of posts on users profile page|list of posts displayed on users profile|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |add other users posts to my favourites|add posts to a favourite folder|favorited posts go into a page on my profile for anyone to see if they click the favourites button beside the the posts button|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |like other users posts <sup>User Story #26</sup>|users will see that I have liked other users post|the number of likes on a post raises by 1 every time a user likes it|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |unlike a post|the like will go away| the number of likes on the post droped by 1|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |comment on other users posts <sup>User Story #13</sup>|comment will show up under post|comment is displayed in the post details which can be accessed through the feed or users profile or anywhere the post is on the site|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |delete my comments <sup>User Story #13</sup>|.button to remove comments posted by me|button below my comments deletes them and shows a message confirming i delketed the comment|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |search the hastags from other users posts <sup>User Story #22</sup>|look at what hashtags people are posting on other users posts and click them to see other users popularity|all posts with the same hashtags are displayed to get to that page just click the hashtag you want to see|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |look at other users favorited posts|click other users favourites button and see a list of other users favourite posts|favourites are displayed in place of the users posts when the favourite button is clicked|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |contact the site owner <sup>User Story #24, #19</sup>|enter in my information an messsage and send message|message sent and message apears to confirm I have sent a message to site owner|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |read the site owners blog <sup>User Story #23, #16</sup>|see a list of blog posts|blog posts are displayed on the blog page|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |logout of my account|not be able to access some of the sites features|log out stops users from being able to see some site features|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |log back in<sup>User Story #1, #6</sup>|be able to click a button to log back in |there is an option to log back in once logged out|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |edit/ update my profile <sup>User Story #8</sup>|edit my profile and update/change some information|all updated information changes instantly and a message apears to confirm I have updated my profile|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |login on a mobile device|be able to login to my account |all features available on the desktop site are available on mobile|
+<details>
+<summary>Screenshot</summary>
+<img src="./readme-images/">
+</details>
+
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
 |re trace all steps taken again on mobile device|all steps work the same as on desktop site|all steps work the same as on desktop site|
 
 
