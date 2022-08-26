@@ -89,35 +89,51 @@ Dedicated Page/blog to advertise and support businesses and inform users of upda
 
 ----
 ## User Stories
+
+### site Owner
+
 User search
 #25
+
 Create contact us form
 #24
+
 create a blog
 #23
+
 Users can create hashtags and view posts with same hashtags on one page
 #22
+
 Users can Comment on posts
 #21
+
 users can create posts
 #20
-build login/signup page MUST HAVE
+
+build login/signup page
 #1
+
 setup repository prep
 #3
+
 deploy to heroku prep
 #2
+
 install django + supporting libraries
 #4
 
+### Users
 
-### site Owner
+USER STORY: Create Post
+#27
+
 User story: Be able to Like posts
 #26
-User Story: contact site owner SHOULD HAVE
+
+User Story: contact site owner
 #19
 
-USER STORY should be able to log into my account MUST HAVE
+USER STORY should be able to log into my account
 #5
 
 
@@ -125,19 +141,19 @@ USER STORY have a log in page MUST HAVE
 #6
 
 
-USER STORY have an explore page COULD HAVE
+USER STORY have an explore page
 #7
 
 
-USER STORY have a personal profile COULD HAVE
+USER STORY have a personal profile
 #8
 
 
-USER STORY a buy and sell section of the fourm. COULD HAVE
+USER STORY a buy and sell section of the fourm.
 #10
 
 
-USER STORY be able tom follow other users SHOULD HAVE
+USER STORY be able tom follow other users
 #9
 
 
@@ -169,11 +185,6 @@ USER STORY find good pubs, bars, restaurants local to me
 #17
 
 
-
-
-
-
- ### Users
 
 
 
@@ -690,26 +701,26 @@ I performed manual testing throughout the whole prcess of building this site, I 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-|from landing page Register a new account|new account would be created| new account created and welcome message apears letting me know I have created an account|
-|Login as New user| have acccess to the rest of the features on the site|all sites features are available once user is logged in.|
-|Setup profile|have the ability to personalise my profile|users can add their own personal profile picture, firstname, last name, bio, location and website|
-|create a post|to be able to create a post that other users can see and interact with|post created with picture, hashtag, and caption with the ability for other users to like comment and favourite it.|
-|browse the feed|see other users posts|the ability to see other users posts and interact with them|
-|search for other users|see a list of other users|a list of users + a searchbar to search for specific users|
-|follow other users|be able to follow other users|ability to follow users and have it reflect in the number of users on both profiles|
-|browse other users posts on their profile|list of posts on users profile page|list of posts displayed on users profile|
-|add their posts to my favourites|add posts to a favourite folder|favorited posts go into a page on my profile for anyone to see if they click the favourites button beside the the posts button|
-|like their posts|users will see that I have liked their post|the number of likes on a post raises by 1 every time a user likes it|
+|from landing page Register a new account <sup>User Story #1,5</sup> |new account would be created| new account created and welcome message apears letting me know I have created an account|
+| Login as New user <sup>User Story #6</sup>| have acccess to the rest of the features on the site|all sites features are available once user is logged in.|
+| Setup profile <sup>User Story #8</sup>|have the ability to personalise my profile|users can add their own personal profile picture, firstname, last name, bio, location and website|
+|create a post <sup>User Story #20, #27</sup>|to be able to create a post that other users can see and interact with|post created with picture, hashtag, and caption with the ability for other users to like comment and favourite it.|
+|browse the feed <sup>User Story #14, #17, #7</sup>|see other users posts|the ability to see other users posts and interact with them|
+|search for other users <sup>User Story #25</sup>|see a list of other users|a list of users + a searchbar to search for specific users|
+|follow other users <sup>User Story #9</sup>|be able to follow other users|ability to follow users and have it reflect in the number of users on both profiles|
+|browse other users posts on other users profile <sup>User Story #13, #8</sup>|list of posts on users profile page|list of posts displayed on users profile|
+|add other users posts to my favourites|add posts to a favourite folder|favorited posts go into a page on my profile for anyone to see if they click the favourites button beside the the posts button|
+|like other users posts <sup>User Story #26</sup>|users will see that I have liked other users post|the number of likes on a post raises by 1 every time a user likes it|
 |unlike a post|the like will go away| the number of likes on the post droped by 1|
-|comment on their posts|comment will show up under post|comment is displayed in the post details which can be accessed through the feed or users profile or anywhere the post is on the site|
-|delete my comments|.button to remove comments posted by me|button below my comments deletes them and shows a message confirming i delketed the comment|
-|search the hastags from other users posts|look at what hashtags people are posting on their posts and click them to see their popularity|all posts with the same hashtags are displayed to get to that page just click the hashtag you want to see|
-|look at other users favorited posts|click their favourites button and see a list of their favourite posts|favourites are displayed in place of the users posts when the favourite button is clicked|
-|contact the site owner|enter in my information an messsage and send message|message sent and message apears to confirm I have sent a message to site owner|
-|read the site owners blog|see a list of blog posts|blog posts are displayed on the blog page|
+|comment on other users posts <sup>User Story #13</sup>|comment will show up under post|comment is displayed in the post details which can be accessed through the feed or users profile or anywhere the post is on the site|
+|delete my comments <sup>User Story #13</sup>|.button to remove comments posted by me|button below my comments deletes them and shows a message confirming i delketed the comment|
+|search the hastags from other users posts <sup>User Story #22</sup>|look at what hashtags people are posting on other users posts and click them to see other users popularity|all posts with the same hashtags are displayed to get to that page just click the hashtag you want to see|
+|look at other users favorited posts|click other users favourites button and see a list of other users favourite posts|favourites are displayed in place of the users posts when the favourite button is clicked|
+|contact the site owner <sup>User Story #24, #19</sup>|enter in my information an messsage and send message|message sent and message apears to confirm I have sent a message to site owner|
+|read the site owners blog <sup>User Story #23, #16</sup>|see a list of blog posts|blog posts are displayed on the blog page|
 |logout of my account|not be able to access some of the sites features|log out stops users from being able to see some site features|
-|log back in|be able to click a button to log back in |there is an option to log back in once logged out|
-|edit/ update my profile|edit my profile and update/change some information|all updated information changes instantly and a message apears to confirm I have updated my profile|
+|log back in<sup>User Story #1, #6</sup>|be able to click a button to log back in |there is an option to log back in once logged out|
+|edit/ update my profile <sup>User Story #8</sup>|edit my profile and update/change some information|all updated information changes instantly and a message apears to confirm I have updated my profile|
 |login on a mobile device|be able to login to my account |all features available on the desktop site are available on mobile|
 |re trace all steps taken again on mobile device|all steps work the same as on desktop site|all steps work the same as on desktop site|
 
