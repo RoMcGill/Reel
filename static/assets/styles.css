@@ -15,7 +15,7 @@ body{
 }
 
 .container{
-    max-width: 1280;
+    max-width: 1280px;
 
     display: flex;
     align-items: center;
@@ -233,7 +233,7 @@ body {
 }
 
 .card-login{
-    background-color: none;
+    background-color: transparent;
 }
 
 .login-button{
@@ -243,7 +243,7 @@ body {
     border-color: var(--light);
     height: 50px;
     width: 100px;
-    font: bold15px arial,sans-serif;
+    font: bold 15px arial,sans-serif;
     text-shadow: none;
     border-radius: 50px;
 

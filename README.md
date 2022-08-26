@@ -519,13 +519,26 @@ CSS Validation
 I used the  W3C Jigsaw CSS Validation Service to validate the CSS of my website. When validating all of my css on the site, it passes with no errors.
 
 <details>
-<summary>Tags</summary>
-<img src="./readme-images/html-validator/tags.png">
+<summary>CSS</summary>
+<img src="./readme-images/css-validation/css.png">
+</details>
+
+----
+
+### JavaScript Validation
+
+I used JSHint JS Validation Service to validate my Javascript files. No errors were found.
+
+<details>
+<summary>Java Script</summary>
+<img src="./readme-images/js-validation/js.png">
 </details>
 
 
+----
 
-
+PEP8 Validation
+PEP8 Validation Service was used to check the code for PEP8 requirements. All the code passes with no errors and no warnings to show.
 
 ---
 ## Testing
