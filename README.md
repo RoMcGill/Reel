@@ -92,13 +92,14 @@ Dedicated Page/blog to advertise and support businesses and inform users of upda
 
 ### site Owner
 
+
 User search
 #25
 
 Create contact us form
 #24
 
-create a blog
+Create a blog
 #23
 
 Users can create hashtags and view posts with same hashtags on one page
@@ -107,30 +108,30 @@ Users can create hashtags and view posts with same hashtags on one page
 Users can Comment on posts
 #21
 
-users can create posts
+Users can create posts
 #20
 
-build login/signup page
+Build login/signup page
 #1
 
-setup repository prep
+Setup repository prep
 #3
 
-deploy to heroku prep
+Deploy to heroku prep
 #2
 
-install django + supporting libraries
+Install django + supporting libraries
 #4
 
 ### Users
 
-USER STORY: Create Post
+USER STORY  Create Post
 #27
 
-User story: Be able to Like posts
+USER STORY  Be able to Like posts
 #26
 
-User Story: contact site owner
+USER STORY  contact site owner
 #19
 
 USER STORY should be able to log into my account
@@ -183,10 +184,6 @@ USER STORY discover more unique bars and restaurants near me
 
 USER STORY find good pubs, bars, restaurants local to me
 #17
-
-
-
-
 
 
 ----
