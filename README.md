@@ -367,7 +367,8 @@ the image field is a ImageField for users to upload their Profile image
 <details>
 <summary>Profile</summary>
 <img src="./readme-images/wireframes/wireframe10.jpg">
-</detail>
+</details>
+
 
 ----
 
@@ -441,6 +442,90 @@ Lighthouse was used to test the performance, accessibility, best practice and SE
 <summary>Profile</summary>
 <img src="./readme-images/lighthouse/lighthouse-profile.jpg">
 </details>
+
+----
+
+### HTML
+
+I used The W3C Markup Validation Service to validate the HTML of the website, some changes had to be made to account for the validation service not recognising django static tags.
+
+<details>
+<summary>Contact us</summary>
+<img src="./readme-images/html-validator/contact-us.png">
+</details>
+
+<details>
+<summary>Edit Profile</summary>
+<img src="./readme-images/html-validator/edit-profile.png">
+</details>
+
+
+<details>
+<summary>Feed</summary>
+<img src="./readme-images/html-validator/feed.png">
+</details>
+
+
+<details>
+<summary>Login</summary>
+<img src="./readme-images/html-validator/login.png">
+</details>
+
+
+<details>
+<summary>Logout</summary>
+<img src="./readme-images/html-validator/logout.png">
+</details>
+
+
+<details>
+<summary>Profile</summary>
+<img src="./readme-images/html-validator/profile.png">
+</details>
+
+
+<details>
+<summary>New Post</summary>
+<img src="./readme-images/html-validator/newpost.png">
+</details>
+
+
+<details>
+<summary>Post Details/Comments</summary>
+<img src="./readme-images/html-validator/post-details-and-comments.png">
+</details>
+
+
+<details>
+<summary>Register</summary>
+<img src="./readme-images/html-validator/register.png">
+</details>
+
+
+<details>
+<summary>Search</summary>
+<img src="./readme-images/html-validator/searchbar.png">
+</details>
+
+
+<details>
+<summary>Tags</summary>
+<img src="./readme-images/html-validator/tags.png">
+</details>
+
+----
+
+CSS Validation
+I used the  W3C Jigsaw CSS Validation Service to validate the CSS of my website. When validating all of my css on the site, it passes with no errors.
+
+<details>
+<summary>Tags</summary>
+<img src="./readme-images/html-validator/tags.png">
+</details>
+
+
+
+
 
 ---
 ## Testing
