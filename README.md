@@ -89,104 +89,94 @@ Dedicated Page/blog to advertise and support businesses and inform users of upda
 
 ----
 ## User Stories
+User search
+#25
+Create contact us form
+#24
+create a blog
+#23
+Users can create hashtags and view posts with same hashtags on one page
+#22
+Users can Comment on posts
+#21
+users can create posts
+#20
+build login/signup page MUST HAVE
+#1
+setup repository prep
+#3
+deploy to heroku prep
+#2
+install django + supporting libraries
+#4
 
 
 ### site Owner
+User story: Be able to Like posts
+#26
+User Story: contact site owner SHOULD HAVE
+#19
 
-user search bar/ list of users MUST HAVE
-#24 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
+USER STORY should be able to log into my account MUST HAVE
+#5
 
-create contact us form
-#23 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
 
-create a blog
-#22 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
+USER STORY have a log in page MUST HAVE
+#6
 
-users create + view hashtags MUST HAVE
-#21 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
 
-users comment on posts MUST HAVE
-#20 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
+USER STORY have an explore page COULD HAVE
+#7
 
-users create posts MUST HAVE
-#19 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
 
-build login/signup page MUST HAVE
-#18 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
+USER STORY have a personal profile COULD HAVE
+#8
 
-setup repository prep
-#17 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
 
-deploy to heroku prep
-#16 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
+USER STORY a buy and sell section of the fourm. COULD HAVE
+#10
 
-install django + supporting libraries
-#15 opened on 27 Jun by RoMcGill
- PBI ITERATION 1
+
+USER STORY be able tom follow other users SHOULD HAVE
+#9
+
+
+USER STORY add gps location of solved boozers
+#11
+
+
+USER STORY add photos to posts
+#12
+
+
+USER STORY comment on other users posts
+#13
+
+
+USER STORY view other users posts
+#14
+
+
+USER STORY upload details of recent trips to the pub/resteraunt
+#15
+
+
+USER STORY discover more unique bars and restaurants near me
+#16
+
+
+USER STORY find good pubs, bars, restaurants local to me
+#17
+
+
+
+
 
 
  ### Users
 
-USER STORY should be able to log into my account MUST HAVE
-#1 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
 
-USER STORY have a log in page MUST HAVE
-#2 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
 
-USER STORY have an explore page COULD HAVE
-#3 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY have a personal profile COULD HAVE
-#4 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY be able tom follow other users SHOULD HAVE
-#6 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY add gps location of solved boozers COULD HAVE
-#7 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY add photos to posts COULD HAVE
-#8 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY comment on other users posts COULD HAVE
-#9 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY view other users posts COULD HAVE
-#10 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY upload details of recent trips to the pub/resteraunt COULD HAVE
-#11 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY discover more unique bars and restaurants near me MUST HAVE
-#12 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY find good pubs, bars, restaurants local to me MUST HAVE
-#13 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
-
-USER STORY : connecting people who enjoy socialising and puzzels MUST HAVE
-#14 opened on 22 Apr by RoMcGill
- PBI ITERATION 1
 
 ----
 
