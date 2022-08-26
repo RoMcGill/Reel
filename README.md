@@ -566,7 +566,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 
 <details>
 <summary>Models</summary>
-<img src="./readme-images/comment-pep8/comment-models.png">
+<img src="./readme-images/comment-pep8/comment-model.png">
 </details>
 
 <details>
@@ -576,7 +576,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 
 <details>
 <summary>Url</summary>
-<img src="./readme-images/comment-pep8/blog-url.png">
+<img src="./readme-images/comment-pep8/comment-url.png">
 </details>
 
 #### Search
@@ -596,7 +596,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 
 <details>
 <summary>Models</summary>
-<img src="./readme-images/contact-pep8/contact-models.png">
+<img src="./readme-images/contact-pep8/contact.models.png">
 </details>
 
 <details>
@@ -611,7 +611,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 
 <details>
 <summary>Admin</summary>
-<img src="./readme-images/contact-pep8/contact-admin.png">
+<img src="./readme-images/contact-pep8/contact.admin.png">
 </details>
 
 #### Post
