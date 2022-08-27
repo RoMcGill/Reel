@@ -1256,7 +1256,15 @@ Heroku deployment
 -----
 
 ## Acknowledgements
+My class mates and the students of Code Institute.
 
+My Cohort facilitator Kasia for all of her help and encouragement throughout the project.
+
+My Mentor Mo for keeping me on schedual and giving helpfull feedback throughout the Project.
+
+The stackoverflow community for responding to questions and having built up a massive database of invaluable tips,tricks and bug fixes.
+
+Code Institute for supplying an amazing course, from the content to the staff and alumni.
 
 
 
