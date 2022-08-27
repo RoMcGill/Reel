@@ -12,8 +12,6 @@ from post.forms import NewPostForm
 from userauthentication.models import Profile
 from comment.models import Comment
 from comment.forms import CommentForm
-# from userauthentication.models import Profile
-# from notify.utilities import create_notification
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

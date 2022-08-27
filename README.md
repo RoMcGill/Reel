@@ -1,6 +1,6 @@
 ToDo:
 
-cleanup files
+
 extra detail on heroku deployment
 
 
@@ -37,20 +37,17 @@ add credits+
   - [Features](#features)
   - [Validation](#validation)
   - [Testing](#testing)
-    - [Manual testing of user stories](#manual-testing-of-user-stories)
-    - [Automated testing](#automated-testing)
+    - [Manual testing](#manual-testing-of-user-stories)
     - [Performing tests on various devices](#performing-tests-on-various-devices)
     - [Browser compatibility](#browser-compatibility)
   - [Bugs](#bugs)
-  - [Configuration](#configuration)
-    - [Google emails](#google-emails)
     - [Heroku Deployment](#heroku-deployment)
   - [Credits](#credits)
   - [Acknowledgements](#acknowledgements)
 ---
 ## About
 
-Guess the boozer is a social media game to play with friends, the object of the game is to guess what pub,bar,resteraunt your friends are in based on their vague images and hints, this is a game that my friends and I personaly Play most weekends and by creating guess the boozer we will bring the game to a wider audience.
+Guess the boozer is a social media game to play with friends. The objective of the game is to guess what pub,bar,resteraunt your friends are in based on their vague images and hints. This is a game that my friends and I Play most weekends over whatsapp and by creating guess the boozer we will bring the game to a wider audience and promote pubs,bars and resteraunts.
 
 ----------
 
@@ -60,7 +57,7 @@ Register and Login to a new Social media site.
 
 Join in on the fun and Create posts and give hints to other users so they can try tio guess where i am or have been.
 
-guess where other users are or have been using the information they supply.
+Guess where other users are or have been using the information they supply.
 
 ----
 ## Site Owner Goals
@@ -207,57 +204,59 @@ USER STORY find good pubs, bars, restaurants local to me
 
 ## Colours
 <img src="./readme-images/Screenshot 2022-08-26 at 23.25.19.png">
-the colour scheme was chosen as there is a nice contrast between diffrent elements which makes for a pleasurable user experience also the colour schem plays a role in helping the user feel familiar with the site as the gradient used is similar to instagram just with diffrent colours, the fade from dark green to bright green in the background is like instagrams gradient from dark purple to bright pink.
+The colour scheme was chosen as there is a nice contrast between diffrent elements which makes for a pleasurable user experience. The colour scheme plays a role in helping the user feel familiar with the site as the gradient used is similar to instagram just with diffrent colours. The fade from dark green to bright green in the background is like instagrams gradient from dark purple to bright pink.
 
 
 ## Fonts
-The fonts implemented on the site are Fira sans with sans-serif as a fallback these fonts were used thoughout the site to add charachter, style and legibility
+The fonts implemented on the site are Fira sans with sans-serif as a fallback. The fonts were used thoughout the site to add charachter, style and legibility
 
 
 ## Structure
-ease of use was the goal for this site. the navagation bar at ther top of the page provides easy clikable links to each section of the site, from there you can dive deeper into other features of the site.
+Ease of use was the goal for this site. the navagation bar at ther top of the page provides easy clikable links to each section of the site, from there you can dive deeper into other features of the site.
 
 ### Website pages
 ### The website is made up of the following pages:
 
 ### Home page/feed
-this page is your landing page once logged in and will propt you to update your profile information and instruct you what to do next, following these instructions you will find other users and populate this page with their posts after following some users.
+This page is your landing page once logged in and will prompt you to update your profile information and instruct you what to do next, following these instructions you will find other users and populate this page with their posts after following some users.
 
 ### Register page
-this is where a user can create an account.
+This is where a new user can create an account.
 
 ### Login page
-on this page users can login to their account.
+On this page users can login to their account.
 
 ### search page
-this page will show users a list of other users and provide a button to search for users by name.
+This page will show users a list of other users and provide a button to search for users by name.
 
 ### Logout page
-this page will allow users to log out of the website, this page will also provide the user with an option to log back in.
+This page will allow users to log out of the website, this page will also provide the user with an option to log back in.
 
 ### Profile page
-where users can add their profile picture first/last name, bio and website. This page will display thier profile image,bio, name, posted posts and favourited posts. If a user is on another users Profile page they will not have the option to edit their profile from there but will have an option to follow the user in its place.
+This is where users information is shown. Users can add their profile picture first/last name, bio and website. This page will display thier profile image,bio, name, posted posts and favourited posts. If a user is on another users Profile page they will not have the option to edit their profile from there but will have an option to follow the user in its place.
 
 ### post detail page
-is used for specific posts that a user clicks on, this page will show all of the details of a given post and also provide a button to view the comments and post/delete a comment, view the hashtags and likes associated with the post.
+This page is used for specific posts that a user clicks on, this page will show all of the details of a given post and also provide a button to view the comments and post/delete a comment, view the hashtags and likes associated with the post.
 
 ### the tags page
-is where all posts with corrisponding tags are displayed.
+This page is where all posts with corrisponding tags are displayed.
 
 ### the favourites page
-is located in the profile page and when clicked the user posts will no loger show but the posts that the given user has favourited will display instead.
+This page is located in the profile page and when clicked the user posts will no loger show but the posts that the given user has favourited will display instead.
 
 ### the comment page/modal
-is used to display, post and delete comments on nay given post.
+This page is used to display, post and delete comments on nay given post.
 
 ### the blog page
-is a site owner run blog to promote businesses and provide users with information.
+This page is a site owner run blog to promote businesses and provide users with information.
 
 ### Contact page
- with contact form which allows users to send an email to the site owner and provide their feedback or questions.
+This page displays a contact form which allows users to send an message to the site owner and provide their feedback or questions.
 
 ### 404 error page
+This page is used in place of a standard 404 page. It will be shown in the event of an error which does not allow the page to loadT
 ----
+
 
 ## Database
 The backend is built on the Django framework using Postgres for the deployed Heroku version I have created a graph model of the site using django-extensions and graphviz to display the model relationships.
@@ -266,23 +265,23 @@ The backend is built on the Django framework using Postgres for the deployed Her
 
 ### blogpost app
 
-the blog post model contains title, slug, intro, body, date_added, picture,
-the title field contains the title of the blog post
-the slug field contains the individal slug for each blog post
-the intro contains a breif subject line for the blog post
-the body contains the main content for the blog post
-the date added contains the date and time the blog was created
-the picture field contains the image that is uploaded to support the text of the blog post.
+The blog post model contains title, slug, intro, body, date_added, picture,
+The title field contains the title of the blog post
+The slug field contains the individal slug for each blog post
+The intro contains a breif subject line for the blog post
+The body contains the main content for the blog post
+The date added contains the date and time the blog was created
+The picture field contains the image that is uploaded to support the text of the blog post.
 
 ### comment app
-the comment model contains post, user, body, date
+The comment model contains post, user, body, date
 The post field contains a ForeignKey to id the post.
 The user field contains a ForeignKey to id the user.
 The body field contains a textfield to manage user input
 The date field contains contains the date and time which the comment was posted.
 
 ### contact app
-the contact model contains name, email, subject, message
+The contact model contains name, email, subject, message
 The name field contains the users name
 The email field contains the users email address
 The subject field contains the subject/ reason for contact
@@ -290,22 +289,22 @@ The message field contains the main body/contact of the correspondance.
 
 ### post app
 
-the post app contains 5 models follow, stream, likes, post and tag
+The post app contains 5 models follow, stream, likes, post and tag
 
-the follow model contains follower and following
+The follow model contains follower and following
 both fields contain foreignkey fields to identify users.
 
-the stream model contains following, user, post, date.
-the following field contains the following status of the user.
-the user field contains the id of the user.
-the post field contains the data being posted by the user.
-the date field contains the date and time the stream was created.
+The streTm model contains following, user, post, date.
+The following field contains the following status of the user.
+The user field contains the id of the user.
+The post field contains the data being posted by the user.
+The date field contains the date and time the stream was created.
 
-the likes model contains user and post
-the user field is to identify the user id
-the post field is to identify the post id
+The likes model contains user and post
+The user field is to identify the user id
+The post field is to identify the post id
 
-the post model contains id, picture, caption, posted, tag, user, likes
+The post model contains id, picture, caption, posted, tag, user, likes
 The id field contains a unique id for the post.
 The picture field contains a ImageField for users to upload photos.
 The caption field contains a CharField for users to uplad a caption to their post.
@@ -314,19 +313,19 @@ The tag field contains a ManyToManyField for the hashtags.
 The user field contains a ForeignKey to identify the user.
 The likes field contains a IntergerField to handle the number of likes on a post.
 
-the tag model contains title and slug
-the title field is a CgarField for users to enter thier hashtags
-the slug field is a SlugField for creating unique slugs for each hashtag
+The tag model contains title and slug
+The title field is a CgarField for users to enter thier hashtags
+The slug field is a SlugField for creating unique slugs for each hashtag
 
 ### userauthentication app
-the userauthentication app contains the profile model
-the profile model contains 9 Fields user, first_name, last_name, location, url, profile_info, created, favourite, image
-the first_name, last_name, location, url fields are all CharFields for users to input their own information.
-the user field is a OnetoOneField that contains the users username.
-the profile_info Field is a textfield for the user to input information about themselves.
-the created field is a DateTimeField to capture when the profile has been created,
-the Favourite Field is a ManyToManyField that users can have their favourite posts by them selfs or by other users saved.
-the image field is a ImageField for users to upload their Profile image
+The userauthentication app contains the profile model
+The profile model contains 9 Fields user, first_name, last_name, location, url, profile_info, created, favourite, image
+The first_name, last_name, location, url fields are all CharFields for users to input their own information.
+The user field is a OnetoOneField that contains the users username.
+The profile_info Field is a textfield for the user to input information about themselves.
+The created field is a DateTimeField to capture when the profile has been created,
+The Favourite Field is a ManyToManyField that users can have their favourite posts by them selfs or by other users saved.
+The image field is a ImageField for users to upload their Profile image
 
 ----
 
@@ -395,55 +394,36 @@ the image field is a ImageField for users to upload their Profile image
 - Django 3.2
 
 ### Libraries & Tools
-Am I Responsive -
+Am I Responsive - Was used to create the multi screen display at the top of this document.
 
-Cloudinary -
+Cloudinary - Was used to manage Images/Media.
 
-Favicon.io -
+Favicon.io - Was used to create The Favicon.
 
-Chrome dev tools -
+Chrome dev tools - Was used to test the responsiveness of the site and generate lighthouse reports.
 
-Gitpod -
+Gitpod
+GitHub - Was used to write and host the code for this project .
 
-GitHub -
+CrispyForms- Was used to manage Django forms.
 
-CrispyForms
+Google Fonts
 
-Google Fonts -
+django_extentions - Was used in conjunction with graphviz to create my database diagram.
 
-django_extentions -
+Heroku - Was used to Deploy The finished product.
 
-Heroku -
+jQuery and Bootstrap - Was used for creating fast and responsive html pages.
 
-jQuery -
+Postgres – Was used for database management.
 
-Bootstrap -
+gunicorn - Was used for running multiple Python processes within a single dyno.
 
-Postgres –
+Pillow - Was used to add support for opening, manipulating, and saving images.
 
-graphviz -
+psycopg2 - Was used to perform operations on postgres.
 
-gunicorn -
-
-Pillow -
-
-psycopg2 -
-
-Balsamiq -
-
-WC3 Validator -
-
-Jigsaw W3 Validator -
-
-JShint -
-
-PEP8 -
-
-Google dev tools -
-
-Lighthouse -
-
-responsinator -
+Balsamiq - Was used to generate the wireframes for the site.
 
 ----
 
@@ -776,7 +756,8 @@ I used The W3C Markup Validation Service to validate the HTML of the website, so
 
 ----
 
-CSS Validation
+### CSS
+
 I used the  W3C Jigsaw CSS Validation Service to validate the CSS of my website. When validating all of my css on the site, it passes with no errors.
 
 <details>
@@ -1140,10 +1121,6 @@ I performed manual testing throughout the whole prcess of building this site, I 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 |re trace all steps taken again on mobile device|all steps work the same as on desktop site|all steps work the same as on desktop site|
-
-
-## Automated testing
-*** not done yet ***
 
 
 ## Performing tests on various devices
