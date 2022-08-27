@@ -1164,39 +1164,101 @@ Samsung Internet Version (18.0.0.58)
 
 ----
 
-## Heroku Deployment (expand on this)
-### Heroku Deployment
-This application has been deployed from GitHub to Heroku by following the steps:
+## Heroku Deployment
 
-1. Create or log in to your account at heroku.com
-2. Create a new app, add a unique app name (this project is named "reel-2022-new") and choose your region
-3. Click on create app
-4. Under resources search for postgres, and add a Postgres database to the app
-5. Install the plugins dj-database-url and psycopg2-binary
-6. Install django and gunicorn
-7. Add the list of requirements by writing in the terminal "pip3 freeze --local > requirements.txt"
-8. Create a Procfile in your app:
-   ```
-   wsgi:PROJECT_NAME.wsgi
-   ```
-   (web: gunicorn reel.wsgi)
-9.  In the settings.py ensure the connection is to the Heroku postgres database
-10. Ensure Debug is set to False in the settings.py file
-11. Add localhost/127.0.0.1, and reel-2022-new.herokuapp.com to the ALLOWED_HOSTS variable in settings.py
-12. Go to Settings in your Heroku and set the environment variables in the Config Vars
-    ![Config vars](docs/readme/heroku-config-vars.jpg)
-13. Remove DISABLE_COLLECTSTATIC from Heroku settings
-14. Push the code to Heroku using the command git push heroku main
+This Django application has been deployed from GitHub to Heroku by following the steps:
 
-Final steps:
+Installing Django and deploying to heroku
 
-- Go to "Deploy" in the menu bar on the top
-- Deployment method: Heroku Git (direct connection to GitHub is no longer available)
-- Follow steps as shown:
-  ![Deployment steps](docs/readme/heroku-deployment.jpg)
+- 1. In the Terminal: Install Django and gunicorn: pip3 install 'django<4' gunicorn
+- 2. In the Terminal: Install supporting libraries: pip3 install dj_database_url psycopg2
+- 3. In the Terminal: Install Cloudinary Libraries pip3 install dj3-cloudinary-storage
+- 3. In the Terminal: Create requirements file pip3 freeze --local > requirements.txt
+- 4. In the Terminal: Create Project (Reel): django-admin startproject Reel.
+- 5. In the Terminal: Create App (blog) python3 manage.py startapp Post
+- 6. Settings.py: Add to installed appsINSTALLED_APPS = ['Reel',] *Save file*
+- 7. In the Terminal: Migrate Changes: python3 manage.py migrate
+- 8. In the Terminal: Run Server to Test python3 manage.py runserver
+
+Step 2: Deploying an app to Heroku
+
+- 2.1 Create the Heroku app In heroku.com: create account/ login
+- 2.2 Create new Heroku App Reel, Location = Europe
+- 2.3 Add Database to App Resources Located in the Resources Tab, Add-ons, search and add e.g. ‘Heroku Postgres’
+- 2.4Copy DATABASE_URL value: Located in the Settings Tab, click reveal Config Vars, Copy Text
+- 2.5 Attach the Database: In gitpod, Create new env.py file on top level directory
+- 2.6 In env.py Import os library, import os
+- 2.7 Set environment variables os.environ["DATABASE_URL"] = "Paste in Heroku DATABASE_URL Link"
+- 2.8. Add in secret key os.environ["SECRET_KEY"] = "Make up your own randomSecretKey"
+- 2.9 In heroku.com: Add Secret Key to Config Vars SECRET_KEY, “randomSecretKey”
+
+step 3: Prepare environment and settings.py file
+- 3.1 In settings.py: Reference env.py from pathlib import Path, import os, import dj_database_url
+```
+if os.path.isfile("env.py"):
+   import env
+```
+- 3.2 Remove the insecure secret key and replace - links to the SECRET_KEY variable on HerokuSECRET_KEY = os.environ.get('SECRET_KEY')
+- 3.2 Comment out the old DataBases Section
+- 3.3 Add new DATABASES Section
+```
+DATABASES = {
+   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+```
+3.4 In the Terminal: Save all files and Make Migrations
+```
+$python3 manage.py migrate
+```
+- 3.5 Get  static and media files stored on Cloudinary In Cloudinary.com: register/login
+- 3.6 Copy your CLOUDINARY_URL e.g. API Environment Variable. From Cloudinary Dashboard Into  env.py:
+- 3.7 Add Cloudinary URL to env.py
+```
+os.environ["CLOUDINARY_URL"] = "cloudinary://************************"
+```
+- 3.8 In Heroku: Add Cloudinary URL to Heroku Config Vars Add to Settings tab in Config Vars e.g. COUDINARY_URL, cloudinary://************************
+- 3.9 Add DISABLE_COLLECTSTATIC to Heroku Config Vars (temporary step for the moment, will be removed before deployment)e.g. DISABLE_COLLECTSTATIC, 1
+- 4.0 In settings.py: Add Cloudinary Libraries to installed apps
+```
+INSTALLED_APPS = [
+    …,
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
+    …,
+]
+```
+- 4.1. Tell Django to use Cloudinary to store media and static files
+Place under the Static files Note
+```
+STATIC_URL = '/static/'
+
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+```
+- 4.2 Link file to the templates directory in Heroku Place under the BASE_DIR line
+```
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+```
+- 4.3 Change the templates directory to TEMPLATES_DIR, Place within the TEMPLATES array
+- 4.4 Add Heroku Hostname to ALLOWED_HOSTS
+```
+ALLOWED_HOSTS = ["reel.herokuapp.com", "localhost"]
+```
+- 4.5 In Gitpod: Create 3 new folders on top level directory media, static, templates
+- 4.6 Create procfile on the top level directory
+- 4.7 In Procfile: Add code web: gunicorn Reel.wsgi
+- 4.8 In the Terminal: Add, Commit and Push
+- 4.9 In Heroku: Deploy Content manually through heroku
+- 5.0 in heroku: setup and configure automatic deployments linked to Github account
 
 
 -----
+
 
 ### Forking the GitHub Repository
 1. Go to the GitHub repository
