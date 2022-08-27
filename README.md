@@ -246,7 +246,7 @@ This page is used in place of a standard 404 page. It will be shown in the event
 
 
 ## Database
-The backend is built on the Django framework using Postgres for the deployed Heroku version I have created a graph model of the site using django-extensions and graphviz to display the model relationships.
+The backend is built on the Django framework using Postgres for the deployed Heroku version. I have created a graph model of the site using django-extensions and graphviz to display a visual representation of the model relationships.
 
 <img src="./readme-images/REEL_sans_foo_bar.png">
 
