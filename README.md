@@ -3,9 +3,9 @@ Features to readme
 cleanup files
 extra detail on heroku deployment
 
-add project url and explain
+
 create better database diagram
-add screenshots to manual tests
+
 add credits+
 
 
@@ -14,7 +14,9 @@ add credits+
 **Developer: Ronan McGill**
 
 
-💻 [Visit live website](https://reel-2022-new.herokuapp.com)
+[Visit live website](https://reel-2022-new.herokuapp.com)
+
+[view project board](https://github.com/users/RoMcGill/projects/1) > **_NOTE:_** This project board is linked to my repository but for some reason does not show up in the projects tab in the repository
 
 <img src="./readme-images/amiresponsive.jpg" width="800">
 
@@ -862,7 +864,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |contact the site owner <sup>User Story #24, #19</sup>|enter in my information an messsage and send message|message sent and message apears to confirm I have sent a message to site owner|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/logged-out-features/contact.png">
+<img src="./readme-images/loged-out-features/contact.png">
 </details>
 
 
@@ -871,7 +873,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |read the site owners blog <sup>User Story #23, #16</sup>|see a list of blog posts|blog posts are displayed on the blog page|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/logged-out-features/blog.png">
+<img src="./readme-images/loged-out-features/blog.png">
 </details>
 
 
@@ -907,7 +909,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |login on a mobile device|be able to login to my account |all features available on the desktop site are available on mobile|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/logged-out-features/res-login.png">
+<img src="./readme-images/loged-out-features/login-res.png">
 </details>
 
 
