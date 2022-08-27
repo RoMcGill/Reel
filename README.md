@@ -396,35 +396,110 @@ the image field is a ImageField for users to upload their Profile image
 
 ### Libraries & Tools
 Am I Responsive -
+
 Cloudinary -
+
 Favicon.io -
+
 Chrome dev tools -
+
 Gitpod -
+
 GitHub -
+
 CrispyForms
+
 Google Fonts -
+
 django_extentions -
+
 Heroku -
+
 jQuery -
+
 Bootstrap -
+
 Postgres –
+
 graphviz -
+
 gunicorn -
+
 Pillow -
+
 psycopg2 -
+
 Balsamiq -
+
 WC3 Validator -
+
 Jigsaw W3 Validator -
+
 JShint -
+
 PEP8 -
+
 Google dev tools -
+
 Lighthouse -
+
 responsinator -
 
 ----
 
 ## Features
 
+### Nav bar
+- Part of base.html
+- Visible on all pages
+- Fully responsive
+- Features included on the nav bar will be diffrent for logged in users and logged out users as logged out users do not have access to as many Features as logged in users.
+- Easy to navigate
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/loged-out-features/nav.png">
+<img src="./readme-images/loged-out-features/nav-res.png">
+<img src="./readme-images/loged-out-features/nav-menu-res.png">
+</details>
+
+### Register
+- page for  new users to create their account
+- Easy to follow
+- User must provide a valid username, password and password confirmation and email address
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/loged-out-features/register.png">
+<img src="./readme-images/loged-out-features/regester-res.png">
+</details>
+
+### Login
+- Page for users to log in to their account
+- Easy to follow
+- User must fill out 2 form fields Username and Password
+- Logged in user will be redirected to  the feed and have access to all features
+- User story [#1](https://github.com/RoMcGill/Reel/issues/1), User story [#6](https://github.com/RoMcGill/Reel/issues/6)
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/loged-out-features/login.png">
+<img src="./readme-images/loged-out-features/login-res.png">
+</details>
+
+
+### Create/edit profile
+### Add Post
+### Search for users
+### View Users Profiles
+### Follow Users
+### Like users posts
+### Comment on users posts
+### Delete comments you have made
+### Add users posts to favourites
+### View feed
+### View Hashtag page's
+### Blog
+### Contact
+### Log out
 ---
 ## Validation
 ### Chrome Dev Tools Lighthouse
