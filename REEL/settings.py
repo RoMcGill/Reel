@@ -159,7 +159,7 @@ USE_TZ = True
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dlxqn3uqt',
     'API_KEY': '535491239448958',
-    'API_SECRET': 'nXXvDq0AHzCCg8kTE7F3TLlTbyU',
+    'API_SECRET': os.environ.get('API_SECRET'),
 }
 
 
