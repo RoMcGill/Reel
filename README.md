@@ -504,7 +504,7 @@ responsinator -
 - users can add a picture, caption and hashtag/'s
 - this will be displayed on a card as a post
 - Once form is complete users will be redirected to their profile page where the post will show, thier new post will also show up in the Feed
-- [#27](https://github.com/RoMcGill/Reel/issues/27), [#22](https://github.com/RoMcGill/Reel/issues/22),
+- [#27](https://github.com/RoMcGill/Reel/issues/27), [#22](https://github.com/RoMcGill/Reel/issues/22),[#15](https://github.com/RoMcGill/Reel/issues/15)
 
 <details>
 <summary>screenshot</summary>
@@ -550,16 +550,98 @@ responsinator -
 <img src="./readme-images/logged-in-features/unfollow-res.png">
 </details>
 
-
 ### Like users posts
+- Users can like other users posts from the feed
+- If  a user likes a post they will be redirected to the post details page
+- If a user has already liked a post and clicks the like button again it will unlike the post
+- [#26](https://github.com/RoMcGill/Reel/issues/26)
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/like.png">
+<img src="./readme-images/logged-in-features/unlike.png">
+</details>
+
 ### Comment on users posts
+- Users can comment on other users post
+- simple and familiar comment form
+- [#21](https://github.com/RoMcGill/Reel/issues/21), [#13](https://github.com/RoMcGill/Reel/issues/13)
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/comment.png">
+<img src="./readme-images/logged-in-features/res-comment.png">
+</details>
+
 ### Delete comments you have made
+
+- Users can delete comments they have made at any time
+- once pomment is posted a button will apear under each comment posted by the user giving them an option to delete the comment
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/delete-comment.png">
+</details>
+
 ### Add users posts to favourites
+- Users can add other users posts to their favourites
+- favourites will show up in place of users posts on their profile when favourites is clicked
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/fav-in-profile.png">
+<img src="./readme-images/logged-in-features/res-fav-in-profile.png">
+</details>
+
 ### View feed
+- logged in Users will see posts from other users on their feed
+- familiar layout of posts Simialr to instagram
+- [#14](https://github.com/RoMcGill/Reel/issues/14), [#7](https://github.com/RoMcGill/Reel/issues/7)
+
 ### View Hashtag page's
+- Users can see hashtags at the bottom of other users posts
+- To view a page for that hashtag and see other posts that use it, the user needs to click on the hashtag and they will be redirected to the page
+- [#22](https://github.com/RoMcGill/Reel/issues/22)
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/tag.png">
+<img src="./readme-images/logged-in-features/tag-res.png">
+</details>
+
 ### Blog
+- Logged in and logged out users can view the blog
+- Blog posts created by admin
+- [#23](https://github.com/RoMcGill/Reel/issues/23), [#16](https://github.com/RoMcGill/Reel/issues/16)
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/loged-out-features/blog.png">
+<img src="./readme-images/loged-out-features/blog-res.png">
+</details>
+
 ### Contact
+- Simple contact form
+- 4 fields, name, email, subject, message
+- User messages sent straight to admin
+- [#24](https://github.com/RoMcGill/Reel/issues/24), [#19](https://github.com/RoMcGill/Reel/issues/19)
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/loged-out-features/contact.png">
+<img src="./readme-images/loged-out-features/contact-res.png">
+</details>
+
 ### Log out
+- Button located in navbar
+- Logout page has clear message user has been logged out
+- Gives user an option to log back in
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/logout.png">
+<img src="./readme-images/logged-in-features/res-logout.png">
+</details>
 ---
 ## Validation
 ### Chrome Dev Tools Lighthouse
