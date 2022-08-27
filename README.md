@@ -479,18 +479,78 @@ responsinator -
 - User must fill out 2 form fields Username and Password
 - Logged in user will be redirected to  the feed and have access to all features
 - User story [#1](https://github.com/RoMcGill/Reel/issues/1), User story [#6](https://github.com/RoMcGill/Reel/issues/6)
+
 <details>
 <summary>screenshot</summary>
 <img src="./readme-images/loged-out-features/login.png">
 <img src="./readme-images/loged-out-features/login-res.png">
 </details>
 
-
 ### Create/edit profile
+- Easy to follow form
+- gives users the option to add a personal profile picture, first name, last name, bio, location and website
+- Once form is submitted users will be redirected to their updated profile page
+- [#8](https://github.com/RoMcGill/Reel/issues/8)
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/edit.png">
+<img src="./readme-images/logged-in-features/edit-res.png">
+</details>
+
+
 ### Add Post
+- Easy to follow form
+- users can add a picture, caption and hashtag/'s
+- this will be displayed on a card as a post
+- Once form is complete users will be redirected to their profile page where the post will show, thier new post will also show up in the Feed
+- [#27](https://github.com/RoMcGill/Reel/issues/27), [#22](https://github.com/RoMcGill/Reel/issues/22),
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/newpost.png">
+<img src="./readme-images/logged-in-features/newpost-res.png">
+</details>
+
 ### Search for users
+- The search page will Provide a List of all of the users
+- The search page has a search button where users can type in the names of their friends and have their profile show
+- [#25](https://github.com/RoMcGill/Reel/issues/25), [#18](https://github.com/RoMcGill/Reel/issues/18)
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/search.png">
+<img src="./readme-images/logged-in-features/search-res.png">
+<img src="./readme-images/logged-in-features/search-result.png">
+<img src="./readme-images/logged-in-features/res-search-result.png">
+</details>
+
 ### View Users Profiles
+- Users can access other users Profiles in 2 ways
+- The search Feature or through the Feed: each post will have a clickable link to the users Profile
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/profile.png">
+<img src="./readme-images/logged-in-features/profile-res.png">
+</details>
+
 ### Follow Users
+- Once in another users profile users will have the option to follow or unfollow a user
+- if a user is not following the user the follow button will apear
+- if a user is following the user the unfollow button will apear
+- [#9](https://github.com/RoMcGill/Reel/issues/9)
+
+
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/follow.png">
+<img src="./readme-images/logged-in-features/follow-res.png">
+<img src="./readme-images/logged-in-features/unfollow.png">
+<img src="./readme-images/logged-in-features/unfollow-res.png">
+</details>
+
+
 ### Like users posts
 ### Comment on users posts
 ### Delete comments you have made
