@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from userauthentication.views import UserProfile, follow
 from django.contrib.auth import views as auth_views
+from userauthentication.views import UserProfile, follow
 from members import views as user_views
 from searchbar import views as search_views
-from blog import views as blog_views
+
 
 
 
@@ -31,15 +31,11 @@ urlpatterns = [
     path('', include('post.urls')),
     path('contact/', include('contact.urls')),
     path('blog/', include('blog.urls')),
-    path('notifications/', include('notify.urls')),
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name="reelusers/login.html"), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name="reelusers/logout.html"), name='logout'),
     path('members/', include('members.urls')),
-    # path('members/', include('django.contrib.auth.urls')),
-    # path('users/', include('django.contrib.auth.urls')),
     path('users/', include('userauthentication.urls')),
-    # path('users/', include('comment.urls')),
     path('<username>/', UserProfile, name='profile'),
     path('<username>/svaed/', UserProfile, name='favourite'),
     path('<username>/follow/<option>/', follow, name='follow'),

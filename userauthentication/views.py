@@ -15,7 +15,6 @@ from django.contrib.auth.decorators import login_required
 from userauthentication.models import Profile
 from post.models import Post, Follow, Stream
 from .forms import editProfileForm
-# from notify.utilities import create_notification
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -128,13 +127,6 @@ def follow(request, username, option):
             request,
             'you have followed another user'
             )
-        # ### notifications (bug) ######
-        # create_notification(
-        # request,
-        # follow.follower,
-        # 'follow',
-        # extra_id=follow.id)
-        # ### notifications (bug) ######
         return HttpResponseRedirect(reverse('profile', args=[username]))
 
     except User.DoesNotExist:
@@ -176,9 +168,6 @@ def editProfile(request):
             profile.profile_info = form.cleaned_data.get(
                 'profile_info'
                 )
-            # profile.url = form.cleaned_data.get(
-            # 'url'
-            # )
             profile.save()
             messages.success(
                 request,
@@ -194,30 +183,3 @@ def editProfile(request):
         'form': form,
     }
     return render(request, 'edit-profile.html', context)
-
-
-# def register(request):
-#     if request.method == "POST":
-#         form = UserRegisterForm(request.POST)
-#         if form.is_valid():
-#             new_user = form.save()
-#             # Profile.get_or_create(user=request.user)
-#             username = form.cleaned_data.get('username')
-#             messages.success(request, f'Hurray your account was created!!')
-
-#             # Automatically Log In The User
-#             new_user = authenticate(username=form.cleaned_data['username'],
-#                                     password=form.cleaned_data['password1'],)
-#             login(request, new_user)
-#             # return redirect('editProfile')
-#             return redirect('index')
-
-
-#     elif request.user.is_authenticated:
-#         return redirect('index')
-#     else:
-#         form = UserRegisterForm()
-#     context = {
-#         'form': form,
-#     }
-#     return render(request, 'sign-up.html', context)

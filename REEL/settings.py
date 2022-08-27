@@ -27,8 +27,6 @@ if os.path.isfile("env.py"):
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -64,8 +62,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'contact',
     'blog',
-    'notify',
-    # 'django_extensions',
+
 
 ]
 
@@ -80,10 +77,6 @@ MIDDLEWARE = [
 
 ]
 
-# GRAPH_MODELS = {
-#   'all_applications': True,
-#   'group_models': True,
-# }
 
 ROOT_URLCONF = 'REEL.urls'
 
@@ -98,7 +91,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'notify.context_processor.notifications'
+
             ],
 
         },
@@ -170,12 +163,7 @@ CLOUDINARY_STORAGE = {
 }
 
 
-
-
-
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
@@ -183,14 +171,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
-
-
-
-
-
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Default primary key field type
@@ -206,4 +186,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 django_heroku.settings(locals())
-

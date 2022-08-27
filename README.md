@@ -1,5 +1,5 @@
 ToDo:
-Features to readme
+
 cleanup files
 extra detail on heroku deployment
 
@@ -262,7 +262,7 @@ is a site owner run blog to promote businesses and provide users with informatio
 ## Database
 The backend is built on the Django framework using Postgres for the deployed Heroku version I have created a graph model of the site using django-extensions and graphviz to display the model relationships.
 
-<img src="./REEL_sans_foo_bar.png">
+<img src="./readme-images/REEL_sans_foo_bar.png">
 
 ### blogpost app
 
@@ -598,6 +598,12 @@ responsinator -
 - familiar layout of posts Simialr to instagram
 - [#14](https://github.com/RoMcGill/Reel/issues/14), [#7](https://github.com/RoMcGill/Reel/issues/7)
 
+<details>
+<summary>screenshot</summary>
+<img src="./readme-images/logged-in-features/feed.png">
+<img src="./readme-images/logged-in-features/res-feed.png">
+</details>
+
 ### View Hashtag page's
 - Users can see hashtags at the bottom of other users posts
 - To view a page for that hashtag and see other posts that use it, the user needs to click on the hashtag and they will be redirected to the page
@@ -642,7 +648,8 @@ responsinator -
 <img src="./readme-images/logged-in-features/logout.png">
 <img src="./readme-images/logged-in-features/res-logout.png">
 </details>
----
+-------
+
 ## Validation
 ### Chrome Dev Tools Lighthouse
 Lighthouse was used to test the performance, accessibility, best practice and SEO of the site.
