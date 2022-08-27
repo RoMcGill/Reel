@@ -2,7 +2,7 @@ ToDo:
 Features to readme
 cleanup files
 extra detail on heroku deployment
-add explination for new repo at begining
+
 add project url and explain
 create better database diagram
 add screenshots to manual tests
@@ -575,7 +575,7 @@ I used JSHint JS Validation Service to validate my Javascript files. No errors w
 ### PEP8 Validation
 I used PEP8 Validation Service to check the code for PEP8 requirements. All the code passes with no errors and no warnings to show Bar one url file that one line was 2 charachters too log, I decided to leave it as when it was formated to meet requirements it was less legible
 
-#### Blog
+### Blog
 
 <details>
 <summary>Models</summary>
@@ -597,7 +597,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 <img src="./readme-images/blog-pep8/blog-views.png">
 </details>
 
-#### Comment
+### Comment
 
 <details>
 <summary>Models</summary>
@@ -614,7 +614,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 <img src="./readme-images/comment-pep8/comment-url.png">
 </details>
 
-#### Search
+### Search
 
 <details>
 <summary>Views</summary>
@@ -627,7 +627,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 </details>
 
 
-#### Contact us
+### Contact us
 
 <details>
 <summary>Models</summary>
@@ -649,7 +649,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 <img src="./readme-images/contact-pep8/contact.admin.png">
 </details>
 
-#### Post
+### Post
 
 
 <details>
@@ -677,7 +677,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 <img src="./readme-images/post-pep8/post-views.png">
 </details>
 
-#### Userauthentication
+### Userauthentication
 
 <details>
 <summary>Models</summary>
@@ -704,7 +704,7 @@ I used PEP8 Validation Service to check the code for PEP8 requirements. All the 
 <img src="./readme-images/userauth-pep8/userauth-views.png">
 </details>
 
-#### Members
+### Members
 
 <details>
 <summary>Views</summary>
@@ -738,7 +738,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |from landing page Register a new account <sup>User Story #1,5</sup> |new account would be created| new account created and welcome message apears letting me know I have created an account|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/loged-out-features/register.png">
 </details>
 
 
@@ -747,7 +747,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 | Login as New user <sup>User Story #6</sup>| have acccess to the rest of the features on the site|all sites features are available once user is logged in.|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/loged-out-features/login.png">
 </details>
 
 
@@ -756,7 +756,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 | Setup profile <sup>User Story #8</sup>|have the ability to personalise my profile|users can add their own personal profile picture, firstname, last name, bio, location and website|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/edit.png">
 </details>
 
 
@@ -765,7 +765,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |create a post <sup>User Story #20, #27</sup>|to be able to create a post that other users can see and interact with|post created with picture, hashtag, and caption with the ability for other users to like comment and favourite it.|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/newpost.png">
 </details>
 
 
@@ -774,7 +774,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |browse the feed <sup>User Story #14, #17, #7</sup>|see other users posts|the ability to see other users posts and interact with them|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/feed.png">
 </details>
 
 
@@ -783,17 +783,13 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |search for other users <sup>User Story #25</sup>|see a list of other users|a list of users + a searchbar to search for specific users|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/search.png">
 </details>
 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 |follow other users <sup>User Story #9</sup>|be able to follow other users|ability to follow users and have it reflect in the number of users on both profiles|
-<details>
-<summary>Screenshot</summary>
-<img src="./readme-images/">
-</details>
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -801,7 +797,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |browse other users posts on other users profile <sup>User Story #13, #8</sup>|list of posts on users profile page|list of posts displayed on users profile|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/profile.png">
 </details>
 
 
@@ -810,26 +806,19 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |add other users posts to my favourites|add posts to a favourite folder|favorited posts go into a page on my profile for anyone to see if they click the favourites button beside the the posts button|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/fav-in-profile.png">
 </details>
 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 |like other users posts <sup>User Story #26</sup>|users will see that I have liked other users post|the number of likes on a post raises by 1 every time a user likes it|
-<details>
-<summary>Screenshot</summary>
-<img src="./readme-images/">
-</details>
+
 
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
 |unlike a post|the like will go away| the number of likes on the post droped by 1|
-<details>
-<summary>Screenshot</summary>
-<img src="./readme-images/">
-</details>
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -837,7 +826,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |comment on other users posts <sup>User Story #13</sup>|comment will show up under post|comment is displayed in the post details which can be accessed through the feed or users profile or anywhere the post is on the site|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/comment.png">
 </details>
 
 
@@ -846,7 +835,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |delete my comments <sup>User Story #13</sup>|.button to remove comments posted by me|button below my comments deletes them and shows a message confirming i delketed the comment|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/delete-comment.png">
 </details>
 
 
@@ -855,7 +844,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |search the hastags from other users posts <sup>User Story #22</sup>|look at what hashtags people are posting on other users posts and click them to see other users popularity|all posts with the same hashtags are displayed to get to that page just click the hashtag you want to see|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/tag.png">
 </details>
 
 
@@ -864,7 +853,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |look at other users favorited posts|click other users favourites button and see a list of other users favourite posts|favourites are displayed in place of the users posts when the favourite button is clicked|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/fav-in-profile.png">
 </details>
 
 
@@ -873,7 +862,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |contact the site owner <sup>User Story #24, #19</sup>|enter in my information an messsage and send message|message sent and message apears to confirm I have sent a message to site owner|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-out-features/contact.png">
 </details>
 
 
@@ -882,7 +871,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |read the site owners blog <sup>User Story #23, #16</sup>|see a list of blog posts|blog posts are displayed on the blog page|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-out-features/blog.png">
 </details>
 
 
@@ -891,7 +880,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |logout of my account|not be able to access some of the sites features|log out stops users from being able to see some site features|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/logout.png">
 </details>
 
 
@@ -900,7 +889,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |log back in<sup>User Story #1, #6</sup>|be able to click a button to log back in |there is an option to log back in once logged out|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/logout.png">
 </details>
 
 
@@ -909,7 +898,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |edit/ update my profile <sup>User Story #8</sup>|edit my profile and update/change some information|all updated information changes instantly and a message apears to confirm I have updated my profile|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-in-features/edit.png">
 </details>
 
 
@@ -918,7 +907,7 @@ I performed manual testing throughout the whole prcess of building this site, I 
 |login on a mobile device|be able to login to my account |all features available on the desktop site are available on mobile|
 <details>
 <summary>Screenshot</summary>
-<img src="./readme-images/">
+<img src="./readme-images/logged-out-features/res-login.png">
 </details>
 
 
@@ -960,7 +949,7 @@ Samsung Internet Version (18.0.0.58)
 |29th June: tried to create user models. without having django User authentication in my imports| import from django.contrib.auth.models import User|
 |4th July: could not display my deployed site on heroku anymore|there was heroku maintance which chnaged my cofig vars on heroku, I updated my env.py file with the correct information.|
 |4th July: the error was cannot type cast int to uuid, cused by migrating my user model with primary key, then changing to uuid|migrate model with no primary key then migrate with uuid|
-|7th July: corrupted database|reset database, still was not working, started new repo from scratch (will add detailed report of intire issue below.)|
+|7th July: issue with database|reset database, still was not working, started new repo from scratch <details><summary>Tutor support chat log</summary>https://docs.google.com/document/d/16XlYW9u0hWma5bD7lxAs2pWkMaWi_GtUyotDagPRKVg/edit?usp=sharing</details>|
 |12th July:heroku not showing anything| created runtime txt file and moved my procfile to be in the same app as manage.py|
 |12th July: I cannot create a post with a hashtag that has already been created|I was using title unique =True so i removed that, and added it to my SlugField which is where it was supposed to be all along.|
 |12th July:After Heroku deployment, no css shown on deployed site|installed whitenoise middleware to serve static files for production, later installed cloudinary.|

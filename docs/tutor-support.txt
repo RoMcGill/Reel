@@ -1,0 +1,328 @@
+Conversation with Code Institute
+Started on July 5, 2022 at 12:46 PM Europe/Dublin time IST (GMT+0100)
+
+--- July 5, 2022 ---
+
+12:46 PM | ro.mcgill12@gmail.com: Begin a Tutoring Session
+
+12:46 PM | Operator: Please confirm that you have prepared for this session as per the steps on this page: https://code-institute-org.github.io/tutoring-info/guidelines/ 
+ You should have: 
+ - A clear description of your issue 
+- A list of the debugging steps and research you have carried so far 
+ Failure to answer all of the bots questions will result in this conversation being closed. 
+ By clicking "I'm Prepared," you agree to these conditions.
+
+01:02 PM | ro.mcgill12@gmail.com: I'm Prepared
+
+01:02 PM | Operator: Your tutoring usage time for this week (in minutes): 0
+
+01:02 PM | Operator: Please provide us with your Problem Statement. This is a clear description of the problem that you're currently facing. 
+ At the very least, you need to tell us what should your code be doing, and what is it actually doing? 
+ If you are getting an error, please send a screenshot. 
+ If you are working on a particular file, which file is it, and which lines of code?
+
+01:04 PM | ro.mcgill12@gmail.com: Link to gitpod : https://romcgill-newportfoliopr-mru0lc358dt.ws-eu51.gitpod.io 
+ I am coding a social media app with django and i am running into this error when trying to use my new Likes feature : operator does not exist: integer = uuid
+LINE 1: ..." FROM "post_likes" WHERE ("post_likes"."post_id" = '859a60e... 
+ I think that it is some sort of conflict in /post/models Line 34,35 - class Post(models.Model):
+ id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+But that also confuses me as there was no issue with this before i added my Like class,(Line 69), another related error I get when trying to make migrations is (You are trying to add a non-nullable field 'id' to likes without a default;) but I do have a default for both, although one default is a uuid and one is an integer, hope you can make sense of all this.
+
+01:04 PM | Operator: What steps have you taken so far to resolve the issue, or to address current gaps in your knowledge? 
+ Vague answers like "searched on Slack and Google" are not sufficient here. What specific steps have you taken? What code and debugging steps have you tried? What resources have you used (e.g. provide links to StackOverflow questions you have read)?
+
+01:05 PM | ro.mcgill12@gmail.com: I have tried many things suggested on stack overflow that were recommended to other people with similar problems but honestly I am a little bit in over my head and not fully understanding the proposed fixes.
+
+01:05 PM | Operator: One final thing. Please share your code with us. 
+ If you are working on Gitpod, please set your workspace to shared, and send us the link to it. If you are working on a course challenge, please send the name of the challenge.
+
+01:05 PM | ro.mcgill12@gmail.com: https://romcgill-newportfoliopr-mru0lc358dt.ws-eu51.gitpod.io
+
+01:05 PM | Operator: Thank you. We will get back to you as soon as possible. You can see how busy tutoring currently is on this page: https://code-institute-org.github.io/tutoring-info/status/ 
+ Note that if you have failed to sufficiently answer any of the above questions, tutors will have to re-ask you for the information, which will use up part of your weekly tutoring time allowance.
+
+01:23 PM | Oisin from Code Institute: Hi Ronan, Oisin here 👋 hope you are well.
+﻿Could you send a screenshot of the error?
+﻿I'm not sure it's necessary to specify an ID field as that will be done automatically by django for all of your models and could potentially be causing the issue in this case.
+
+01:26 PM | ro.mcgill12@gmail.com: okay i will try remove the id field. sending screenshots now
+
+01:26 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+13.25.56.png?expires=1661596074&signature=98529dee5d4567a66c5026f82da0c678722f9436ac3c8dbbcc79a8b27432e257"]
+
+01:26 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+13.25.27.png?expires=1661596074&signature=7dd95d11fff148823e88855914981453ad5511c3fada568e111009a98385fdd6"]
+
+01:26 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+13.25.15.png?expires=1661596074&signature=177c46719a6ee95adaddb8a7c0fd6536a74040679244b64ae6c848bb313faa5a"]
+
+01:32 PM | Oisin from Code Institute: There might be conflicting migrations in your database. Here are the steps to remove your migrations and reset the database:
+﻿
+﻿To completely remove your Django migrations and reset your database: 
+ 
+ 1. Remove the all migrations files within your project. Go through each of your project apps' migration folders and remove everything inside, except the __init__.py file. 
+2. Drop the database. If you're using Heroku Postgres, the command for this is: heroku pg:reset DATABASE_URL. Locally, you can just delete the db.sqlite3 file. 
+3. Run the commands python3 manage.py makemigrations and python3 manage.py migrate to remake migrations and setup the new database.
+
+01:34 PM | ro.mcgill12@gmail.com: perfect will give that a go now and get back to you cheers !
+
+01:43 PM | ro.mcgill12@gmail.com: hey so that did solve my migration error but still having the same issue with the "programming error" as you mentioned i deleted my id field but that causes an error for the rest of the pages and they wont run without it :\
+
+01:45 PM | Oisin from Code Institute: Could you send a screenshot of the error?
+
+01:46 PM | Oisin from Code Institute: If you're going to remove the ID field you will need to remove it first, then reset your database and migrations
+
+01:47 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+13.46.15.png?expires=1661596074&signature=75523942921c52fe987366731b01fe4b715881f08adbbf6751642b735761e7da"]
+
+01:47 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+13.46.59.png?expires=1661596074&signature=069ef1705b0eaa9ba27fa7ac67626bf401617a3af05f4d6b62baa719e39ee605"]
+
+01:47 PM | ro.mcgill12@gmail.com: will try that now cheers
+
+01:49 PM | ro.mcgill12@gmail.com: when i remove it then set the database i get this error
+
+01:50 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+13.49.13.png?expires=1661596074&signature=c04ab29bd70dceacc23e45c7584678682b9d08efdd75a8e57d9f245eb509aaa9"]
+
+01:50 PM | ro.mcgill12@gmail.com: but i get this on all pages instead of just when clicking the like button
+
+01:53 PM | Oisin from Code Institute: did you delete all migration files before resetting the database?
+
+01:56 PM | ro.mcgill12@gmail.com: so the first time arround i deleted the db.sqlite3 file, that is gone now
+
+01:57 PM | ro.mcgill12@gmail.com: but yes i did delete all the files before make/migrate
+
+02:13 PM | Oisin from Code Institute: what happened when you ran the heroku pg:reset command?
+
+02:15 PM | ro.mcgill12@gmail.com: it wants me to state the app to run the command against, sorry but im not sure what would the format for that command be ?
+
+02:15 PM | Oisin from Code Institute: you can run this to see a list of your heroku app names:
+﻿heroku apps
+
+02:16 PM | Oisin from Code Institute: then run
+﻿heroku pg:reset -a <your_app_name>
+
+02:21 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+14.20.20.png?expires=1661596074&signature=9b8be36add20e6043a7ed23736edca3f21dc075613edca02e4c520968fb7b6e7"]
+
+02:22 PM | ro.mcgill12@gmail.com: it says invalid credentials provided but I have not provided any
+
+02:28 PM | Oisin from Code Institute: could you run this first:
+﻿heroku login -i
+
+02:28 PM | Oisin from Code Institute: then run
+﻿heroku apps
+﻿
+﻿and finally
+﻿heroku pg:reset -a <your_app_name>
+
+02:30 PM | ro.mcgill12@gmail.com: yep done, now do i just runserver ?
+
+02:34 PM | Oisin from Code Institute: ok, you can delete this migration file first: 
+ [Image "image.png"] then you need to go to your heroku app dashboard, go to the settings tab, the reveal config vars, then copy your DATABASE_URL and paste it into your env.py, replacing the old one.
+
+02:34 PM | ro.mcgill12@gmail.com: okay will do cheers
+
+02:37 PM | ro.mcgill12@gmail.com: okay done, Im note sure the database url changed though, maby it did just slightly
+
+02:41 PM | Oisin from Code Institute: Ok I'm not sure if the pg:reset command actually changes the url
+
+02:41 PM | Oisin from Code Institute: But the db should be reset now, did you run makemigrations?
+
+02:42 PM | ro.mcgill12@gmail.com: yeap just now ... going to migrate one sec
+
+02:43 PM | ro.mcgill12@gmail.com: have to log back in in the admin 1 second, cheers
+
+02:44 PM | ro.mcgill12@gmail.com: go i have to create a new superuser from gitpod to log back in now? my normal login details are not working ?
+
+02:44 PM | ro.mcgill12@gmail.com: do*
+
+02:45 PM | Oisin from Code Institute: yep, all your data has been removed, you can create a superuser with this command
+﻿python mange.py createsuperuser
+
+02:47 PM | ro.mcgill12@gmail.com: yep done, but now i get a new error trying to get onto /admin
+
+02:47 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+14.46.28.png?expires=1661596074&signature=036b2b110f70a23c8ad311d7e668cb82c43ae557834aac8c0e16324bb7673e78"]
+
+02:53 PM | ro.mcgill12@gmail.com: I am also getting the following error on my /post page now
+
+02:54 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+14.54.17.png?expires=1661596074&signature=65b86f91d5379c2fda0574ba8795c2a4b75b341cd05e222f930430d20ed4452b"]
+
+02:54 PM | ro.mcgill12@gmail.com: I am guessing that is being caused by it not letting me sign in at the admin page
+
+02:55 PM | Oisin from Code Institute: could you run
+﻿python3 manage.py makemigrations
+
+02:55 PM | Oisin from Code Institute: then run
+﻿python3 manage.py migrate
+
+02:57 PM | ro.mcgill12@gmail.com: I have already done that, there are no changes to migrate
+
+03:00 PM | Oisin from Code Institute: it doesn't seem to have created migrations for you Reel app models
+
+03:01 PM | ro.mcgill12@gmail.com: I am only realy working on the post app model, they were kind of a test
+
+03:02 PM | Oisin from Code Institute: ok if that's the case then you can remove the Reel app folder and remove it from your INSTALLED_APPS in settings.py
+
+03:04 PM | Oisin from Code Institute: I need to drop out to a meeting now, I'll drop you back in to the que where another tutor will be with you when available.
+
+03:08 PM | ro.mcgill12@gmail.com: ok
+
+03:11 PM | ro.mcgill12@gmail.com: will the next person be able to see this conversation, as i dont think i could explain how we got to this point
+
+03:16 PM | Fatima from Code Institute: Hi Ronan, Fatima here. kindly bare with us it is busy at the moment, I will be with you ASAP
+
+03:16 PM | ro.mcgill12@gmail.com: okay thanks
+
+03:17 PM | Fatima from Code Institute: 👍
+
+03:27 PM | Fatima from Code Institute: I see you are getting a couple of errors: 
+ - anonymous user is not iterable error, the error usually points to request.user being anonymous user. in the event where you need to itearate over an object for only logged in users: you can use the django @login_required tag 
+- ProgrammingError points to migration: I'd suggest running python3 manage.py showmigrations to check for any unapplied migrations 
+ 
+ where 
+ [Image "image.png"]
+
+03:31 PM | ro.mcgill12@gmail.com: there are no unapplied migrations, where should I use this tag ? .. yes sorry I am getting alot of errors now that I dont fully understand. all of my pages were working perfectly before I did as the previous tutor suggested
+
+03:38 PM | Fatima from Code Institute: sorry for the late response, it is busy at the moment. 
+ I'd suggest dealing with the errors one at a time
+
+03:39 PM | Fatima from Code Institute: run python3 manage.py showmigrations and let me know when you do? 
+ 
+ [Image "image.png"]
+
+03:41 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+15.41.02.png?expires=1661596074&signature=821170fa3b9c571eee0590dfb6143c9da49b2682928bfe4e048abb3ad6be16bc"]
+
+03:41 PM | ro.mcgill12@gmail.com: done
+
+03:42 PM | Fatima from Code Institute: now checking
+
+03:44 PM | Fatima from Code Institute: could you share a screen shot? It has not updated for me 
+ [Image "image.png"]
+
+03:45 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+15.45.13.png?expires=1661596074&signature=e7f647a3d555f53e322cf24afeb4a6aafb2e4add39be65ba4828ab450125576b"]
+
+03:48 PM | Fatima from Code Institute: I am gonna send you guide on how to connect to your Heroku DB to check the migrations as well to ensure migrations are applied on both databases
+
+03:49 PM | Fatima from Code Institute: temporarily comment out your current Databases settings and add this 
+ [Image "1f447.png?version=6.6.0"] Note: you’ll need to copy the postgres string from Heroku config vars 
+ DATABASES = { 'default': dj_database_url.parse(‘paste the postgres connection string from heroku’) } 
+ Then run the following command: 
+ python3 manage.py showmigrations 
+ python3 manage.py migrate
+
+03:53 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+15.53.41.png?expires=1661596074&signature=3d77e8c3b1f4a3027292b01e5e50aeb9a34e2e2000c14dd19efeacb3d3b2f4f7"]
+
+03:58 PM | Fatima from Code Institute: could you check that you have copied the correct database string from heroku and it is wrapped in a string ' ' not backtick ` ` 
+ [Image "image.png"]
+
+03:59 PM | ro.mcgill12@gmail.com: done
+
+03:59 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+15.59.33.png?expires=1661596074&signature=f0160fbb127f90f81e160ad4ebaf96e98476f46109d389c233a4b8e5acc4fedc"]
+
+04:02 PM | Fatima from Code Institute: did you fix the below error? If so it is yet to update from the this side 
+ [Image "image.png"]
+
+04:03 PM | ro.mcgill12@gmail.com: I did yes
+
+04:04 PM | ro.mcgill12@gmail.com: is there anyway to just completely undo everything that the last tutor told me to do? I feel like I am much worse now than when i started with him. I have not committed any changes, I feel like the first error would be easyer to fix from there instead of having to fix all of these new errors aswell ?
+
+04:09 PM | Fatima from Code Institute: if you wish to revert to your previous code, given that you have not yet committed the code and haven't made any changes to the DB: you can use CTRL +Z
+
+04:09 PM | ro.mcgill12@gmail.com: he told me to reset my database
+
+04:15 PM | Fatima from Code Institute: Hey Ronan, sorry to do this, I need to step away for about 30min, kindly bear with us I will leave a note and a tutor will be with you ASAP. 
+ 
+ I apologies for the inconvenience
+
+04:16 PM | ro.mcgill12@gmail.com: ok
+
+04:37 PM | ro.mcgill12@gmail.com: do you know roughly how long it will be until I get a tutor ?
+
+04:37 PM | Gemma from Code Institute: Hi Ronan, thank you for your patience, we are experiencing a high volume currently, but I will be able to look at this momentarily for you 🙂
+
+04:38 PM | ro.mcgill12@gmail.com: okay perfect thanks
+
+04:43 PM | Gemma from Code Institute: Hi Ronan, so have you made any progress since you were working with Fatima? If you could give me a summary of where you are at, that would be great 😊
+
+04:47 PM | ro.mcgill12@gmail.com: Im not sure if you can see the history of the chat but I have had an absolute nightmare going from a "like button" that was giving me an error to a tutor telling me to reset my database now hours and 2 tutors later nothing works. so now all i want to know is if I can revert the changes made since i started the first tutoring session and start from there and try fix my original issue, I have not committed or pushed anything.
+
+04:49 PM | Gemma from Code Institute: Ok, sorry to hear you have not had a successful afternoon Ronan. 
+ 
+ In your workspace where the changes are you can revert then using the curly arrow if you hover over : 
+ 
+ [Image "image.png"]
+
+04:50 PM | Gemma from Code Institute: If nothing is committed, and no data added to your db, you should be able to revert any changes you don't want 👍
+
+04:51 PM | ro.mcgill12@gmail.com: okay perfect thanks, I will try that now
+
+04:55 PM | ro.mcgill12@gmail.com: I have reverted all of the changes but I still cant login to admin
+
+04:55 PM | ro.mcgill12@gmail.com: I was able to before, i will send a screenshot of error
+
+04:56 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+16.55.52.png?expires=1661596074&signature=58f6e2de971fedf386e0830a3cad16c3963e5955231f7e97a224438bc26f204d"]
+
+04:56 PM | Gemma from Code Institute: Ok great - yes send a screenshot - you may need to create a new superuser in the cli
+
+04:56 PM | ro.mcgill12@gmail.com: I have done that, i will try again though
+
+04:58 PM | ro.mcgill12@gmail.com: still did not work
+
+04:59 PM | Gemma from Code Institute: Hmm, ok that looks like your database is still corrupted unfortunately. It's looking for a related field of something that does not exist
+
+05:00 PM | ro.mcgill12@gmail.com: it is also saying I have 9 applied migrations
+
+05:02 PM | ro.mcgill12@gmail.com: unapplied*
+
+05:03 PM | Gemma from Code Institute: ah ok, can you screenshot those for me please Ronan?
+
+05:05 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+17.04.53.png?expires=1661596074&signature=9f44a8228a46053c95d2355034a8e4ccd2fd0b787f371abaf018616925fbac57"]
+
+05:07 PM | Gemma from Code Institute: ok thanks, give me a moment to investigate inside your workspace
+
+05:08 PM | ro.mcgill12@gmail.com: okay thank you, the "reel" app is pretty much unused i was working on the "post" app and everything was fine apart from the error when i tried to add a like button
+
+05:10 PM | Gemma from Code Institute: ok, thanks - I can't see what's listed there above admin - this one looks like it's missing the initial migration
+
+05:12 PM | ro.mcgill12@gmail.com: sorry sending screenshot now,
+
+05:12 PM | ro.mcgill12@gmail.com: [Image "Screenshot+2022-07-05+at+17.11.32.png?expires=1661596074&signature=1ce3deec8abc4ca88d7ffbeb7a1c3331da3394a9a01a33e86ba37ca85778f890"]
+
+05:13 PM | Gemma from Code Institute: thanks, also with you mentioning about the reel app not being much used, I wonder if this is part of the issue as the error is referencing that app?
+
+05:18 PM | ro.mcgill12@gmail.com: yea, the error is now refrencing that app but my original error had nothing to do with it and it never caused a problem before the only error I had when I came to tutor support this morning was "opperator does not exist integer = uuid " which i was thinking was probably something i just overlooked, since making the changes the first tutor told me to I am way out of my depth and very confused to be honest
+
+05:19 PM | Gemma from Code Institute: Are you planning to keep that reel app or will you be deleting it?
+
+05:21 PM | ro.mcgill12@gmail.com: To be honest I forgot it was there before today, do you think i could hard reset to my last commit this morning, do you think that could be an option ?
+
+05:28 PM | Gemma from Code Institute: I can see why one of the tutors was trying to get you to reset the database. 
+ The issue is that when you make changes as you go, if you have old models hanging about but you are not using this can cause issues. 
+ You could try going in and deleting all the migration files that are listed as unapplied (the ones without the x in the box) and see if that's enough to set it straight. 
+ 
+ But if you do need to drop the database, it's not the end of the world, you can always back up your data, but then you will want to be sure that going forwards you knw that you are sure that your models are correct so that you don't have to repeat the process
+
+05:28 PM | ro.mcgill12@gmail.com: okay i will try that now
+
+05:30 PM | Gemma from Code Institute: Also to let you know Ronan that I'm due my break shortly - would you like me to add you back to the queue for the next avaiable tutor, or I can set this aside ready for you to reply once you have given that a go?
+
+05:34 PM | ro.mcgill12@gmail.com: Im back in, i can get to admin and my post pages
+
+05:34 PM | Gemma from Code Institute: Ah great stuff Ronan!!
+
+05:34 PM | ro.mcgill12@gmail.com: after 5 hours back to where I started whoo🤣
+
+05:35 PM | Gemma from Code Institute: Arrgh, yes I can understand your frustration 😅
+
+05:35 PM | Gemma from Code Institute: Coding can be like that sometimes!
+
+05:35 PM | ro.mcgill12@gmail.com: thank you very much for your help honestly, Im just happy I dont have to start the project again
+
+05:36 PM | Gemma from Code Institute: You're most welcome Ronan - Did you want me to add you back to the queue there or close this one off for you? 😊
+
+05:37 PM | ro.mcgill12@gmail.com: that would be great thanks, I really want to get to the bottom of this
+
+05:38 PM | Gemma from Code Institute: Ok will do - best of luck with it Ronan! 🤞
+
+05:38 PM | ro.mcgill12@gmail.com: cheers, thanks again
+
+
+--- July 6, 2022 ---
+
+Exported from Code Institute on August 27, 2022 at 10:57 AM Europe/Dublin time IST (GMT+0100)
