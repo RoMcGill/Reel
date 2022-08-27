@@ -1215,6 +1215,43 @@ Final steps:
 -----
 
 ## Credits
+### helpfull links I relied on
+
+Finding the cause and solution to bugs
+- https://stackoverflow.com/
+Inspiration for buttons and forms
+- https://codepen.io/
+Docs to find out how to do diffrent operations in django
+- https://docs.djangoproject.com/en/4.1/
+Docs to find out how to do diffrent operations in bootstrap
+- https://getbootstrap.com/docs/4.1/getting-started/introduction/
+Quick, Easy tutorials for almost everything
+- https://www.w3schools.com/
+Great Front-end tips and tricks
+- https://thesassway.com/
+Helpful for python related tutorials
+- https://realpython.com/tutorials/django/
+Refresh memory on subjects already covered
+- Code Institute course material
+
+### Video Tutorials
+Navigation
+- https://www.youtube.com/watch?v=ZzQdVy8b8n4&t=1s
+- https://www.youtube.com/watch?v=OFKBep95lb4
+Django app setup with helpful timestamps
+- https://www.youtube.com/watch?v=rHux0gMZ3Eg
+Making and saving favourite post
+- https://www.youtube.com/watch?v=K5ksJVq5qGw&list=PL_KegS2ON4s7aVgtk-UI6jaXazt6KyntZ&index=8
+Like and Dislike
+- https://www.youtube.com/watch?v=u8zMLHAaDXY&list=PL_KegS2ON4s7aVgtk-UI6jaXazt6KyntZ&index=7
+Django refresher
+- https://www.youtube.com/watch?v=0sMtoedWaf0
+User authentication
+- https://www.youtube.com/watch?v=CTrVDi3tt8o&t=976s
+Cloudinary install
+- https://www.youtube.com/watch?v=JV_GoKqj1mg&t=283s
+Heroku deployment
+- https://www.youtube.com/watch?v=6DI_7Zja8Zc
 
 -----
 
