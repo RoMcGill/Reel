@@ -1,18 +1,5 @@
-ToDo:
-
-
-extra detail on heroku deployment
-
-
-create better database diagram
-
-add credits+
-
-
-
 # Guess The Boozer
 **Developer: Ronan McGill**
-
 
 [Visit live website](https://reel-2022-new.herokuapp.com)
 

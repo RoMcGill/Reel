@@ -114,10 +114,6 @@ def PostDetail(request, post_id):
                 request,
                 'you have commented on a users post'
                 )
-            # ### notifications (bug) ######
-            # create_notification(request, comment.body,/
-            #  'comment.first_name', extra_id=0)
-            # ### notifications (bug) ######
         return HttpResponseRedirect(reverse("post-detail", args=[post_id]))
     else:
         form = CommentForm()
@@ -129,9 +125,6 @@ def PostDetail(request, post_id):
     }
     return render(request, 'post-detail.html', context)
 
-# ##################################################################
-# ###################### delete comment ############################
-# ##################################################################
 
 def delete_comment(request, comment_id):
     """
@@ -142,11 +135,6 @@ def delete_comment(request, comment_id):
     messages.add_message(request, messages.SUCCESS,
                          'Your comment has been deleted')
     return redirect(request.META.get('HTTP_REFERER', '/'))
-
-
-# ##################################################################
-# ###################### delete comment ############################
-# ##################################################################
 
 
 def tags(request, tag_slug):
